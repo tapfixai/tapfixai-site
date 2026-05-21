@@ -8,6 +8,7 @@ DMG_URL="${TAPFIX_DMG_URL:-https://raw.githubusercontent.com/tapfixai/tapfixai-s
 TMP_DIR="$(mktemp -d /tmp/tapfix-install.XXXXXX)"
 DMG_PATH="${TMP_DIR}/TapFix-AI-latest.dmg"
 MOUNT_POINT=""
+TAPFIX_BUNDLE_IDS=("${BUNDLE_ID}")
 
 cleanup() {
   if [ -n "${MOUNT_POINT}" ] && [ -d "${MOUNT_POINT}" ]; then
@@ -24,22 +25,53 @@ remove_path() {
   fi
 }
 
+add_bundle_id() {
+  local candidate="${1:-}"
+  if [ -z "${candidate}" ]; then
+    return
+  fi
+
+  local existing
+  for existing in "${TAPFIX_BUNDLE_IDS[@]}"; do
+    if [ "${existing}" = "${candidate}" ]; then
+      return
+    fi
+  done
+
+  TAPFIX_BUNDLE_IDS+=("${candidate}")
+}
+
+reset_tapfix_permissions() {
+  local bundle_id
+  for bundle_id in "${TAPFIX_BUNDLE_IDS[@]}"; do
+    echo "Resetting TapFix permissions for ${bundle_id}..."
+    tccutil reset Accessibility "${bundle_id}" >/dev/null 2>&1 || true
+    tccutil reset AppleEvents "${bundle_id}" >/dev/null 2>&1 || true
+    tccutil reset ListenEvent "${bundle_id}" >/dev/null 2>&1 || true
+  done
+}
+
 echo "TapFix AI clean install"
 echo "Closing old app..."
 pkill -f "${APP_NAME}" 2>/dev/null || true
 
 echo "Removing old app and local data..."
-remove_path "${APP_PATH}"
-remove_path "${HOME}/Library/Application Support/${BUNDLE_ID}"
-remove_path "${HOME}/Library/Preferences/${BUNDLE_ID}.plist"
-remove_path "${HOME}/Library/Caches/${BUNDLE_ID}"
-remove_path "${HOME}/Library/WebKit/${BUNDLE_ID}"
-remove_path "${HOME}/Library/Saved Application State/${BUNDLE_ID}.savedState"
-remove_path "${HOME}/Library/Logs/TapFix"
+if [ -d "${APP_PATH}" ]; then
+  add_bundle_id "$(defaults read "${APP_PATH}/Contents/Info" CFBundleIdentifier 2>/dev/null || true)"
+fi
 
-tccutil reset Accessibility "${BUNDLE_ID}" >/dev/null 2>&1 || true
-tccutil reset AppleEvents "${BUNDLE_ID}" >/dev/null 2>&1 || true
-tccutil reset ListenEvent "${BUNDLE_ID}" >/dev/null 2>&1 || true
+remove_path "${APP_PATH}"
+
+for tapfix_id in "${TAPFIX_BUNDLE_IDS[@]}"; do
+  remove_path "${HOME}/Library/Application Support/${tapfix_id}"
+  remove_path "${HOME}/Library/Preferences/${tapfix_id}.plist"
+  remove_path "${HOME}/Library/Caches/${tapfix_id}"
+  remove_path "${HOME}/Library/WebKit/${tapfix_id}"
+  remove_path "${HOME}/Library/Saved Application State/${tapfix_id}.savedState"
+done
+
+remove_path "${HOME}/Library/Logs/TapFix"
+reset_tapfix_permissions
 
 echo "Downloading TapFix AI..."
 curl -fL --progress-bar "${DMG_URL}" -o "${DMG_PATH}"
