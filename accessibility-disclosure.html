@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accessibility Disclosure — TapFix AI</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="description" content="Why TapFix AI requires Accessibility permission.">
+  <style>
+:root{--bg:#05040b;--card:rgba(255,255,255,.07);--text:#f8f5ff;--muted:#b9b0cf;--line:rgba(255,255,255,.12);--purple:#8b5cf6;--purple2:#c084fc}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at 80% 0%,rgba(139,92,246,.32),transparent 30%),linear-gradient(180deg,#05040b,#0b0715 55%,#05040b);color:var(--text);line-height:1.65}
+a{color:inherit}.wrap{width:min(920px,calc(100% - 36px));margin:0 auto}.nav{height:74px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:850}.logo{width:44px;height:44px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(145deg,#160d2d,#4c1d95 45%,#8b5cf6);box-shadow:0 18px 45px rgba(124,58,237,.38);position:relative}.logo small{position:absolute;right:7px;bottom:5px;font-size:9px;color:#d8b4fe}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 18px;border-radius:999px;background:linear-gradient(135deg,var(--purple),var(--purple2));text-decoration:none;font-weight:800}
+main{padding:58px 0 90px}.card{padding:38px;border-radius:30px;background:var(--card);border:1px solid var(--line);box-shadow:0 30px 90px rgba(0,0,0,.42)}
+h1{font-size:clamp(38px,6vw,64px);line-height:1;margin:0 0 18px;letter-spacing:-.05em}h2{font-size:28px;margin:38px 0 12px;letter-spacing:-.03em}p,li{color:var(--muted);font-size:17px}strong{color:var(--text)}ul{padding-left:22px}.meta{color:#d8b4fe;font-weight:700}.footer{padding:34px 0;border-top:1px solid var(--line);color:var(--muted)}
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><a class="brand" href="index.html"><span class="logo">TF<small>AI</small></span><span>TapFix AI</span></a><a class="btn" href="index.html">Home</a></div></header>
+<main><div class="wrap"><article class="card">
+<h1>Why TapFix AI Requires Accessibility Permission</h1>
+<p>TapFix AI uses Android Accessibility Service to provide its core text assistance features.</p>
+<p>This permission allows the app to help users correct, translate, and rewrite text directly inside supported apps without manually copying and pasting everything into a separate editor.</p>
+
+<h2>What Accessibility Permission Is Used For</h2>
+<p>TapFix AI uses Accessibility permission for the following features:</p>
+<ul>
+<li>detecting when the user is typing in a text field</li>
+<li>showing the floating AI button when text editing is available</li>
+<li>reading selected or typed text only when the user requests an AI action</li>
+<li>sending the selected text for correction, rewriting, or translation</li>
+<li>inserting the AI-generated result back into the active text field</li>
+<li>improving text editing speed inside messengers, email apps, notes, browsers, and other supported apps</li>
+</ul>
+<p>Without Accessibility permission, TapFix AI cannot reliably detect editable text fields or replace text directly inside other apps.</p>
+
+<h2>What TapFix AI Does Not Do</h2>
+<p>TapFix AI does not use Accessibility permission for hidden or harmful purposes.</p>
+<ul>
+<li>TapFix AI does not collect passwords.</li>
+<li>TapFix AI does not read banking credentials.</li>
+<li>TapFix AI does not collect payment card information.</li>
+<li>TapFix AI does not monitor the user’s screen continuously for advertising.</li>
+<li>TapFix AI does not track user activity across apps.</li>
+<li>TapFix AI does not record private conversations without user action.</li>
+<li>TapFix AI does not control the device secretly.</li>
+<li>TapFix AI does not perform actions without user interaction.</li>
+<li>TapFix AI does not sell Accessibility data.</li>
+<li>TapFix AI does not use Accessibility data for ads or user profiling.</li>
+</ul>
+<p>The permission is used only to support user-requested text actions.</p>
+
+<h2>When Text Is Processed</h2>
+<p>Text is processed only when the user actively chooses an AI action.</p>
+<p>For example, the user types or selects text, taps the TapFix AI floating button, chooses an action such as Fix, Translate, or Rewrite, TapFix AI processes that text, and the user receives the improved result. The user may then insert the result back into the text field.</p>
+<p>TapFix AI does not process text silently for unrelated purposes.</p>
+
+<h2>Why This Permission Is Necessary</h2>
+<p>Android apps normally cannot edit text inside other apps. Accessibility Service is required because TapFix AI needs to interact with text fields across different apps in a user-controlled way.</p>
+<p>This allows the app to provide a faster workflow: no manual copy and paste, no switching between apps, no need to open a separate editor, faster correction and translation, and better productivity for multilingual communication.</p>
+<p>Accessibility permission is therefore necessary for the main feature promoted by TapFix AI.</p>
+
+<h2>User Consent</h2>
+<p>TapFix AI asks the user to enable Accessibility permission manually in Android Settings. The app also explains why this permission is needed before the user enables it.</p>
+<p>Users can refuse this permission. If the user does not enable Accessibility permission, some features may not work, including the floating AI button and direct text replacement.</p>
+<p>Users can disable Accessibility permission at any time:</p>
+<p><strong>Android Settings → Accessibility → TapFix AI → Disable</strong></p>
+
+<h2>Accessibility Disclosure Text for the App</h2>
+<p><strong>Accessibility Permission Disclosure</strong></p>
+<p>TapFix AI uses Android Accessibility Service to detect editable text fields, show the floating AI button, read selected text after your action, and insert corrected, translated, or rewritten text back into the active input field.</p>
+<p>TapFix AI does not collect passwords, banking information, or payment data. TapFix AI does not use Accessibility Service for advertising, tracking, surveillance, or hidden data collection.</p>
+<p>This permission is required for the main text assistance features of the app. You can disable it at any time in Android Settings.</p>
+<p><strong>Buttons:</strong> Allow / Continue · Cancel</p>
+
+<h2>Contact</h2>
+<p><strong>TapFix AI Support</strong><br>support@tapfixai.app<br>tapfixai.app</p>
+</article></div></main>
+<footer><div class="wrap footer">© 2026 TapFix AI Studio. All rights reserved.</div></footer>
+</body>
+</html>
