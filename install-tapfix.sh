@@ -45,7 +45,11 @@ echo "Downloading TapFix AI..."
 curl -fL --progress-bar "${DMG_URL}" -o "${DMG_PATH}"
 
 echo "Mounting installer..."
-MOUNT_POINT="$(hdiutil attach "${DMG_PATH}" -nobrowse -quiet | awk '/\\/Volumes\\// {print substr($0, index($0, "/Volumes/")); exit}')"
+if [ -d "/Volumes/tapfix-desktop" ]; then
+  hdiutil detach "/Volumes/tapfix-desktop" -quiet || true
+fi
+
+MOUNT_POINT="$(hdiutil attach "${DMG_PATH}" -nobrowse | awk 'index($0, "/Volumes/") {print substr($0, index($0, "/Volumes/")); exit}')"
 if [ -z "${MOUNT_POINT}" ] || [ ! -d "${MOUNT_POINT}" ]; then
   echo "Could not mount TapFix AI DMG." >&2
   exit 1
