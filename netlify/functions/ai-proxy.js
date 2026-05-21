@@ -39,11 +39,14 @@ Correct ONLY real writing mistakes:
 - typos
 - punctuation mistakes
 - obvious grammar mistakes
+- capitalization mistakes
+- missing final punctuation
 
 Strict rules:
 - Preserve the original meaning.
 - Preserve the author's style.
 - Preserve the author's tone.
+- If a word is clearly mistyped, replace it with the most likely intended word.
 - Preserve slang, casual language, rough language, swear words and profanity.
 - Do NOT censor profanity.
 - Do NOT replace rude words with polite words.
@@ -56,6 +59,11 @@ Strict rules:
 - Do not explain anything.
 
 If the text contains profanity with typos, correct the typos but keep the profanity.
+
+Examples:
+привет как дела тваи -> Привет, как дела твои?
+как твои дела сегодня -> Как твои дела сегодня?
+я слушаю тебя -> Я слушаю тебя.
 
 Text:
 ${text}`;
