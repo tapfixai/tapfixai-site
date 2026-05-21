@@ -23,6 +23,14 @@ function json(statusCode, body) {
   };
 }
 
+function logProxyError(error) {
+  console.error("TapFix AI proxy error:", {
+    name: error?.name || "Error",
+    status: error?.status || error?.statusCode || null,
+    code: error?.code || null
+  });
+}
+
 function proofreadingPrompt(text) {
   return `You are a precise proofreading assistant.
 
@@ -179,7 +187,8 @@ export async function handler(event) {
         service: "TapFix AI Netlify Proxy",
         endpoint: "/.netlify/functions/ai-proxy",
         modelConfigured: Boolean(MODEL),
-        promptVersion: "style-aware-v3"
+        promptVersion: "style-aware-v3",
+        storesResponses: false
       });
     }
 
@@ -229,6 +238,7 @@ export async function handler(event) {
     const response = await openai.responses.create({
       model: MODEL,
       input,
+      store: false,
       temperature: 0.2
     });
 
@@ -237,7 +247,7 @@ export async function handler(event) {
       result: response.output_text || ""
     });
   } catch (error) {
-    console.error("TapFix AI proxy error:", error);
+    logProxyError(error);
     return json(500, { error: "AI request failed" });
   }
 }
