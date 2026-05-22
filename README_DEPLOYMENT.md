@@ -15,16 +15,14 @@ These can be served from GitHub Pages.
 
 ## Backend
 
-The old Netlify Function proxy is still present for rollback:
-
-- `netlify/functions/ai-proxy.js`
-- `netlify.toml`
-
-Do not delete it until the Railway API is deployed and TapFix builds are switched to:
+TapFix AI requests are handled by the Railway API:
 
 ```text
-VITE_TAPFIX_API_URL=https://YOUR-RAILWAY-DOMAIN.up.railway.app/tapfix/ai
+https://api.tapfixai.app/tapfix/ai
 ```
+
+The public site repository should stay static and should not contain OpenAI keys,
+backend functions, or proxy code.
 
 ## GitHub Pages
 

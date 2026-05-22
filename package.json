@@ -4,8 +4,5 @@
   "type": "module",
   "scripts": {
     "build": "echo Static site build complete"
-  },
-  "dependencies": {
-    "openai": "^4.80.1"
   }
 }
