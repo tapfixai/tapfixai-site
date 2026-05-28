@@ -25,6 +25,14 @@ remove_path() {
   fi
 }
 
+remove_glob() {
+  local pattern="$1"
+  local match
+  while IFS= read -r match; do
+    remove_path "${match}"
+  done < <(compgen -G "${pattern}" || true)
+}
+
 add_bundle_id() {
   local candidate="${1:-}"
   if [ -z "${candidate}" ]; then
@@ -68,9 +76,16 @@ for tapfix_id in "${TAPFIX_BUNDLE_IDS[@]}"; do
   remove_path "${HOME}/Library/Caches/${tapfix_id}"
   remove_path "${HOME}/Library/WebKit/${tapfix_id}"
   remove_path "${HOME}/Library/Saved Application State/${tapfix_id}.savedState"
+  remove_path "${HOME}/Library/HTTPStorages/${tapfix_id}"
+  remove_path "${HOME}/Library/Cookies/${tapfix_id}.binarycookies"
+  remove_path "${HOME}/Library/Logs/${tapfix_id}"
 done
 
 remove_path "${HOME}/Library/Logs/TapFix"
+remove_path "${HOME}/Library/LaunchAgents/TapFix AI.plist"
+remove_path "${HOME}/Library/LaunchAgents/${BUNDLE_ID}.plist"
+remove_path "/tmp/tapfix-desktop-single-instance.lock"
+remove_glob "${HOME}/Library/Application Support/CrashReporter/${APP_NAME}_*.plist"
 reset_tapfix_permissions
 
 echo "Downloading TapFix AI..."
