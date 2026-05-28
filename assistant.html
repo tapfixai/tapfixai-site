@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TapFix AI Button — Floating AI Assistant</title>
+
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <meta name="description" content="TapFix AI Button is a floating AI assistant for fixing mistakes, rewriting text, translating messages and AI dictation in the apps you use every day." />
+  <meta property="og:title" content="TapFix AI Button — Floating AI Assistant" />
+  <meta property="og:description" content="Fix, translate, rewrite and dictate text anywhere with a floating AI button." />
+  <meta property="og:image" content="banner-1024x500.png" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#7c3aed" />
+
+  <style>
+    :root {
+      --bg: #05040b;
+      --card: rgba(255,255,255,.065);
+      --text: #f8f5ff;
+      --muted: #b9b0cf;
+      --line: rgba(255,255,255,.12);
+      --purple: #7c3aed;
+      --purple2: #a855f7;
+      --purple3: #d8b4fe;
+      --radius: 30px;
+      --shadow: 0 30px 90px rgba(0,0,0,.58);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 82% 10%, rgba(124,58,237,.36), transparent 30%),
+        radial-gradient(circle at 12% 18%, rgba(168,85,247,.22), transparent 28%),
+        linear-gradient(180deg, #05040b 0%, #0b0715 48%, #05040b 100%);
+      color: var(--text);
+    }
+
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1160px, calc(100% - 40px)); margin: 0 auto; }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(18px);
+      background: rgba(5,4,11,.72);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 850; letter-spacing: -.03em; }
+    .logo {
+      width: 46px;
+      height: 46px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      background: linear-gradient(145deg, #160d2d 0%, #4c1d95 42%, #8b5cf6 100%);
+      box-shadow: 0 0 0 1px rgba(216,180,254,.2), 0 18px 45px rgba(124,58,237,.38);
+      color: white;
+      position: relative;
+    }
+    .logo small {
+      position: absolute;
+      right: 7px;
+      bottom: 5px;
+      font-size: 10px;
+      color: #d8b4fe;
+      letter-spacing: 0;
+    }
+    .links { display: flex; align-items: center; gap: 22px; color: var(--muted); font-size: 14px; }
+    .links a:hover { color: var(--text); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 0 22px;
+      border-radius: 999px;
+      font-weight: 800;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+    }
+    .btn.primary {
+      border: none;
+      background: linear-gradient(135deg, var(--purple), var(--purple2));
+      box-shadow: 0 18px 55px rgba(124,58,237,.4);
+    }
+
+    .hero {
+      padding: 88px 0 58px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 58px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 9px 14px;
+      border: 1px solid rgba(216,180,254,.22);
+      border-radius: 999px;
+      color: #ddd6fe;
+      background: rgba(124,58,237,.12);
+      font-size: 13px;
+      margin-bottom: 24px;
+      font-weight: 700;
+    }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: #a855f7; box-shadow: 0 0 18px #a855f7; }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(46px, 7vw, 82px);
+      line-height: .95;
+      letter-spacing: -.067em;
+    }
+    .grad { background: linear-gradient(135deg, #fff, #efe7ff 42%, #a855f7); -webkit-background-clip: text; color: transparent; }
+    .lead {
+      max-width: 650px;
+      margin: 24px 0 0;
+      font-size: clamp(18px, 2vw, 22px);
+      line-height: 1.55;
+      color: var(--muted);
+    }
+    .actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 34px; }
+    .trust { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 24px; color: var(--muted); font-size: 14px; }
+    .trust span::before { content: "✓"; color: #d8b4fe; margin-right: 7px; }
+
+    .brand-stage {
+      position: relative;
+      min-height: 650px;
+      display: grid;
+      place-items: center;
+    }
+    .orb {
+      position: absolute;
+      right: -40px;
+      bottom: 30px;
+      width: 430px;
+      height: 430px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 30%, rgba(168,85,247,.35), rgba(28,12,62,.25) 42%, transparent 67%);
+      border: 1px solid rgba(168,85,247,.22);
+      box-shadow: inset 0 0 50px rgba(168,85,247,.25), 0 0 90px rgba(124,58,237,.28);
+      opacity: .8;
+    }
+
+    .phone {
+      position: relative;
+      width: min(370px, 88vw);
+      padding: 13px;
+      border-radius: 42px;
+      background: linear-gradient(180deg, rgba(255,255,255,.22), rgba(255,255,255,.05));
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255,255,255,.18);
+      z-index: 2;
+    }
+    .screen {
+      overflow: hidden;
+      border-radius: 31px;
+      background: #111;
+      border: 1px solid rgba(255,255,255,.08);
+      aspect-ratio: 9 / 19.2;
+    }
+    .screen img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    section { padding: 80px 0; }
+    .section-head { max-width: 760px; margin-bottom: 34px; }
+    h2 { margin: 0; font-size: clamp(34px, 4vw, 54px); line-height: 1.02; letter-spacing: -.045em; }
+    .section-head p { color: var(--muted); font-size: 18px; line-height: 1.55; }
+
+    .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .card {
+      padding: 24px;
+      border-radius: var(--radius);
+      background: var(--card);
+      border: 1px solid var(--line);
+      min-height: 210px;
+    }
+    .icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background: rgba(124,58,237,.20);
+      color: #ddd6fe;
+      margin-bottom: 18px;
+      font-weight: 900;
+    }
+    .card h3 { margin: 0 0 10px; font-size: 20px; letter-spacing: -.02em; }
+    .card p { margin: 0; color: var(--muted); line-height: 1.55; }
+
+    .banner-preview {
+      border-radius: 34px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: linear-gradient(135deg, #090713, #1c0b3d 55%, #07060d);
+      min-height: 320px;
+      position: relative;
+      display: grid;
+      grid-template-columns: .7fr 1.3fr;
+      align-items: center;
+      padding: 46px;
+      box-shadow: 0 30px 100px rgba(0,0,0,.45);
+      margin-bottom: 36px;
+    }
+    .banner-preview::after {
+      content: "";
+      position: absolute;
+      right: -150px;
+      bottom: -250px;
+      width: 520px;
+      height: 520px;
+      border-radius: 50%;
+      border: 2px solid rgba(168,85,247,.65);
+      box-shadow: 0 0 80px rgba(168,85,247,.45);
+    }
+    .big-icon {
+      width: 170px;
+      height: 170px;
+      border-radius: 44px;
+      display: grid;
+      place-items: center;
+      font-size: 78px;
+      font-weight: 950;
+      font-style: italic;
+      background: linear-gradient(145deg, #0f0820 0%, #4c1d95 45%, #9b5cf6 100%);
+      box-shadow: 0 0 0 1px rgba(216,180,254,.22), 0 25px 80px rgba(124,58,237,.48);
+      position: relative;
+    }
+    .big-icon .ai {
+      position: absolute;
+      right: 22px;
+      bottom: 18px;
+      font-size: 34px;
+      color: #d8b4fe;
+      font-weight: 900;
+      letter-spacing: -.06em;
+    }
+    .banner-preview h3 { margin: 0; font-size: clamp(42px, 6vw, 76px); letter-spacing: -.055em; }
+    .banner-preview h3 span { color: #a855f7; }
+    .banner-preview p { color: var(--muted); font-size: 20px; line-height: 1.45; margin: 12px 0 0; max-width: 520px; }
+
+    .shots { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .shot {
+      padding: 10px;
+      border-radius: 30px;
+      background: linear-gradient(180deg, rgba(255,255,255,.16), rgba(255,255,255,.04));
+      border: 1px solid var(--line);
+      box-shadow: 0 22px 60px rgba(0,0,0,.35);
+    }
+    .shot img { width: 100%; display: block; border-radius: 22px; aspect-ratio: 9 / 19.2; object-fit: cover; background: #111; }
+    .caption { padding: 12px 6px 4px; color: var(--muted); font-size: 13px; }
+
+    .privacy {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+    .panel {
+      padding: 34px;
+      border-radius: 34px;
+      background: linear-gradient(180deg, rgba(124,58,237,.16), rgba(255,255,255,.055));
+      border: 1px solid var(--line);
+    }
+    .list { display: grid; gap: 12px; margin-top: 22px; }
+    .list div { padding: 16px; border-radius: 18px; background: rgba(255,255,255,.055); color: var(--muted); border: 1px solid rgba(255,255,255,.08); }
+    .list strong { color: var(--text); }
+
+    .pricing { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+    .price-card {
+      position: relative;
+      padding: 32px;
+      border-radius: 34px;
+      background: var(--card);
+      border: 1px solid var(--line);
+    }
+    .price-card.featured {
+      background: linear-gradient(180deg, rgba(124,58,237,.25), rgba(255,255,255,.07));
+      box-shadow: 0 28px 90px rgba(124,58,237,.22);
+    }
+    .tag { position: absolute; top: 24px; right: 24px; padding: 8px 12px; border-radius: 999px; background: rgba(216,180,254,.18); color: #e9d5ff; font-size: 12px; font-weight: 900; }
+    .price { font-size: 50px; font-weight: 900; letter-spacing: -.05em; margin: 14px 0; }
+    .price span { font-size: 16px; color: var(--muted); letter-spacing: 0; font-weight: 600; }
+    ul { margin: 22px 0 0; padding: 0; list-style: none; display: grid; gap: 12px; color: var(--muted); }
+    li::before { content: "✓"; color: #d8b4fe; margin-right: 9px; }
+
+    footer { padding: 44px 0; border-top: 1px solid var(--line); color: var(--muted); }
+    .foot { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    .foot a { color: var(--text); }
+
+    @media (max-width: 920px) {
+      .hero, .privacy, .banner-preview { grid-template-columns: 1fr; }
+      .brand-stage { min-height: 560px; }
+      .grid, .shots { grid-template-columns: repeat(2, 1fr); }
+      .pricing { grid-template-columns: 1fr; }
+      .links { display: none; }
+      .orb { right: -120px; }
+    }
+    @media (max-width: 560px) {
+      .wrap { width: min(100% - 24px, 1160px); }
+      .hero { padding-top: 54px; }
+      .grid, .shots { grid-template-columns: 1fr; }
+      .trust { display: grid; }
+      .banner-preview { padding: 28px; }
+      .big-icon { width: 145px; height: 145px; font-size: 66px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="TapFix AI Home">
+        <div class="logo">TF<small>AI</small></div>
+        <span>TapFix AI</span>
+      </a>
+      <nav class="links" aria-label="Main navigation">
+        <a href="#features">Features</a>
+        <a href="index.html">Keyboard</a>
+        <a href="#screenshots">Screenshots</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#pricing">Pricing</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="accessibility-disclosure.html">Accessibility</a>
+        <a href="#support">Support</a>
+      </nav>
+      <a class="btn primary" href="#pricing">Start free trial</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="wrap hero">
+      <div>
+        <div class="badge"><span class="dot"></span> Coming soon on Google Play</div>
+        <h1><span class="grad">TapFix AI</span><br>your daily AI assistant.</h1>
+        <p class="lead">Fix mistakes, rewrite text, translate messages and use AI dictation directly inside the apps you already use.</p>
+        <div class="actions">
+          <a class="btn primary" href="#pricing">Get it on Google Play</a>
+          <a class="btn" href="index.html">AI Keyboard</a>
+          <a class="btn" href="#screenshots">See real screenshots</a>
+        </div>
+        <div class="trust">
+          <span>Floating AI button</span>
+          <span>Privacy-first controls</span>
+          <span>Built by TapFix AI Studio</span>
+        </div>
+      </div>
+
+      <div class="brand-stage" aria-label="TapFix AI app preview">
+        <div class="orb"></div>
+        <div class="phone">
+          <div class="screen">
+            <img src="images/tapfix-floating-menu.jpg" alt="TapFix AI floating menu screenshot">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="features">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>One assistant for everyday text.</h2>
+          <p>Designed for quick mobile work: messages, marketplaces, email, notes and social apps.</p>
+        </div>
+        <div class="grid">
+          <article class="card"><div class="icon">Aa</div><h3>Fix mistakes</h3><p>Correct spelling, grammar and awkward phrasing in seconds.</p></article>
+          <article class="card"><div class="icon">↻</div><h3>Rewrite</h3><p>Make your text clearer, cleaner and more professional.</p></article>
+          <article class="card"><div class="icon">文</div><h3>Translate</h3><p>Translate selected text into your preferred language fast.</p></article>
+          <article class="card"><div class="icon">🎙</div><h3>AI dictation</h3><p>Speak naturally and turn your voice into polished text.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="keyboard">
+      <div class="wrap privacy">
+        <div class="panel">
+          <h2>TapFix AI Keyboard.</h2>
+          <p class="lead">A full Android keyboard with AI rewrite, translation, dictation, emoji search, clipboard history and screenshot quick paste built directly into the typing flow.</p>
+          <div class="actions">
+            <a class="btn primary" href="index.html">Keyboard details</a>
+            <a class="btn" href="privacy-policy.html">Privacy Policy</a>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="list">
+            <div><strong>User action first:</strong> AI text actions run when you choose Fix, Rewrite, Style or Translate.</div>
+            <div><strong>Local typing tools:</strong> keyboard settings, quick replacements, learned suggestions, emoji history and clipboard history are stored on the device.</div>
+            <div><strong>Clear permissions:</strong> microphone is for dictation, photos/images are for screenshot quick paste, vibration is for haptic feedback, internet is for AI features.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="banner-preview">
+          <div class="big-icon">TF<span class="ai">AI</span></div>
+          <div>
+            <h3>TapFix <span>AI</span></h3>
+            <p>Smart AI assistant for your daily tasks and productivity.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="screenshots">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Real app. Real screens.</h2>
+          <p>No fake product story. TapFix AI uses real Android permissions and real in-app controls.</p>
+        </div>
+        <div class="shots">
+          <div class="shot"><img src="images/tapfix-floating-menu.jpg" alt="TapFix AI floating assistant screenshot"><div class="caption">Floating assistant</div></div>
+          <div class="shot"><img src="images/tapfix-screenshot-2.jpg" alt="TapFix AI app controls screenshot"><div class="caption">App controls</div></div>
+          <div class="shot"><img src="images/tapfix-screenshot-3.jpg" alt="TapFix AI allowed apps screenshot"><div class="caption">Allowed apps</div></div>
+          <div class="shot"><img src="images/tapfix-screenshot-4.jpg" alt="TapFix AI settings screenshot"><div class="caption">Settings and permissions</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="privacy">
+      <div class="wrap privacy">
+        <div class="panel">
+          <h2>Privacy-first by design.</h2>
+          <p class="lead">TapFix AI is designed to work only when you ask it to. You stay in control of where the assistant appears.</p>
+        </div>
+        <div class="panel">
+          <div class="list">
+            <div><strong>Accessibility Service:</strong> used to detect editable text fields, show the floating AI button, read selected text after your action, and insert corrected, translated or rewritten text back into the active input field.</div>
+            <div><strong>Overlay permission:</strong> used to show the floating AI button above allowed apps.</div>
+            <div><strong>GPT API processing:</strong> selected text may be sent to an AI API only to generate the result requested by the user.</div>
+            <div><strong>User control:</strong> choose allowed apps and disable permissions anytime in Android Settings.</div>
+          </div>
+          <div class="actions">
+            <a class="btn primary" href="privacy-policy.html">Privacy Policy</a>
+            <a class="btn" href="accessibility-disclosure.html">Accessibility Disclosure</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Simple pricing.</h2>
+          <p>Start with a 3-day free trial. Continue monthly or save with yearly access.</p>
+        </div>
+        <div class="pricing">
+          <article class="price-card">
+            <h3>Monthly</h3>
+            <div class="price">$4.99 <span>/ month</span></div>
+            <a class="btn" href="#support">Start 3-day free trial</a>
+            <ul>
+              <li>Floating AI assistant</li>
+              <li>Grammar fix and rewrite</li>
+              <li>Translation</li>
+              <li>AI dictation</li>
+            </ul>
+          </article>
+          <article class="price-card featured">
+            <div class="tag">Best Value</div>
+            <h3>Yearly</h3>
+            <div class="price">$49.99 <span>/ year</span></div>
+            <a class="btn primary" href="#support">Start 3-day free trial</a>
+            <ul>
+              <li>Everything in Monthly</li>
+              <li>Better yearly value</li>
+              <li>Built for daily use</li>
+              <li>Cancel anytime</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="support">
+      <div class="wrap">
+        <div class="panel">
+          <h2>Support</h2>
+          <p class="lead">Need help with permissions, subscription or app setup? Contact TapFix AI Studio.</p>
+          <div class="actions">
+            <a class="btn primary" href="mailto:support@tapfixai.app">support@tapfixai.app</a>
+            <a class="btn" href="#top">Back to top</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <div>© 2026 TapFix AI Studio. All rights reserved.</div>
+      <div><a href="index.html">Keyboard</a> · <a href="privacy-policy.html">Privacy Policy</a> · <a href="accessibility-disclosure.html">Accessibility Disclosure</a> · <a href="terms.html">Terms of Service</a> · <a href="support.html">Support</a> · EN / RU</div>
+    </div>
+  </footer>
+</body>
+</html>
