@@ -9,6 +9,12 @@ TMP_DIR="$(mktemp -d /tmp/tapfix-install.XXXXXX)"
 DMG_PATH="${TMP_DIR}/TapFix-AI-latest.dmg"
 MOUNT_POINT=""
 TAPFIX_BUNDLE_IDS=("${BUNDLE_ID}")
+TAPFIX_TCC_SERVICES=(
+  "kTCCServiceAccessibility"
+  "kTCCServiceAppleEvents"
+  "kTCCServiceListenEvent"
+  "kTCCServiceMicrophone"
+)
 
 cleanup() {
   if [ -n "${MOUNT_POINT}" ] && [ -d "${MOUNT_POINT}" ]; then
@@ -56,7 +62,50 @@ reset_tapfix_permissions() {
     tccutil reset Accessibility "${bundle_id}" >/dev/null 2>&1 || true
     tccutil reset AppleEvents "${bundle_id}" >/dev/null 2>&1 || true
     tccutil reset ListenEvent "${bundle_id}" >/dev/null 2>&1 || true
+    tccutil reset Microphone "${bundle_id}" >/dev/null 2>&1 || true
   done
+
+  remove_tapfix_tcc_rows
+  killall tccd >/dev/null 2>&1 || true
+}
+
+remove_tapfix_tcc_rows() {
+  local tcc_db="${HOME}/Library/Application Support/com.apple.TCC/TCC.db"
+  if [ ! -f "${tcc_db}" ]; then
+    return
+  fi
+
+  if ! command -v sqlite3 >/dev/null 2>&1; then
+    echo "sqlite3 not found; skipping deep TapFix permission cleanup."
+    return
+  fi
+
+  local service_list=""
+  local service
+  for service in "${TAPFIX_TCC_SERVICES[@]}"; do
+    if [ -n "${service_list}" ]; then
+      service_list="${service_list},"
+    fi
+    service_list="${service_list}'${service}'"
+  done
+
+  local sql="
+PRAGMA busy_timeout=3000;
+DELETE FROM access
+WHERE service IN (${service_list})
+  AND (
+    lower(client) LIKE '%tapfix%'
+    OR lower(client) LIKE '%com.marat.tapfix-desktop%'
+    OR lower(client) LIKE '%tapfix-desktop%'
+  );
+"
+
+  if sqlite3 "${tcc_db}" "${sql}" >/dev/null 2>&1; then
+    echo "Removed stale TapFix permission rows from macOS privacy database."
+  else
+    echo "Could not directly edit macOS privacy database; tccutil reset was still applied."
+    echo "If TapFix stays stuck in Privacy & Security, remove the old row manually once."
+  fi
 }
 
 echo "TapFix AI clean install"
