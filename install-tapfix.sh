@@ -5,6 +5,8 @@ APP_NAME="tapfix-desktop"
 BUNDLE_ID="com.marat.tapfix-desktop"
 APP_PATH="/Applications/${APP_NAME}.app"
 DMG_URL="${TAPFIX_DMG_URL:-https://raw.githubusercontent.com/tapfixai/tapfixai-site/main/downloads/TapFix-AI-latest.dmg}"
+TAPFIX_DEEP_TCC_RESET="${TAPFIX_DEEP_TCC_RESET:-0}"
+TAPFIX_OPEN_PRIVACY_SETTINGS="${TAPFIX_OPEN_PRIVACY_SETTINGS:-1}"
 TMP_DIR="$(mktemp -d /tmp/tapfix-install.XXXXXX)"
 DMG_PATH="${TMP_DIR}/TapFix-AI-latest.dmg"
 MOUNT_POINT=""
@@ -14,6 +16,7 @@ TAPFIX_TCC_SERVICES=(
   "kTCCServiceAppleEvents"
   "kTCCServiceListenEvent"
   "kTCCServiceMicrophone"
+  "kTCCServiceScreenCapture"
 )
 
 cleanup() {
@@ -59,14 +62,36 @@ reset_tapfix_permissions() {
   local bundle_id
   for bundle_id in "${TAPFIX_BUNDLE_IDS[@]}"; do
     echo "Resetting TapFix permissions for ${bundle_id}..."
+    tccutil reset All "${bundle_id}" >/dev/null 2>&1 || true
     tccutil reset Accessibility "${bundle_id}" >/dev/null 2>&1 || true
     tccutil reset AppleEvents "${bundle_id}" >/dev/null 2>&1 || true
     tccutil reset ListenEvent "${bundle_id}" >/dev/null 2>&1 || true
     tccutil reset Microphone "${bundle_id}" >/dev/null 2>&1 || true
+    tccutil reset ScreenCapture "${bundle_id}" >/dev/null 2>&1 || true
   done
 
   remove_tapfix_tcc_rows
+
+  if [ "${TAPFIX_DEEP_TCC_RESET}" = "1" ]; then
+    echo "Deep-resetting macOS privacy services so TapFix asks for fresh permissions..."
+    echo "This may also make macOS ask other apps for these permissions again."
+    tccutil reset Accessibility >/dev/null 2>&1 || true
+    tccutil reset ListenEvent >/dev/null 2>&1 || true
+    tccutil reset AppleEvents >/dev/null 2>&1 || true
+  fi
+
   killall tccd >/dev/null 2>&1 || true
+}
+
+open_privacy_settings() {
+  if [ "${TAPFIX_OPEN_PRIVACY_SETTINGS}" != "1" ]; then
+    return
+  fi
+
+  echo "Opening macOS Privacy settings. Enable tapfix-desktop in Accessibility and Input Monitoring if prompted."
+  open "x-apple.systempreferences:com.apple.preference.security?Privacy_Accessibility" >/dev/null 2>&1 || true
+  sleep 0.5
+  open "x-apple.systempreferences:com.apple.preference.security?Privacy_ListenEvent" >/dev/null 2>&1 || true
 }
 
 remove_tapfix_tcc_rows() {
@@ -130,6 +155,15 @@ for tapfix_id in "${TAPFIX_BUNDLE_IDS[@]}"; do
   remove_path "${HOME}/Library/Logs/${tapfix_id}"
 done
 
+remove_path "${HOME}/Library/Application Support/${APP_NAME}"
+remove_path "${HOME}/Library/Preferences/${APP_NAME}.plist"
+remove_path "${HOME}/Library/Caches/${APP_NAME}"
+remove_path "${HOME}/Library/WebKit/${APP_NAME}"
+remove_path "${HOME}/Library/Saved Application State/${APP_NAME}.savedState"
+remove_path "${HOME}/Library/HTTPStorages/${APP_NAME}"
+remove_path "${HOME}/Library/Cookies/${APP_NAME}.binarycookies"
+remove_path "${HOME}/Library/Logs/${APP_NAME}"
+
 remove_path "${HOME}/Library/Logs/TapFix"
 remove_path "${HOME}/Library/LaunchAgents/TapFix AI.plist"
 remove_path "${HOME}/Library/LaunchAgents/${BUNDLE_ID}.plist"
@@ -164,7 +198,11 @@ echo "Installing to /Applications..."
 cp -R "${SOURCE_APP}" /Applications/ 2>/dev/null || sudo cp -R "${SOURCE_APP}" /Applications/
 xattr -dr com.apple.quarantine "${APP_PATH}" 2>/dev/null || true
 
+add_bundle_id "$(defaults read "${APP_PATH}/Contents/Info" CFBundleIdentifier 2>/dev/null || true)"
+reset_tapfix_permissions
+
 echo "Starting TapFix AI..."
 open "${APP_PATH}"
+open_privacy_settings
 
 echo "Done."
