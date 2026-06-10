@@ -2,7 +2,8 @@
 set -euo pipefail
 
 APP_NAME="tapfix-desktop"
-BUNDLE_ID="com.marat.tapfix-desktop"
+BUNDLE_ID="ai.tapfix.desktop"
+OLD_BUNDLE_ID="com.marat.tapfix-desktop"
 APP_PATH="/Applications/${APP_NAME}.app"
 DMG_URL="${TAPFIX_DMG_URL:-https://raw.githubusercontent.com/tapfixai/tapfixai-site/main/downloads/TapFix-AI-latest.dmg}"
 TAPFIX_DEEP_TCC_RESET="${TAPFIX_DEEP_TCC_RESET:-0}"
@@ -10,7 +11,7 @@ TAPFIX_OPEN_PRIVACY_SETTINGS="${TAPFIX_OPEN_PRIVACY_SETTINGS:-1}"
 TMP_DIR="$(mktemp -d /tmp/tapfix-install.XXXXXX)"
 DMG_PATH="${TMP_DIR}/TapFix-AI-latest.dmg"
 MOUNT_POINT=""
-TAPFIX_BUNDLE_IDS=("${BUNDLE_ID}")
+TAPFIX_BUNDLE_IDS=("${BUNDLE_ID}" "${OLD_BUNDLE_ID}")
 TAPFIX_TCC_SERVICES=(
   "kTCCServiceAccessibility"
   "kTCCServiceAppleEvents"
@@ -120,6 +121,7 @@ DELETE FROM access
 WHERE service IN (${service_list})
   AND (
     lower(client) LIKE '%tapfix%'
+    OR lower(client) LIKE '%ai.tapfix.desktop%'
     OR lower(client) LIKE '%com.marat.tapfix-desktop%'
     OR lower(client) LIKE '%tapfix-desktop%'
   );
@@ -166,7 +168,9 @@ remove_path "${HOME}/Library/Logs/${APP_NAME}"
 
 remove_path "${HOME}/Library/Logs/TapFix"
 remove_path "${HOME}/Library/LaunchAgents/TapFix AI.plist"
-remove_path "${HOME}/Library/LaunchAgents/${BUNDLE_ID}.plist"
+for tapfix_id in "${TAPFIX_BUNDLE_IDS[@]}"; do
+  remove_path "${HOME}/Library/LaunchAgents/${tapfix_id}.plist"
+done
 remove_path "/tmp/tapfix-desktop-single-instance.lock"
 remove_glob "${HOME}/Library/Application Support/CrashReporter/${APP_NAME}_*.plist"
 reset_tapfix_permissions
