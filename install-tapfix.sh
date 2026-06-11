@@ -89,10 +89,8 @@ open_privacy_settings() {
     return
   fi
 
-  echo "Opening macOS Privacy settings. Enable tapfix-desktop in Accessibility and Input Monitoring if prompted."
+  echo "Opening macOS Accessibility settings. Enable tapfix-desktop if prompted."
   open "x-apple.systempreferences:com.apple.preference.security?Privacy_Accessibility" >/dev/null 2>&1 || true
-  sleep 0.5
-  open "x-apple.systempreferences:com.apple.preference.security?Privacy_ListenEvent" >/dev/null 2>&1 || true
 }
 
 remove_tapfix_tcc_rows() {
