@@ -7,6 +7,7 @@ OLD_BUNDLE_ID="com.marat.tapfix-desktop"
 APP_PATH="/Applications/${APP_NAME}.app"
 DMG_URL="${TAPFIX_DMG_URL:-https://raw.githubusercontent.com/tapfixai/tapfixai-site/main/downloads/TapFix-AI-latest.dmg}"
 TAPFIX_DEEP_TCC_RESET="${TAPFIX_DEEP_TCC_RESET:-1}"
+TAPFIX_KEEP_PERMISSIONS="${TAPFIX_KEEP_PERMISSIONS:-0}"
 TAPFIX_OPEN_PRIVACY_SETTINGS="${TAPFIX_OPEN_PRIVACY_SETTINGS:-1}"
 TMP_DIR="$(mktemp -d /tmp/tapfix-install.XXXXXX)"
 DMG_PATH="${TMP_DIR}/TapFix-AI-latest.dmg"
@@ -205,44 +206,53 @@ WHERE service IN (${service_list})
 }
 
 echo "TapFix AI clean install"
+if [ "${TAPFIX_KEEP_PERMISSIONS}" = "1" ]; then
+  echo "TapFix AI update mode: keeping macOS permissions and local settings."
+fi
 echo "Closing old app..."
 pkill -f "${APP_NAME}" 2>/dev/null || true
 
-echo "Removing old app and local data..."
+if [ "${TAPFIX_KEEP_PERMISSIONS}" = "1" ]; then
+  echo "Replacing app only..."
+else
+  echo "Removing old app and local data..."
+fi
 if [ -d "${APP_PATH}" ]; then
   add_bundle_id "$(defaults read "${APP_PATH}/Contents/Info" CFBundleIdentifier 2>/dev/null || true)"
 fi
 
 remove_path "${APP_PATH}"
 
-for tapfix_id in "${TAPFIX_BUNDLE_IDS[@]}"; do
-  remove_path "${HOME}/Library/Application Support/${tapfix_id}"
-  remove_path "${HOME}/Library/Preferences/${tapfix_id}.plist"
-  remove_path "${HOME}/Library/Caches/${tapfix_id}"
-  remove_path "${HOME}/Library/WebKit/${tapfix_id}"
-  remove_path "${HOME}/Library/Saved Application State/${tapfix_id}.savedState"
-  remove_path "${HOME}/Library/HTTPStorages/${tapfix_id}"
-  remove_path "${HOME}/Library/Cookies/${tapfix_id}.binarycookies"
-  remove_path "${HOME}/Library/Logs/${tapfix_id}"
-done
+if [ "${TAPFIX_KEEP_PERMISSIONS}" != "1" ]; then
+  for tapfix_id in "${TAPFIX_BUNDLE_IDS[@]}"; do
+    remove_path "${HOME}/Library/Application Support/${tapfix_id}"
+    remove_path "${HOME}/Library/Preferences/${tapfix_id}.plist"
+    remove_path "${HOME}/Library/Caches/${tapfix_id}"
+    remove_path "${HOME}/Library/WebKit/${tapfix_id}"
+    remove_path "${HOME}/Library/Saved Application State/${tapfix_id}.savedState"
+    remove_path "${HOME}/Library/HTTPStorages/${tapfix_id}"
+    remove_path "${HOME}/Library/Cookies/${tapfix_id}.binarycookies"
+    remove_path "${HOME}/Library/Logs/${tapfix_id}"
+  done
 
-remove_path "${HOME}/Library/Application Support/${APP_NAME}"
-remove_path "${HOME}/Library/Preferences/${APP_NAME}.plist"
-remove_path "${HOME}/Library/Caches/${APP_NAME}"
-remove_path "${HOME}/Library/WebKit/${APP_NAME}"
-remove_path "${HOME}/Library/Saved Application State/${APP_NAME}.savedState"
-remove_path "${HOME}/Library/HTTPStorages/${APP_NAME}"
-remove_path "${HOME}/Library/Cookies/${APP_NAME}.binarycookies"
-remove_path "${HOME}/Library/Logs/${APP_NAME}"
+  remove_path "${HOME}/Library/Application Support/${APP_NAME}"
+  remove_path "${HOME}/Library/Preferences/${APP_NAME}.plist"
+  remove_path "${HOME}/Library/Caches/${APP_NAME}"
+  remove_path "${HOME}/Library/WebKit/${APP_NAME}"
+  remove_path "${HOME}/Library/Saved Application State/${APP_NAME}.savedState"
+  remove_path "${HOME}/Library/HTTPStorages/${APP_NAME}"
+  remove_path "${HOME}/Library/Cookies/${APP_NAME}.binarycookies"
+  remove_path "${HOME}/Library/Logs/${APP_NAME}"
 
-remove_path "${HOME}/Library/Logs/TapFix"
-remove_path "${HOME}/Library/LaunchAgents/TapFix AI.plist"
-for tapfix_id in "${TAPFIX_BUNDLE_IDS[@]}"; do
-  remove_path "${HOME}/Library/LaunchAgents/${tapfix_id}.plist"
-done
-remove_path "/tmp/tapfix-desktop-single-instance.lock"
-remove_glob "${HOME}/Library/Application Support/CrashReporter/${APP_NAME}_*.plist"
-reset_tapfix_permissions
+  remove_path "${HOME}/Library/Logs/TapFix"
+  remove_path "${HOME}/Library/LaunchAgents/TapFix AI.plist"
+  for tapfix_id in "${TAPFIX_BUNDLE_IDS[@]}"; do
+    remove_path "${HOME}/Library/LaunchAgents/${tapfix_id}.plist"
+  done
+  remove_path "/tmp/tapfix-desktop-single-instance.lock"
+  remove_glob "${HOME}/Library/Application Support/CrashReporter/${APP_NAME}_*.plist"
+  reset_tapfix_permissions
+fi
 
 echo "Downloading TapFix AI..."
 curl -fL --progress-bar "${DMG_URL}" -o "${DMG_PATH}"
@@ -272,7 +282,9 @@ cp -R "${SOURCE_APP}" /Applications/ 2>/dev/null || sudo cp -R "${SOURCE_APP}" /
 xattr -dr com.apple.quarantine "${APP_PATH}" 2>/dev/null || true
 
 add_bundle_id "$(defaults read "${APP_PATH}/Contents/Info" CFBundleIdentifier 2>/dev/null || true)"
-reset_tapfix_permissions
+if [ "${TAPFIX_KEEP_PERMISSIONS}" != "1" ]; then
+  reset_tapfix_permissions
+fi
 
 echo "Starting TapFix AI..."
 open -b "${BUNDLE_ID}" || open "${APP_PATH}"
@@ -283,6 +295,8 @@ for _ in 1 2 3 4 5 6 7 8 9 10; do
   sleep 0.5
 done
 sleep 3
-open_privacy_settings
+if [ "${TAPFIX_KEEP_PERMISSIONS}" != "1" ]; then
+  open_privacy_settings
+fi
 
 echo "Done."
