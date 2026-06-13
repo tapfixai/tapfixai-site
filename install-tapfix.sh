@@ -28,6 +28,14 @@ TAPFIX_TCC_SERVICES=(
   "kTCCServiceMicrophone"
   "kTCCServiceScreenCapture"
 )
+TAPFIX_TCCUTIL_SERVICES=(
+  "All"
+  "Accessibility"
+  "AppleEvents"
+  "ListenEvent"
+  "Microphone"
+  "ScreenCapture"
+)
 
 cleanup() {
   if [ -n "${MOUNT_POINT}" ] && [ -d "${MOUNT_POINT}" ]; then
@@ -68,16 +76,32 @@ add_bundle_id() {
   TAPFIX_BUNDLE_IDS+=("${candidate}")
 }
 
+ensure_admin_for_tcc() {
+  if [ "${TAPFIX_DEEP_TCC_RESET}" != "1" ]; then
+    return
+  fi
+
+  if sudo -n true >/dev/null 2>&1; then
+    return
+  fi
+
+  echo "Administrator password is required to remove old TapFix permission rows from macOS privacy database."
+  if ! sudo -v; then
+    echo "Could not get administrator access; will still run non-admin tccutil reset."
+  fi
+}
+
 reset_tapfix_permissions() {
+  ensure_admin_for_tcc
+
   local bundle_id
+  local service
   for bundle_id in "${TAPFIX_BUNDLE_IDS[@]}"; do
     echo "Resetting TapFix permissions for ${bundle_id}..."
-    tccutil reset All "${bundle_id}" >/dev/null 2>&1 || true
-    tccutil reset Accessibility "${bundle_id}" >/dev/null 2>&1 || true
-    tccutil reset AppleEvents "${bundle_id}" >/dev/null 2>&1 || true
-    tccutil reset ListenEvent "${bundle_id}" >/dev/null 2>&1 || true
-    tccutil reset Microphone "${bundle_id}" >/dev/null 2>&1 || true
-    tccutil reset ScreenCapture "${bundle_id}" >/dev/null 2>&1 || true
+    for service in "${TAPFIX_TCCUTIL_SERVICES[@]}"; do
+      tccutil reset "${service}" "${bundle_id}" >/dev/null 2>&1 || true
+      sudo tccutil reset "${service}" "${bundle_id}" >/dev/null 2>&1 || true
+    done
   done
 
   remove_tapfix_tcc_rows
@@ -85,12 +109,14 @@ reset_tapfix_permissions() {
   if [ "${TAPFIX_DEEP_TCC_RESET}" = "1" ]; then
     echo "Deep-resetting macOS privacy services so TapFix asks for fresh permissions..."
     echo "This may also make macOS ask other apps for these permissions again."
-    tccutil reset Accessibility >/dev/null 2>&1 || true
-    tccutil reset ListenEvent >/dev/null 2>&1 || true
-    tccutil reset AppleEvents >/dev/null 2>&1 || true
+    for service in "Accessibility" "ListenEvent" "AppleEvents"; do
+      tccutil reset "${service}" >/dev/null 2>&1 || true
+      sudo tccutil reset "${service}" >/dev/null 2>&1 || true
+    done
   fi
 
   killall tccd >/dev/null 2>&1 || true
+  sudo killall tccd >/dev/null 2>&1 || true
 }
 
 open_privacy_settings() {
@@ -130,15 +156,29 @@ WHERE service IN (${service_list})
     OR lower(client) LIKE '%tapfix-desktop%'
   );
 "
+  local count_sql="
+PRAGMA busy_timeout=3000;
+SELECT COUNT(*) FROM access
+WHERE service IN (${service_list})
+  AND (
+    lower(client) LIKE '%tapfix%'
+    OR lower(client) LIKE '%ai.tapfix.desktop%'
+    OR lower(client) LIKE '%com.marat.tapfix-desktop%'
+    OR lower(client) LIKE '%tapfix-desktop%'
+  );
+"
 
   local user_tcc_db="${HOME}/Library/Application Support/com.apple.TCC/TCC.db"
   local system_tcc_db="/Library/Application Support/com.apple.TCC/TCC.db"
   local removed_any=0
+  local remaining=""
 
   if [ -f "${user_tcc_db}" ]; then
     if sqlite3 "${user_tcc_db}" "${sql}" >/dev/null 2>&1; then
       echo "Removed stale TapFix permission rows from user macOS privacy database."
       removed_any=1
+      remaining="$(sqlite3 "${user_tcc_db}" "${count_sql}" 2>/dev/null || echo unknown)"
+      echo "Remaining user TapFix permission rows: ${remaining}"
     else
       echo "Could not directly edit user macOS privacy database; tccutil reset was still applied."
     fi
@@ -148,6 +188,8 @@ WHERE service IN (${service_list})
     if sudo sqlite3 "${system_tcc_db}" "${sql}" >/dev/null 2>&1; then
       echo "Removed stale TapFix permission rows from system macOS privacy database."
       removed_any=1
+      remaining="$(sudo sqlite3 "${system_tcc_db}" "${count_sql}" 2>/dev/null || echo unknown)"
+      echo "Remaining system TapFix permission rows: ${remaining}"
     else
       echo "Could not directly edit system macOS privacy database; tccutil reset was still applied."
     fi
