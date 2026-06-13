@@ -105,11 +105,6 @@ open_privacy_settings() {
 }
 
 remove_tapfix_tcc_rows() {
-  local tcc_db="${HOME}/Library/Application Support/com.apple.TCC/TCC.db"
-  if [ ! -f "${tcc_db}" ]; then
-    return
-  fi
-
   if ! command -v sqlite3 >/dev/null 2>&1; then
     echo "sqlite3 not found; skipping deep TapFix permission cleanup."
     return
@@ -136,11 +131,34 @@ WHERE service IN (${service_list})
   );
 "
 
-  if sqlite3 "${tcc_db}" "${sql}" >/dev/null 2>&1; then
-    echo "Removed stale TapFix permission rows from macOS privacy database."
-  else
+  local user_tcc_db="${HOME}/Library/Application Support/com.apple.TCC/TCC.db"
+  local system_tcc_db="/Library/Application Support/com.apple.TCC/TCC.db"
+  local removed_any=0
+
+  if [ -f "${user_tcc_db}" ]; then
+    if sqlite3 "${user_tcc_db}" "${sql}" >/dev/null 2>&1; then
+      echo "Removed stale TapFix permission rows from user macOS privacy database."
+      removed_any=1
+    else
+      echo "Could not directly edit user macOS privacy database; tccutil reset was still applied."
+    fi
+  fi
+
+  if [ -f "${system_tcc_db}" ]; then
+    if sudo sqlite3 "${system_tcc_db}" "${sql}" >/dev/null 2>&1; then
+      echo "Removed stale TapFix permission rows from system macOS privacy database."
+      removed_any=1
+    else
+      echo "Could not directly edit system macOS privacy database; tccutil reset was still applied."
+    fi
+  fi
+
+  if [ "${removed_any}" = "0" ]; then
     echo "Could not directly edit macOS privacy database; tccutil reset was still applied."
     echo "If TapFix stays stuck in Privacy & Security, remove the old row manually once."
+  else
+    killall tccd >/dev/null 2>&1 || true
+    sudo killall tccd >/dev/null 2>&1 || true
   fi
 }
 
