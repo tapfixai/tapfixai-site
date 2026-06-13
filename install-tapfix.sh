@@ -275,7 +275,14 @@ add_bundle_id "$(defaults read "${APP_PATH}/Contents/Info" CFBundleIdentifier 2>
 reset_tapfix_permissions
 
 echo "Starting TapFix AI..."
-open "${APP_PATH}"
+open -b "${BUNDLE_ID}" || open "${APP_PATH}"
+for _ in 1 2 3 4 5 6 7 8 9 10; do
+  if pgrep -f "${APP_PATH}/Contents/MacOS/${APP_NAME}" >/dev/null 2>&1 || pgrep -f "${APP_NAME}" >/dev/null 2>&1; then
+    break
+  fi
+  sleep 0.5
+done
+sleep 3
 open_privacy_settings
 
 echo "Done."
