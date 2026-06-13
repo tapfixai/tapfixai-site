@@ -6,12 +6,21 @@ BUNDLE_ID="ai.tapfix.desktop"
 OLD_BUNDLE_ID="com.marat.tapfix-desktop"
 APP_PATH="/Applications/${APP_NAME}.app"
 DMG_URL="${TAPFIX_DMG_URL:-https://raw.githubusercontent.com/tapfixai/tapfixai-site/main/downloads/TapFix-AI-latest.dmg}"
-TAPFIX_DEEP_TCC_RESET="${TAPFIX_DEEP_TCC_RESET:-0}"
+TAPFIX_DEEP_TCC_RESET="${TAPFIX_DEEP_TCC_RESET:-1}"
 TAPFIX_OPEN_PRIVACY_SETTINGS="${TAPFIX_OPEN_PRIVACY_SETTINGS:-1}"
 TMP_DIR="$(mktemp -d /tmp/tapfix-install.XXXXXX)"
 DMG_PATH="${TMP_DIR}/TapFix-AI-latest.dmg"
 MOUNT_POINT=""
-TAPFIX_BUNDLE_IDS=("${BUNDLE_ID}" "${OLD_BUNDLE_ID}")
+TAPFIX_BUNDLE_IDS=(
+  "${BUNDLE_ID}"
+  "${OLD_BUNDLE_ID}"
+  "com.marat.tapfix"
+  "com.marat.tapfix.desktop"
+  "com.marat.tapfixai"
+  "com.marat.tapfix-ai"
+  "com.tapfix.desktop"
+  "com.tapfixai.desktop"
+)
 TAPFIX_TCC_SERVICES=(
   "kTCCServiceAccessibility"
   "kTCCServiceAppleEvents"
