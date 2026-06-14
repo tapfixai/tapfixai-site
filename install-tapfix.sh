@@ -6,7 +6,7 @@ BUNDLE_ID="ai.tapfix.desktop"
 OLD_BUNDLE_ID="com.marat.tapfix-desktop"
 APP_PATH="/Applications/${APP_NAME}.app"
 DMG_URL="${TAPFIX_DMG_URL:-https://raw.githubusercontent.com/tapfixai/tapfixai-site/main/downloads/TapFix-AI-latest.dmg}"
-TAPFIX_DEEP_TCC_RESET="${TAPFIX_DEEP_TCC_RESET:-1}"
+TAPFIX_DEEP_TCC_RESET="${TAPFIX_DEEP_TCC_RESET:-0}"
 TAPFIX_KEEP_PERMISSIONS="${TAPFIX_KEEP_PERMISSIONS:-0}"
 TAPFIX_OPEN_PRIVACY_SETTINGS="${TAPFIX_OPEN_PRIVACY_SETTINGS:-1}"
 TMP_DIR="$(mktemp -d /tmp/tapfix-install.XXXXXX)"
@@ -107,15 +107,6 @@ reset_tapfix_permissions() {
 
   remove_tapfix_tcc_rows
 
-  if [ "${TAPFIX_DEEP_TCC_RESET}" = "1" ]; then
-    echo "Deep-resetting macOS privacy services so TapFix asks for fresh permissions..."
-    echo "This may also make macOS ask other apps for these permissions again."
-    for service in "Accessibility" "ListenEvent" "AppleEvents"; do
-      tccutil reset "${service}" >/dev/null 2>&1 || true
-      sudo tccutil reset "${service}" >/dev/null 2>&1 || true
-    done
-  fi
-
   killall tccd >/dev/null 2>&1 || true
   sudo killall tccd >/dev/null 2>&1 || true
 }
@@ -146,15 +137,23 @@ remove_tapfix_tcc_rows() {
     service_list="${service_list}'${service}'"
   done
 
+  local client_list=""
+  local bundle_id
+  for bundle_id in "${TAPFIX_BUNDLE_IDS[@]}"; do
+    if [ -n "${client_list}" ]; then
+      client_list="${client_list},"
+    fi
+    client_list="${client_list}'$(printf "%s" "${bundle_id}" | tr "[:upper:]" "[:lower:]")'"
+  done
+
   local sql="
 PRAGMA busy_timeout=3000;
 DELETE FROM access
 WHERE service IN (${service_list})
   AND (
-    lower(client) LIKE '%tapfix%'
-    OR lower(client) LIKE '%ai.tapfix.desktop%'
-    OR lower(client) LIKE '%com.marat.tapfix-desktop%'
-    OR lower(client) LIKE '%tapfix-desktop%'
+    lower(client) IN (${client_list})
+    OR lower(client) = '/applications/tapfix-desktop.app'
+    OR lower(client) LIKE '/applications/tapfix-desktop.app/%'
   );
 "
   local count_sql="
@@ -162,10 +161,9 @@ PRAGMA busy_timeout=3000;
 SELECT COUNT(*) FROM access
 WHERE service IN (${service_list})
   AND (
-    lower(client) LIKE '%tapfix%'
-    OR lower(client) LIKE '%ai.tapfix.desktop%'
-    OR lower(client) LIKE '%com.marat.tapfix-desktop%'
-    OR lower(client) LIKE '%tapfix-desktop%'
+    lower(client) IN (${client_list})
+    OR lower(client) = '/applications/tapfix-desktop.app'
+    OR lower(client) LIKE '/applications/tapfix-desktop.app/%'
   );
 "
 
