@@ -7,6 +7,8 @@ BUNDLE_ID="ai.tapfix.native"
 APP_PATH="/Applications/${APP_NAME}.app"
 TAPFIX_DEEP_TCC_RESET="${TAPFIX_DEEP_TCC_RESET:-0}"
 TAPFIX_KEEP_LOCAL_DATA="${TAPFIX_KEEP_LOCAL_DATA:-0}"
+TAPFIX_KEEP_CLIPBOARD_NOTES="${TAPFIX_KEEP_CLIPBOARD_NOTES:-1}"
+APP_SUPPORT_DIR="${HOME}/Library/Application Support/${BUNDLE_ID}"
 
 TAPFIX_TCCUTIL_SERVICES=(
   "All"
@@ -30,6 +32,23 @@ remove_path() {
   if [ -e "${target}" ]; then
     rm -rf "${target}" 2>/dev/null || sudo rm -rf "${target}"
   fi
+}
+
+remove_app_support() {
+  if [ ! -d "${APP_SUPPORT_DIR}" ]; then
+    return
+  fi
+
+  if [ "${TAPFIX_KEEP_CLIPBOARD_NOTES}" = "1" ]; then
+    echo "Keeping clipboard notes in ${APP_SUPPORT_DIR}"
+    find "${APP_SUPPORT_DIR}" -mindepth 1 -maxdepth 1 \
+      ! -name "clipboard-notes.json" \
+      ! -name "clipboard-notes.backup.json" \
+      -exec rm -rf {} + 2>/dev/null || true
+    return
+  fi
+
+  remove_path "${APP_SUPPORT_DIR}"
 }
 
 reset_permissions() {
@@ -98,7 +117,7 @@ pkill -x "${APP_NAME}" >/dev/null 2>&1 || true
 remove_path "${APP_PATH}"
 
 if [ "${TAPFIX_KEEP_LOCAL_DATA}" != "1" ]; then
-  remove_path "${HOME}/Library/Application Support/${BUNDLE_ID}"
+  remove_app_support
   remove_path "${HOME}/Library/Preferences/${BUNDLE_ID}.plist"
   remove_path "${HOME}/Library/Caches/${BUNDLE_ID}"
   remove_path "${HOME}/Library/WebKit/${BUNDLE_ID}"
