@@ -87,7 +87,8 @@
     "plat.android": "Доступно в Google Play",
     "plat.ios": "готовится к релизу в App Store",
     "hero.local": "Обычный набор работает локально. AI-функции используют сеть только когда вы нажимаете AI-действие.",
-    "hero.cta.play": "Установить из Google Play"
+    "hero.cta.play": "Установить из Google Play",
+    "gp.small": "Доступно в"
   },
   "es": {
     "nav.home": "Inicio",

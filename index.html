@@ -42,6 +42,13 @@ footer{padding:44px 0;border-top:1px solid var(--line);color:var(--muted)}.foot{
 .lang{appearance:none;-webkit-appearance:none;border:1px solid var(--line);background:var(--surface);color:var(--text);font:inherit;font-size:14px;font-weight:700;padding:9px 34px;border-radius:999px;cursor:pointer;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%23667085' stroke-width='1.6' viewBox='0 0 24 24'><circle cx='12' cy='12' r='9'/><path d='M3 12h18M12 3c2.6 2.7 2.6 15.3 0 18M12 3c-2.6 2.7-2.6 15.3 0 18'/></svg>"),url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23667085' stroke-width='2' viewBox='0 0 24 24'><path d='M6 9l6 6 6-6'/></svg>");background-repeat:no-repeat,no-repeat;background-position:11px center,right 12px center}
 @media(max-width:920px){.lang{font-size:13px}}
 .platforms{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}.plat{display:inline-flex;align-items:center;gap:6px;padding:8px 15px;border:1px solid var(--line);border-radius:999px;background:var(--surface);font-size:13.5px;font-weight:700;color:var(--muted)}.plat strong{color:var(--text)}.plat.soon{color:var(--accent);background:var(--accent-soft);border-color:color-mix(in srgb,var(--accent) 30%,var(--line))}.reassure{margin:18px 0 0;font-size:15px;color:var(--muted);max-width:680px;letter-spacing:-.006em}
+.actions{align-items:center}
+.gp-badge{display:inline-flex;align-items:center;gap:13px;padding:0 22px;min-height:58px;border-radius:15px;background:#000;border:1px solid #2a2f3a;color:#fff;text-decoration:none;box-shadow:0 16px 38px rgba(0,0,0,.24);transition:transform .15s ease,box-shadow .15s ease}
+.gp-badge:hover{transform:translateY(-1px);box-shadow:0 20px 44px rgba(0,0,0,.32);color:#fff}
+.gp-badge svg{width:27px;height:27px;flex:none;display:block}
+.gp-badge .gp-t{display:flex;flex-direction:column;line-height:1.04;text-align:left}
+.gp-badge .gp-t small{font-size:10px;letter-spacing:.13em;text-transform:uppercase;opacity:.92;font-weight:600}
+.gp-badge .gp-t b{font-size:20px;font-weight:600;letter-spacing:.01em}
 
 h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.lead{letter-spacing:-.008em}.btn{letter-spacing:-.006em}
 </style>
@@ -80,7 +87,15 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
       </div>
       <p class="reassure" data-i18n="hero.local">Normal typing works locally. AI features use the network only when you tap an AI action.</p>
       <div class="actions">
-        <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.tapfixai.keyboard" target="_blank" rel="noopener" data-i18n="hero.cta.play">Get it on Google Play</a>
+        <a class="gp-badge" href="https://play.google.com/store/apps/details?id=com.tapfixai.keyboard" target="_blank" rel="noopener" aria-label="Get it on Google Play">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <polygon points="3,2.2 3,21.8 12.7,12" fill="#00d2ff"/>
+            <polygon points="3,2.2 16.2,9.6 16.2,12 12.7,12" fill="#00f076"/>
+            <polygon points="3,21.8 16.2,14.4 16.2,12 12.7,12" fill="#ff3b44"/>
+            <polygon points="16.2,9.6 20.5,12 16.2,14.4" fill="#ffcd00"/>
+          </svg>
+          <span class="gp-t"><small data-i18n="gp.small">Get it on</small><b>Google Play</b></span>
+        </a>
         <a class="btn" href="#features" data-i18n="hero.cta1">See features</a>
         <a class="btn" href="support.html" data-i18n="nav.support">Support</a>
       </div>
