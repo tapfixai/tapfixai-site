@@ -1,0 +1,84 @@
+/* TapFix AI — Liquid Glass (black premium) ============================
+   Shared design layer. Loaded AFTER each page's inline <style>, so it
+   overrides surfaces site-wide without touching page markup/content.
+   Black base + ambient colored light-leaks + frosted glass + specular. */
+
+:root{
+  color-scheme: dark;
+  --bg:#07080d; --surface:#0c0f17; --surface-2:#0a0d14; --card:#0c0f17;
+  --text:#eef2fb; --muted:#aab4cf; --line:rgba(255,255,255,.13);
+  --accent:#5b9bff; --accent-2:#22d3ee; --accent2:#22d3ee;
+  --accent-soft:rgba(91,155,255,.16);
+  --key:rgba(255,255,255,.12); --key-strong:rgba(255,255,255,.06);
+  --shadow:0 24px 70px rgba(0,0,0,.55); --radius:24px;
+  --lg-blur:saturate(180%) blur(22px);
+  --lg-surface:rgba(22,26,38,.58);
+  --lg-pill:rgba(255,255,255,.07);
+  --lg-edge:inset 0 1px 0 rgba(255,255,255,.30), inset 0 -14px 26px rgba(255,255,255,.025);
+  --lg-drop:0 18px 50px rgba(0,0,0,.55);
+}
+
+html{background:#06070b}
+body{
+  background:
+   radial-gradient(38% 42% at 10% 3%, rgba(37,99,235,.24), transparent 66%),
+   radial-gradient(40% 44% at 95% 1%, rgba(14,165,233,.18), transparent 64%),
+   radial-gradient(54% 56% at 90% 100%, rgba(124,58,237,.26), transparent 70%),
+   radial-gradient(46% 50% at 3% 100%, rgba(236,72,153,.13), transparent 70%),
+   #06070b !important;
+  background-attachment: fixed !important;
+  color: var(--text);
+}
+
+/* sticky frosted header */
+header{
+  background: rgba(10,12,18,.55) !important;
+  -webkit-backdrop-filter: var(--lg-blur); backdrop-filter: var(--lg-blur);
+  border-bottom: 1px solid var(--line) !important;
+}
+
+/* large reading / content surfaces -> dark glass (kept readable) */
+.card,.panel,.keyboard-preview,table,.hero-phone .phone,.feature .phone,.media .phone{
+  background: var(--lg-surface) !important;
+  -webkit-backdrop-filter: var(--lg-blur); backdrop-filter: var(--lg-blur);
+  border: 1px solid var(--line) !important;
+  box-shadow: var(--lg-drop), var(--lg-edge) !important;
+}
+table{overflow:hidden}
+th{background: rgba(255,255,255,.05) !important; color: var(--text) !important}
+td,th{border-bottom:1px solid var(--line) !important}
+td{color: var(--muted)}
+tr:last-child td{border-bottom:0 !important}
+
+/* small chrome -> bright frosted pills */
+.btn,.lang,.badge,.plat,.step,.contact,.list div,.note,.kicker{
+  -webkit-backdrop-filter: var(--lg-blur); backdrop-filter: var(--lg-blur);
+}
+.btn,.lang{background: var(--lg-pill) !important; border:1px solid var(--line) !important; color: var(--text) !important; box-shadow: var(--lg-edge)}
+.btn.primary{background: linear-gradient(135deg,#2563eb,#0ea5e9) !important; border-color: transparent !important; color:#fff !important; box-shadow:0 16px 40px rgba(37,99,235,.4)}
+.badge,.plat,.step,.contact{background: var(--lg-pill) !important; border:1px solid var(--line) !important}
+.plat.soon{background: rgba(91,155,255,.14) !important; color: var(--accent) !important}
+.list div{background: var(--lg-pill) !important; border:1px solid var(--line) !important; color: var(--muted)}
+.note{background: rgba(91,155,255,.10) !important; border:1px solid var(--line) !important; border-left:3px solid var(--accent) !important}
+.note p{color: var(--text) !important}
+
+/* gradient brand title (was flat). Use background-image longhand so the
+   shorthand !important does not reset background-clip back to border-box. */
+.grad{
+  background-image: linear-gradient(110deg,#5b9bff,#22d3ee 52%,#c084fc) !important;
+  -webkit-background-clip: text !important; background-clip: text !important;
+  -webkit-text-fill-color: transparent !important; color: transparent !important;
+}
+
+/* misc accents on black */
+.gp-badge{border:1px solid rgba(255,255,255,.16) !important}
+.kicker{background: rgba(91,155,255,.14) !important; border:1px solid var(--line) !important; color: var(--accent) !important}
+.icon{background: rgba(91,155,255,.14) !important; color: var(--accent) !important}
+strong{color: var(--text)}
+
+/* fallback: no backdrop-filter -> solid dark surfaces */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))){
+  header{background:#0b0e16 !important}
+  .card,.panel,.keyboard-preview,table,.hero-phone .phone,.feature .phone,.media .phone{background:#0e111a !important}
+  .btn,.lang,.badge,.plat,.list div,.step,.contact,.note{background:rgba(255,255,255,.08) !important}
+}
