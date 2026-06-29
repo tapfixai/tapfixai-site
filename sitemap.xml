@@ -1,11 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://tapfixai.app/</loc><lastmod>2026-06-30</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://tapfixai.app/mac</loc><lastmod>2026-06-30</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://tapfixai.app/support</loc><lastmod>2026-06-30</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://tapfixai.app/privacy</loc><lastmod>2026-06-30</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
-  <url><loc>https://tapfixai.app/terms</loc><lastmod>2026-06-30</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://tapfixai.app/delete-data</loc><lastmod>2026-06-30</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://tapfixai.app/account-deletion</loc><lastmod>2026-06-30</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://tapfixai.app/accessibility-disclosure</loc><lastmod>2026-06-30</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://tapfixai.app/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tapfixai.app/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tapfixai.app/ru/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tapfixai.app/"/>
+    <lastmod>2026-06-30</lastmod>
+  </url>
+  <url>
+    <loc>https://tapfixai.app/ru/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tapfixai.app/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tapfixai.app/ru/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tapfixai.app/"/>
+    <lastmod>2026-06-30</lastmod>
+  </url>
+  <url>
+    <loc>https://tapfixai.app/mac</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tapfixai.app/mac"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tapfixai.app/ru/mac"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tapfixai.app/mac"/>
+    <lastmod>2026-06-30</lastmod>
+  </url>
+  <url>
+    <loc>https://tapfixai.app/ru/mac</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tapfixai.app/mac"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tapfixai.app/ru/mac"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tapfixai.app/mac"/>
+    <lastmod>2026-06-30</lastmod>
+  </url>
+  <url>
+    <loc>https://tapfixai.app/support</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tapfixai.app/support"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tapfixai.app/ru/support"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tapfixai.app/support"/>
+    <lastmod>2026-06-30</lastmod>
+  </url>
+  <url>
+    <loc>https://tapfixai.app/ru/support</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tapfixai.app/support"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tapfixai.app/ru/support"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tapfixai.app/support"/>
+    <lastmod>2026-06-30</lastmod>
+  </url>
+  <url>
+    <loc>https://tapfixai.app/delete-data</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tapfixai.app/delete-data"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tapfixai.app/ru/delete-data"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tapfixai.app/delete-data"/>
+    <lastmod>2026-06-30</lastmod>
+  </url>
+  <url>
+    <loc>https://tapfixai.app/ru/delete-data</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tapfixai.app/delete-data"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tapfixai.app/ru/delete-data"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tapfixai.app/delete-data"/>
+    <lastmod>2026-06-30</lastmod>
+  </url>
+  <url>
+    <loc>https://tapfixai.app/account-deletion</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tapfixai.app/account-deletion"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tapfixai.app/ru/account-deletion"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tapfixai.app/account-deletion"/>
+    <lastmod>2026-06-30</lastmod>
+  </url>
+  <url>
+    <loc>https://tapfixai.app/ru/account-deletion</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tapfixai.app/account-deletion"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tapfixai.app/ru/account-deletion"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tapfixai.app/account-deletion"/>
+    <lastmod>2026-06-30</lastmod>
+  </url>
+  <url>
+    <loc>https://tapfixai.app/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tapfixai.app/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tapfixai.app/privacy"/>
+    <lastmod>2026-06-30</lastmod>
+  </url>
+  <url>
+    <loc>https://tapfixai.app/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tapfixai.app/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tapfixai.app/terms"/>
+    <lastmod>2026-06-30</lastmod>
+  </url>
+  <url>
+    <loc>https://tapfixai.app/accessibility-disclosure</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tapfixai.app/accessibility-disclosure"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tapfixai.app/accessibility-disclosure"/>
+    <lastmod>2026-06-30</lastmod>
+  </url>
 </urlset>

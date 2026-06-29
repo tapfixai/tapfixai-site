@@ -1,4 +1,5 @@
-// TapFix site i18n — 20 languages, English is the in-page source, others load from i18n.json
+// TapFix i18n — per-language URLs (/xx/), auto-detect (CIS -> ru), manual switcher.
+// Pre-rendered localized pages inject: TF_STATIC=true, TF_LANG, TF_PAGE, TF_AVAIL.
 window.TF_LANGS = [
   {c:"en", n:"English"},
   {c:"es", n:"Español"},
@@ -23,51 +24,79 @@ window.TF_LANGS = [
 ];
 
 (function(){
-  var DATA = {};
-  function isRTL(l){ for(var i=0;i<window.TF_LANGS.length;i++){ if(window.TF_LANGS[i].c===l) return !!window.TF_LANGS[i].rtl; } return false; }
+  var LANGS = window.TF_LANGS;
+  var AVAIL = window.TF_AVAIL || ["en"];          // langs that have THIS page as a static URL
+  var PAGE  = window.TF_PAGE  || "index.html";    // current page file
+  var CUR   = window.TF_LANG  || "en";            // language of THIS page
+  var STATIC= !!window.TF_STATIC;                 // true on pre-rendered pages
+  var DATA  = {};
 
-  function apply(lang){
-    document.documentElement.lang = lang;
-    document.documentElement.dir = isRTL(lang) ? "rtl" : "ltr";
-    var dict = (lang === "en") ? null : (DATA[lang] || {});
+  function meta(l){ for(var i=0;i<LANGS.length;i++) if(LANGS[i].c===l) return LANGS[i]; return {c:l,n:l}; }
+  function isRTL(l){ return !!meta(l).rtl; }
+  function has(l){ return AVAIL.indexOf(l) !== -1; }
+
+  // browser/OS language -> one of our codes; CIS locales -> Russian
+  function detect(){
+    var navs = navigator.languages || [navigator.language || "en"];
+    var cis = {ru:1,uk:1,be:1,kk:1,ky:1,tg:1,uz:1,hy:1,az:1,mo:1,tk:1};
+    for(var i=0;i<navs.length;i++){
+      var two=(navs[i]||"").slice(0,2).toLowerCase();
+      if(cis[two]) return (two==="uk" && has("uk")) ? "uk" : "ru";
+      for(var j=0;j<LANGS.length;j++) if(LANGS[j].c===two) return two;
+    }
+    return "en";
+  }
+
+  function urlFor(lang){
+    var base = PAGE.replace(/\.html$/,"").replace(/^index$/,"");   // "" for home, "mac" for /mac
+    return (lang==="en") ? ("/"+base) : ("/"+lang+"/"+base);
+  }
+
+  // client-side swap (only for languages that don't have a static page yet)
+  function applySwap(lang){
+    document.documentElement.lang=lang; document.documentElement.dir=isRTL(lang)?"rtl":"ltr";
+    var dict=(lang==="en")?null:(DATA[lang]||{});
     document.querySelectorAll("[data-i18n]").forEach(function(el){
-      if(el.dataset.en == null){ el.dataset.en = el.innerHTML; }
-      var v = dict ? dict[el.getAttribute("data-i18n")] : el.dataset.en;
-      el.innerHTML = (v != null && v !== "") ? v : el.dataset.en; // fall back to English
+      if(el.dataset.en==null) el.dataset.en=el.innerHTML;
+      var v=dict?dict[el.getAttribute("data-i18n")]:el.dataset.en;
+      el.innerHTML=(v!=null&&v!=="")?v:el.dataset.en;
     });
-    // screenshots: only English and Russian variants exist; everything else uses English shots
-    var imgLang = (lang === "ru") ? "ru" : "en";
-    document.querySelectorAll("img[data-base]").forEach(function(img){
-      img.src = "images/" + img.dataset.base + "-" + imgLang + ".jpg";
-    });
-    document.querySelectorAll("img[data-pngbase]").forEach(function(img){
-      img.src = "images/" + img.dataset.pngbase + "-" + imgLang + ".png?v=7";
-    });
-    var sel = document.getElementById("lang");
-    if(sel) sel.value = lang;
+    var il=(lang==="ru")?"ru":"en";
+    document.querySelectorAll("img[data-base]").forEach(function(im){im.src="/images/"+im.dataset.base+"-"+il+".jpg";});
+    document.querySelectorAll("img[data-pngbase]").forEach(function(im){im.src="/images/"+im.dataset.pngbase+"-"+il+".png?v=7";});
+    var sel=document.getElementById("lang"); if(sel) sel.value=lang;
+  }
+
+  function go(lang){
+    try{ localStorage.setItem("tapfix_lang", lang); }catch(e){}
+    if(lang===CUR) return;
+    if(has(lang)){ location.href=urlFor(lang); return; }            // navigate to localized URL
+    if(Object.keys(DATA).length){ applySwap(lang); }                // fallback: swap in place
+    else fetch((window.TF_I18N||"/i18n.json")+"?v=3").then(function(r){return r.json();}).then(function(j){DATA=j;applySwap(lang);}).catch(function(){});
   }
 
   function init(){
-    var sel = document.getElementById("lang");
-    if(sel){
-      sel.innerHTML = "";
-      window.TF_LANGS.forEach(function(o){
-        var op = document.createElement("option");
-        op.value = o.c; op.textContent = o.n;
-        sel.appendChild(op);
-      });
-    }
-    document.querySelectorAll("[data-i18n]").forEach(function(el){ if(el.dataset.en==null) el.dataset.en = el.innerHTML; });
-    var saved = null; try { saved = localStorage.getItem("tapfix_lang"); } catch(e){}
-    var lang = saved || "en";
-    apply(lang); // immediate (EN correct; others briefly fall back to EN until data loads)
-    fetch((window.TF_I18N || "i18n.json") + "?v=2").then(function(r){ return r.json(); }).then(function(j){ DATA = j; apply(lang); }).catch(function(){});
-    if(sel) sel.addEventListener("change", function(){
-      apply(this.value);
-      try { localStorage.setItem("tapfix_lang", this.value); } catch(e){}
-    });
-  }
+    var sel=document.getElementById("lang");
+    if(sel){ sel.innerHTML=""; LANGS.forEach(function(o){var op=document.createElement("option");op.value=o.c;op.textContent=o.n;sel.appendChild(op);}); sel.value=CUR; sel.addEventListener("change",function(){go(this.value);}); }
+    document.documentElement.dir=isRTL(CUR)?"rtl":"ltr";
 
-  if(document.readyState !== "loading") init();
-  else document.addEventListener("DOMContentLoaded", init);
+    // first-visit auto-detect: only on a pre-rendered English home, only if no saved choice
+    if(STATIC && CUR==="en" && PAGE==="index.html"){
+      var saved=null; try{saved=localStorage.getItem("tapfix_lang");}catch(e){}
+      if(!saved){
+        var want=detect();
+        if(want!=="en" && has(want)){ location.replace(urlFor(want)); return; }
+      }
+    }
+
+    // non-pre-rendered pages keep the legacy in-place behaviour
+    if(!STATIC){
+      var s2=null; try{s2=localStorage.getItem("tapfix_lang");}catch(e){}
+      var lang=s2||"en";
+      applySwap(lang);
+      if(lang!=="en") fetch((window.TF_I18N||"/i18n.json")+"?v=3").then(function(r){return r.json();}).then(function(j){DATA=j;applySwap(lang);}).catch(function(){});
+      if(sel) sel.value=lang;
+    }
+  }
+  if(document.readyState!=="loading") init(); else document.addEventListener("DOMContentLoaded",init);
 })();
