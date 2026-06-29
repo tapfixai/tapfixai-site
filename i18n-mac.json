@@ -66,7 +66,10 @@
     "foot.acc": "Accessibility",
     "nav.permissions": "Разрешения",
     "nav.button": "AI-кнопка",
-    "nav.mac": "Mac"
+    "nav.mac": "Mac",
+    "nav.support": "Поддержка",
+    "nav.terms": "Условия",
+    "nav.delete": "Удаление данных"
   },
   "es": {
     "nav.features": "Funciones",

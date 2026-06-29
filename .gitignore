@@ -5,3 +5,8 @@ node_modules/
 *.jks
 .env
 .env.*
+
+# internal project docs (do not deploy)
+STATUS.md
+TASKS.md
+kb-preview.html

@@ -41,7 +41,8 @@ footer{padding:44px 0;border-top:1px solid var(--line);color:var(--muted)}.foot{
 .navright{display:flex;align-items:center;gap:14px}
 .lang{appearance:none;-webkit-appearance:none;border:1px solid var(--line);background:var(--surface);color:var(--text);font:inherit;font-size:14px;font-weight:700;padding:9px 34px;border-radius:999px;cursor:pointer;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%23667085' stroke-width='1.6' viewBox='0 0 24 24'><circle cx='12' cy='12' r='9'/><path d='M3 12h18M12 3c2.6 2.7 2.6 15.3 0 18M12 3c-2.6 2.7-2.6 15.3 0 18'/></svg>"),url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23667085' stroke-width='2' viewBox='0 0 24 24'><path d='M6 9l6 6 6-6'/></svg>");background-repeat:no-repeat,no-repeat;background-position:11px center,right 12px center}
 @media(max-width:920px){.lang{font-size:13px}}
-  
+.platforms{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}.plat{display:inline-flex;align-items:center;gap:6px;padding:8px 15px;border:1px solid var(--line);border-radius:999px;background:var(--surface);font-size:13.5px;font-weight:700;color:var(--muted)}.plat strong{color:var(--text)}.plat.soon{color:var(--accent);background:var(--accent-soft);border-color:color-mix(in srgb,var(--accent) 30%,var(--line))}.reassure{margin:18px 0 0;font-size:15px;color:var(--muted);max-width:680px;letter-spacing:-.006em}
+
 h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.lead{letter-spacing:-.008em}.btn{letter-spacing:-.006em}
 </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -55,7 +56,8 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
     <nav class="links" aria-label="Keyboard navigation">
       <a href="index.html" data-i18n="nav.keyboard">Keyboard</a>
       <a href="mac.html" data-i18n="nav.mac">Mac</a>
-      <a href="privacy-policy.html" data-i18n="nav.privacy">Privacy</a>
+      <a href="support.html" data-i18n="nav.support">Support</a>
+      <a href="privacy.html" data-i18n="nav.privacy">Privacy</a>
     </nav>
     <div class="navright">
       <select class="lang" id="lang" aria-label="Language">
@@ -72,10 +74,15 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
       <div class="badge"><span class="dot"></span> <span data-i18n="hero.badge">Android AI keyboard</span></div>
       <h1 data-i18n="hero.title"><span class="grad">TapFix AI Keyboard</span><br>write faster anywhere.</h1>
       <p class="lead" data-i18n="hero.lead">A full keyboard for Android with AI text fixing, strong rewrites, translation, dictation, emoji search, predictive typing, quick replacements, clipboard history and screenshot quick paste.</p>
+      <div class="platforms">
+        <span class="plat"><strong>Android</strong> · <span data-i18n="plat.android">Available on Google Play</span></span>
+        <span class="plat soon"><strong>iOS</strong> · <span data-i18n="plat.ios">is being prepared for App Store release</span></span>
+      </div>
+      <p class="reassure" data-i18n="hero.local">Normal typing works locally. AI features use the network only when you tap an AI action.</p>
       <div class="actions">
         <a class="btn primary" href="#features" data-i18n="hero.cta1">See features</a>
-        <a class="btn" href="assistant.html" data-i18n="hero.cta2">Floating AI Button</a>
-        <a class="btn" href="privacy-policy.html" data-i18n="hero.cta3">Read Privacy Policy</a>
+        <a class="btn" href="support.html" data-i18n="nav.support">Support</a>
+        <a class="btn" href="privacy.html" data-i18n="hero.cta3">Read Privacy Policy</a>
       </div>
     </div>
     <div class="hero-phone" aria-label="TapFix AI Keyboard preview">
@@ -185,7 +192,7 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
         <h2 data-i18n="perm.h">Permissions, in plain language.</h2>
         <p class="lead" data-i18n="perm.p">The keyboard asks for access only to power visible features. You can deny optional permissions, disable features or uninstall the app at any time.</p>
         <div class="actions">
-          <a class="btn primary" href="privacy-policy.html" data-i18n="perm.cta1">Privacy Policy</a>
+          <a class="btn primary" href="privacy.html" data-i18n="perm.cta1">Privacy Policy</a>
           <a class="btn" href="#data" data-i18n="perm.cta2">Data use</a>
         </div>
       </div>
@@ -240,7 +247,7 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
 <footer>
   <div class="wrap foot">
     <div data-i18n="foot.copy">© 2026 TapFix AI Studio. All rights reserved.</div>
-    <div><a href="mac.html" data-i18n="nav.mac">Mac</a> · <a href="privacy-policy.html" data-i18n="foot.privacy">Privacy Policy</a> · <a href="accessibility-disclosure.html" data-i18n="foot.acc">Accessibility Disclosure</a> · <a href="account-deletion.html">Account deletion</a></div>
+    <div><a href="mac.html" data-i18n="nav.mac">Mac</a> · <a href="support.html" data-i18n="nav.support">Support</a> · <a href="privacy.html" data-i18n="foot.privacy">Privacy Policy</a> · <a href="terms.html" data-i18n="nav.terms">Terms</a> · <a href="delete-data.html" data-i18n="nav.delete">Delete data</a> · <a href="accessibility-disclosure.html" data-i18n="foot.acc">Accessibility Disclosure</a></div>
   </div>
 </footer>
 

@@ -81,7 +81,12 @@
     "foot.privacy": "Политика конфиденциальности",
     "foot.acc": "Accessibility Disclosure",
     "nav.keyboard": "Клавиатура",
-    "nav.privacy": "Приватность"
+    "nav.privacy": "Приватность",
+    "nav.terms": "Условия",
+    "nav.delete": "Удаление данных",
+    "plat.android": "Доступно в Google Play",
+    "plat.ios": "готовится к релизу в App Store",
+    "hero.local": "Обычный набор работает локально. AI-функции используют сеть только когда вы нажимаете AI-действие."
   },
   "es": {
     "nav.home": "Inicio",

@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TapFix AI Keyboard — Account deletion and data deletion</title>
+  <title>Delete My Data — TapFix AI Keyboard</title>
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <meta name="description" content="Delete your TapFix AI Keyboard account and associated data, or request deletion by email.">
+  <meta name="description" content="Request deletion of data associated with TapFix AI Keyboard. No account is required to use the keyboard.">
   <style>
 :root{color-scheme:light dark;--bg:#f6f7fb;--surface:#ffffff;--card:#ffffff;--text:#111827;--muted:#667085;--line:#d9e0ea;--accent:#2563eb;--accent2:#0ea5e9}
 @media (prefers-color-scheme:dark){:root{--bg:#0c111d;--surface:#101826;--card:#111827;--text:#f8fafc;--muted:#9aa4b2;--line:#263244;--accent:#60a5fa;--accent2:#22d3ee}}
@@ -16,15 +16,13 @@ header{position:sticky;top:0;z-index:20;backdrop-filter:blur(18px);background:co
 .wrap{width:min(1160px,calc(100% - 40px));margin:0 auto}.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
 .brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-weight:850;color:var(--text)}.logo{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(145deg,#111827,#2563eb);box-shadow:0 18px 45px rgba(37,99,235,.18);color:#fff;position:relative}.logo small{position:absolute;right:7px;bottom:5px;font-size:9px;color:#bfdbfe}
 .navlinks{display:flex;gap:20px;color:var(--muted);font-size:14px}.navlinks a{color:var(--muted)}.navlinks a:hover{color:var(--text)}
-.spacer{flex:1}
 .lang{appearance:none;-webkit-appearance:none;border:1px solid var(--line);background:var(--surface);color:var(--text);font:inherit;font-size:14px;font-weight:700;padding:9px 34px;border-radius:999px;cursor:pointer;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%23667085' stroke-width='1.6' viewBox='0 0 24 24'><circle cx='12' cy='12' r='9'/><path d='M3 12h18M12 3c2.6 2.7 2.6 15.3 0 18M12 3c-2.6 2.7-2.6 15.3 0 18'/></svg>"),url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23667085' stroke-width='2' viewBox='0 0 24 24'><path d='M6 9l6 6 6-6'/></svg>");background-repeat:no-repeat,no-repeat;background-position:11px center,right 12px center}
-main{padding:54px 0 90px}.card{padding:38px;border-radius:30px;background:var(--card);border:1px solid var(--line);box-shadow:0 24px 70px rgba(15,23,42,.12)}
-h1{font-size:clamp(30px,5vw,48px);line-height:1.06;margin:0 0 8px;letter-spacing:-.032em}h2{font-size:24px;margin:38px 0 10px;letter-spacing:-.022em}
-p{color:var(--muted);font-size:17px}strong{color:var(--text)}.meta{color:var(--accent);font-weight:700;font-size:15px}
-.step{display:inline-block;background:color-mix(in srgb,var(--accent) 12%,transparent);border:1px solid var(--line);border-radius:14px;padding:10px 16px;color:var(--text);font-weight:700;margin:4px 0}
+main{padding:54px 0 90px}.card{padding:38px;border-radius:30px;background:var(--card);border:1px solid var(--line);box-shadow:0 24px 70px rgba(15,23,42,.12);max-width:920px;margin:0 auto}
+h1{font-size:clamp(32px,5.4vw,52px);line-height:1.04;margin:0 0 12px;letter-spacing:-.032em}h2{font-size:23px;margin:34px 0 8px;letter-spacing:-.02em}
+p,li{color:var(--muted);font-size:17px}strong{color:var(--text)}ul{padding-left:22px;margin:8px 0}.meta{color:var(--accent);font-weight:700;font-size:15px}
+.contact{display:inline-flex;align-items:center;gap:10px;margin:6px 0 4px;padding:12px 20px;border-radius:999px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;text-decoration:none;font-weight:800}
 footer{padding:34px 0;border-top:1px solid var(--line);color:var(--muted)}.footer a{color:var(--text)}
 @media(max-width:620px){.navlinks{display:none}}
-.card{max-width:920px;margin-left:auto;margin-right:auto}
 </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,7 +37,6 @@ footer{padding:34px 0;border-top:1px solid var(--line);color:var(--muted)}.foote
     <a href="support.html" data-i18n="nav.support">Support</a>
     <a href="privacy.html" data-i18n="nav.privacy">Privacy</a>
   </nav>
-  
   <select class="lang" id="lang" aria-label="Language">
     <option value="en">English</option>
     <option value="ru">Русский</option>
@@ -48,43 +45,35 @@ footer{padding:34px 0;border-top:1px solid var(--line);color:var(--muted)}.foote
 
 <main><div class="wrap"><article class="card">
 
-<h1 data-i18n="h1">TapFix AI Keyboard — Account deletion and data deletion</h1>
+<h1 data-i18n="h1">Delete My Data</h1>
 <p class="meta">App: TapFix AI Keyboard · Website: tapfixai.app · Support: support@tapfixai.app</p>
 
-<h2 data-i18n="s1.h">Delete your account inside the app</h2>
-<p data-i18n="s1.p">You can delete your <strong>TapFix AI Keyboard</strong> account inside the app:</p>
-<p class="step" data-i18n="s1.step">Open TapFix AI Keyboard → Profile / Account settings → Delete account.</p>
+<p data-i18n="p1">TapFix does not require an account for keyboard use. TapFix does not currently provide user accounts. If you want to request deletion of data associated with your anonymous device ID or a support request, contact:</p>
 
-<h2 data-i18n="s2.h">Request deletion by email</h2>
-<p data-i18n="s2.p">If you no longer have access to the app, you can request account deletion by email:</p>
-<p><a href="mailto:support@tapfixai.app?subject=Account%20deletion%20request">support@tapfixai.app</a></p>
-<p data-i18n="s2.p2">Please send the request from the email address connected to your TapFix account and use the subject:</p>
-<p class="step">Account deletion request</p>
+<p><a class="contact" href="mailto:support@tapfixai.app?subject=Data%20deletion%20request">support@tapfixai.app</a></p>
 
-<h2 data-i18n="s3.h">What data is deleted</h2>
-<p data-i18n="s3.p">When an account is deleted, we delete the account, authentication record, profile data, cloud settings, saved preferences, and other TapFix data associated with the account.</p>
+<h2 data-i18n="local.h">Delete local data on your device</h2>
+<p data-i18n="local.p">Custom words, settings, language choices, emoji recents and clipboard history are stored locally on your device or in the app group container. You can remove this local data by clearing the keyboard's local data in the app settings, or by uninstalling the app.</p>
 
-<h2 data-i18n="s4.h">How long it takes</h2>
-<p><strong data-i18n="s4.p">Account deletion requests are processed within 30 days.</strong></p>
+<h2 data-i18n="server.h">Request server-side deletion</h2>
+<p data-i18n="server.p">To request deletion of server-side data — such as AI processing logs or support records — email us and please include:</p>
+<ul>
+<li data-i18n="server.l1"><strong>platform:</strong> iOS or Android</li>
+<li data-i18n="server.l2"><strong>approximate date of use</strong></li>
+<li data-i18n="server.l3"><strong>issue description</strong></li>
+<li data-i18n="server.l4">if available, your <strong>anonymous support / device identifier</strong> from the app settings</li>
+</ul>
 
-<h2 data-i18n="s5.h">What data may be retained</h2>
-<p data-i18n="s5.p">Some data may be retained only where required for security, fraud prevention, legal, tax, payment, or compliance reasons.</p>
+<h2 data-i18n="time.h">How long it takes</h2>
+<p data-i18n="time.p">We will process deletion requests according to applicable privacy laws, within 30 days.</p>
 
-<h2 data-i18n="s6.h">Delete specific data without deleting your account</h2>
-<p data-i18n="s6.p">To request deletion of specific data without deleting your account, email <a href="mailto:support@tapfixai.app?subject=Data%20deletion%20request">support@tapfixai.app</a> and use the subject:</p>
-<p class="step">Data deletion request</p>
-<p data-i18n="s6.p2">Please describe what data you want deleted.</p>
-
-<h2 data-i18n="ios.h">iOS users</h2>
-<p data-i18n="ios.p">On iOS, TapFix AI Keyboard does not require an account. Local data can be removed by clearing the keyboard's local data in the app settings or by uninstalling the app. To request deletion of server-side data such as AI processing logs or support records, see the <a href="delete-data.html">Delete My Data</a> page or email <a href="mailto:support@tapfixai.app?subject=Data%20deletion%20request">support@tapfixai.app</a>.</p>
-
-<p data-i18n="see">See also our <a href="privacy.html">Privacy Policy</a>.</p>
+<p data-i18n="see">See also our <a href="privacy.html">Privacy Policy</a>. If you created a TapFix account, see <a href="account-deletion.html">Account deletion</a>.</p>
 
 </article></div></main>
 
-<footer><div class="wrap footer">© 2026 TapFix AI Studio. All rights reserved. · <a href="index.html" data-i18n="nav.home">Home</a> · <a href="support.html" data-i18n="nav.support">Support</a> · <a href="privacy.html" data-i18n="nav.privacy">Privacy Policy</a> · <a href="delete-data.html" data-i18n="nav.delete">Delete data</a></div></footer>
+<footer><div class="wrap footer">© 2026 TapFix AI Studio. All rights reserved. · <a href="index.html" data-i18n="nav.home">Home</a> · <a href="support.html" data-i18n="nav.support">Support</a> · <a href="privacy.html" data-i18n="nav.privacy">Privacy</a> · <a href="terms.html" data-i18n="nav.terms">Terms</a></div></footer>
 
-<script>window.TF_I18N="i18n-account.json";</script>
+<script>window.TF_I18N="i18n-deletedata.json";</script>
 <script src="i18n.js?v=2"></script>
 </body>
 </html>
