@@ -11,7 +11,7 @@
 :root{color-scheme:light dark;--bg:#f6f7fb;--card:#ffffff;--text:#111827;--muted:#667085;--line:#d9e0ea;--accent:#2563eb;--accent2:#0ea5e9}
 @media (prefers-color-scheme:dark){:root{--bg:#0c111d;--card:#111827;--text:#f8fafc;--muted:#9aa4b2;--line:#263244;--accent:#60a5fa;--accent2:#22d3ee}}
 *{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text",Inter,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,var(--bg),color-mix(in srgb,var(--bg) 86%,var(--card)));color:var(--text);line-height:1.65}
-a{color:inherit}.wrap{width:min(920px,calc(100% - 36px));margin:0 auto}.nav{height:74px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+a{color:inherit}.wrap{width:min(1160px,calc(100% - 40px));margin:0 auto}.nav{height:74px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:850}.logo{width:44px;height:44px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(145deg,#111827,#2563eb);box-shadow:0 18px 45px rgba(37,99,235,.18);color:#fff;position:relative}.logo small{position:absolute;right:7px;bottom:5px;font-size:9px;color:#bfdbfe}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 18px;border-radius:999px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;text-decoration:none;font-weight:800}
 main{padding:58px 0 90px}.card{padding:38px;border-radius:30px;background:var(--card);border:1px solid var(--line);box-shadow:0 24px 70px rgba(15,23,42,.12)}
@@ -19,13 +19,15 @@ h1{font-size:clamp(38px,6vw,64px);line-height:1;margin:0 0 18px;letter-spacing:0
 
 h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.lead{letter-spacing:-.008em}.btn{letter-spacing:-.006em}
 .legalnav{display:flex;gap:18px;margin-left:18px;font-size:14px}.legalnav a{color:var(--muted);text-decoration:none}.legalnav a:hover{color:var(--text)}.nav{gap:14px}@media(max-width:640px){.legalnav{display:none}}
+.card{max-width:920px}
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
 </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..900&display=swap" rel="stylesheet">
 </head>
 <body>
-<header><div class="wrap nav"><a class="brand" href="index.html"><span class="logo">TF<small>AI</small></span><span>TapFix AI</span></a><nav class="legalnav"><a href="index.html">Keyboard</a><a href="mac.html">Mac</a><a href="assistant.html">AI Button</a><a href="privacy-policy.html">Privacy</a></nav><span style="flex:1"></span><a class="btn" href="index.html">Home</a></div></header>
+<header><div class="wrap nav"><a class="brand" href="index.html"><span class="logo">TF<small>AI</small></span><span>TapFix AI</span></a><nav class="legalnav"><a href="index.html">Keyboard</a><a href="mac.html">Mac</a><a href="privacy-policy.html">Privacy</a></nav><span style="flex:1"></span><a class="btn" href="index.html">Home</a></div></header>
 <main><div class="wrap"><article class="card">
 <h1>Why TapFix AI Requires Accessibility Permission</h1>
 <p>TapFix AI uses Android Accessibility Service to provide its core text assistance features.</p>
