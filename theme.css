@@ -1,0 +1,8 @@
+/* TapFix — header logo = real app icon (replaces old gradient TF/AI box).
+   Small shared layer loaded after each page's inline styles. */
+.logo{
+  background:#000 url("logo.png") center/cover no-repeat !important;
+  color:transparent !important;
+  overflow:hidden;
+}
+.logo small{display:none !important}
