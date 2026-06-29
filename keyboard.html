@@ -14,7 +14,7 @@
   <style>
 :root{color-scheme:light dark;--bg:#f6f7fb;--surface:#ffffff;--surface-2:#eef2f7;--card:#ffffffcc;--text:#111827;--muted:#667085;--line:#d9e0ea;--accent:#2563eb;--accent-2:#0ea5e9;--accent-soft:#e8f1ff;--key:#ffffff;--key-strong:#eef2f7;--shadow:0 24px 70px rgba(15,23,42,.12);--radius:24px}
 @media (prefers-color-scheme:dark){:root{--bg:#0c111d;--surface:#101826;--surface-2:#151f2e;--card:#111827cc;--text:#f8fafc;--muted:#9aa4b2;--line:#263244;--accent:#60a5fa;--accent-2:#22d3ee;--accent-soft:#10243d;--key:#252b35;--key-strong:#161b24;--shadow:0 30px 90px rgba(0,0,0,.45)}}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:linear-gradient(180deg,var(--bg),var(--surface-2));color:var(--text);line-height:1.6}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text",Inter,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,var(--bg),var(--surface-2));color:var(--text);line-height:1.6}
 a{color:inherit;text-decoration:none}.wrap{width:min(1160px,calc(100% - 40px));margin:0 auto}
 header{position:sticky;top:0;z-index:20;backdrop-filter:blur(18px);background:color-mix(in srgb,var(--bg) 82%,transparent);border-bottom:1px solid var(--line)}
 .nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:12px;font-weight:850;letter-spacing:0}.logo{width:46px;height:46px;border-radius:16px;display:grid;place-items:center;font-weight:900;background:linear-gradient(145deg,#111827,#2563eb);box-shadow:var(--shadow);color:#fff;position:relative}.logo small{position:absolute;right:7px;bottom:5px;font-size:10px;color:#bfdbfe}.links{display:flex;align-items:center;gap:22px;color:var(--muted);font-size:14px}.links a:hover{color:var(--text)}
@@ -30,7 +30,12 @@ section{padding:76px 0}.section-head{max-width:800px;margin-bottom:34px}h2{margi
 footer{padding:44px 0;border-top:1px solid var(--line);color:var(--muted)}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot a{color:var(--text)}
 @media(max-width:920px){.hero,.privacy-grid{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}.links{display:none}.key{font-size:20px}.toolbar,.row,.row.mid,.row.low,.row.bottom{gap:6px}.tool,.key{min-height:42px;border-radius:15px}.tool{border-radius:999px}}
 @media(max-width:560px){.wrap{width:min(100% - 24px,1160px)}.hero{padding-top:54px}.grid{grid-template-columns:1fr}.keyboard-shell{padding:8px}.toolbar{grid-template-columns:repeat(4,1fr)}.key{font-size:17px}.tool,.key{min-height:36px}.row,.row.mid,.row.low{grid-template-columns:repeat(5,1fr)}.row.bottom{grid-template-columns:1fr 1fr 3fr 1fr}}
-  </style>
+  
+h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.lead{letter-spacing:-.008em}.btn{letter-spacing:-.006em}
+</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..900&display=swap" rel="stylesheet">
 </head>
 <body>
 <header>
@@ -156,7 +161,7 @@ footer{padding:44px 0;border-top:1px solid var(--line);color:var(--muted)}.foot{
 <footer>
   <div class="wrap foot">
     <div>© 2026 TapFix AI Studio. All rights reserved.</div>
-    <div><a href="assistant.html">AI Button</a> · <a href="privacy-policy.html">Privacy Policy</a> · <a href="accessibility-disclosure.html">Accessibility Disclosure</a></div>
+    <div><a href="assistant.html">AI Button</a> · <a href="privacy-policy.html">Privacy Policy</a> · <a href="accessibility-disclosure.html">Accessibility Disclosure</a> · <a href="account-deletion.html">Account deletion</a></div>
   </div>
 </footer>
 </body>
