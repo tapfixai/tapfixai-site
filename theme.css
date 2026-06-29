@@ -13,18 +13,18 @@
 :root{
   --bg:#fafafa; --surface:#ffffff; --surface-2:#f4f4f5; --card:#ffffff;
   --text:#18181b; --muted:#71717a; --line:#e6e6e9;
-  --accent:#18181b; --accent-2:#3f3f46; --accent-soft:#f4f4f5;
+  --accent:#18181b; --accent-2:#3f3f46; --accent2:#3f3f46; --accent-soft:#f4f4f5;
 }
 @media (prefers-color-scheme:dark){
   :root{
     --bg:#0a0a0a; --surface:#161617; --surface-2:#1b1b1e; --card:#161617;
     --text:#fafafa; --muted:#a1a1aa; --line:#2a2a2e;
-    --accent:#fafafa; --accent-2:#d4d4d8; --accent-soft:#1c1c1f;
+    --accent:#fafafa; --accent-2:#d4d4d8; --accent2:#d4d4d8; --accent-soft:#1c1c1f;
   }
 }
 
-/* flat black (light) / white (dark) primary button */
-.btn.primary{background:var(--accent) !important;color:var(--bg) !important;border-color:transparent !important;box-shadow:0 10px 30px rgba(0,0,0,.14) !important}
+/* flat black (light) / white (dark) accent buttons */
+.btn.primary,.contact{background:var(--accent) !important;color:var(--bg) !important;border-color:transparent !important;box-shadow:0 10px 30px rgba(0,0,0,.14) !important}
 /* keep official store badges legible on both themes */
 .gp-badge{border:1px solid var(--line) !important}
 .soon-tag{background:var(--accent) !important;color:var(--bg) !important}
