@@ -1,84 +1,106 @@
-/* TapFix AI — Liquid Glass (black premium) ============================
-   Shared design layer. Loaded AFTER each page's inline <style>, so it
-   overrides surfaces site-wide without touching page markup/content.
-   Black base + ambient colored light-leaks + frosted glass + specular. */
+/* TapFix AI — Liquid Glass (cinematic, Perplexity-style) =============
+   Dark cinematic scene + real glass spheres + glossy frosted panels +
+   serif display headline + single teal accent + new app icon logo.
+   Loaded AFTER each page's inline <style>; overrides surfaces site-wide.
+   To use a real photographic hero background later: set
+   --hero-img: url("hero-bg.jpg"); on body (see bottom). */
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
 
 :root{
   color-scheme: dark;
-  --bg:#07080d; --surface:#0c0f17; --surface-2:#0a0d14; --card:#0c0f17;
-  --text:#eef2fb; --muted:#aab4cf; --line:rgba(255,255,255,.13);
-  --accent:#5b9bff; --accent-2:#22d3ee; --accent2:#22d3ee;
-  --accent-soft:rgba(91,155,255,.16);
-  --key:rgba(255,255,255,.12); --key-strong:rgba(255,255,255,.06);
-  --shadow:0 24px 70px rgba(0,0,0,.55); --radius:24px;
-  --lg-blur:saturate(180%) blur(22px);
-  --lg-surface:rgba(22,26,38,.58);
-  --lg-pill:rgba(255,255,255,.07);
-  --lg-edge:inset 0 1px 0 rgba(255,255,255,.30), inset 0 -14px 26px rgba(255,255,255,.025);
-  --lg-drop:0 18px 50px rgba(0,0,0,.55);
+  --bg:#070a0d; --surface:#0c0f13; --surface-2:#0a0d11; --card:#0c0f13;
+  --text:#eef2f6; --muted:#a6b1bf; --line:rgba(255,255,255,.12);
+  --accent:#36b3a3; --accent-2:#36b3a3; --accent2:#36b3a3;
+  --accent-soft:rgba(54,179,163,.14);
+  --key:rgba(255,255,255,.10); --key-strong:rgba(255,255,255,.05);
+  --shadow:0 24px 70px rgba(0,0,0,.55); --radius:18px;
+  --lg-blur: blur(22px) saturate(180%) brightness(1.10);
+  --lg-surface: rgba(255,255,255,.06);
+  --lg-pill: rgba(255,255,255,.07);
+  --lg-spec: inset 0 1px 0 rgba(255,255,255,.40), inset 0 0 0 1px rgba(255,255,255,.03);
+  --lg-drop: 0 26px 60px rgba(0,0,0,.5), 0 4px 12px rgba(0,0,0,.35);
 }
 
-html{background:#06070b}
+/* cinematic background scene (soft restrained glows, one tone) */
+html{background:#060708}
 body{
+  position:relative;
   background:
-   radial-gradient(38% 42% at 10% 3%, rgba(37,99,235,.24), transparent 66%),
-   radial-gradient(40% 44% at 95% 1%, rgba(14,165,233,.18), transparent 64%),
-   radial-gradient(54% 56% at 90% 100%, rgba(124,58,237,.26), transparent 70%),
-   radial-gradient(46% 50% at 3% 100%, rgba(236,72,153,.13), transparent 70%),
-   #06070b !important;
+   radial-gradient(55% 42% at 50% 18%, rgba(80,128,142,.20), transparent 62%),
+   radial-gradient(40% 36% at 78% 26%, rgba(150,190,205,.13), transparent 60%),
+   radial-gradient(50% 40% at 20% 72%, rgba(64,104,124,.13), transparent 62%),
+   radial-gradient(120% 80% at 50% 128%, #0a0e12, transparent 60%),
+   linear-gradient(180deg,#080a0d,#060708) !important;
   background-attachment: fixed !important;
   color: var(--text);
 }
+/* real glass spheres behind content */
+body::before{content:"";position:fixed;z-index:0;pointer-events:none;width:46vw;max-width:560px;aspect-ratio:1;border-radius:50%;right:-6vw;top:-12vh;
+  background:radial-gradient(34% 30% at 34% 28%,rgba(235,245,250,.5),rgba(255,255,255,.05) 42%,transparent 56%),radial-gradient(130% 130% at 72% 78%,rgba(10,16,22,.92),rgba(44,70,84,.5) 58%,rgba(150,185,200,.16));
+  box-shadow:inset 0 0 80px rgba(255,255,255,.05),inset -30px -40px 80px rgba(0,0,0,.5)}
+body::after{content:"";position:fixed;z-index:0;pointer-events:none;width:150px;height:150px;border-radius:50%;left:4%;bottom:12%;
+  background:radial-gradient(34% 30% at 34% 28%,rgba(235,245,250,.45),transparent 50%),radial-gradient(130% 130% at 72% 78%,rgba(10,16,22,.9),rgba(44,70,84,.45) 60%,rgba(150,185,200,.14));
+  box-shadow:inset 0 0 40px rgba(255,255,255,.05),inset -16px -22px 44px rgba(0,0,0,.5)}
+header{z-index:20}
+main,footer{position:relative;z-index:1}
 
-/* sticky frosted header */
+/* serif display headline */
+h1{font-family:"Instrument Serif",Georgia,"Times New Roman",serif !important;font-weight:400 !important;letter-spacing:-.005em !important}
+h1 em,.serif-em{font-style:italic;color:#cfe8e2}
+.grad{-webkit-text-fill-color:#f2f5f8 !important;color:#f2f5f8 !important;background:none !important}
+
+/* frosted header */
 header{
-  background: rgba(10,12,18,.55) !important;
+  background: rgba(10,13,17,.55) !important;
   -webkit-backdrop-filter: var(--lg-blur); backdrop-filter: var(--lg-blur);
   border-bottom: 1px solid var(--line) !important;
 }
 
-/* large reading / content surfaces -> dark glass (kept readable) */
-.card,.panel,.keyboard-preview,table,.hero-phone .phone,.feature .phone,.media .phone{
+/* content surfaces -> glossy glass */
+.card,.panel,.keyboard-preview,table,.hero-phone .phone,.feature .phone,.media .phone,.cmd{
   background: var(--lg-surface) !important;
   -webkit-backdrop-filter: var(--lg-blur); backdrop-filter: var(--lg-blur);
   border: 1px solid var(--line) !important;
-  box-shadow: var(--lg-drop), var(--lg-edge) !important;
+  box-shadow: var(--lg-spec), var(--lg-drop) !important;
 }
 table{overflow:hidden}
 th{background: rgba(255,255,255,.05) !important; color: var(--text) !important}
 td,th{border-bottom:1px solid var(--line) !important}
-td{color: var(--muted)}
-tr:last-child td{border-bottom:0 !important}
+td{color: var(--muted)} tr:last-child td{border-bottom:0 !important}
 
-/* small chrome -> bright frosted pills */
-.btn,.lang,.badge,.plat,.step,.contact,.list div,.note,.kicker{
+/* small chrome -> frosted pills */
+.btn,.lang,.badge,.plat,.step,.contact,.list div,.note,.kicker,.eyebrow{
   -webkit-backdrop-filter: var(--lg-blur); backdrop-filter: var(--lg-blur);
 }
-.btn,.lang{background: var(--lg-pill) !important; border:1px solid var(--line) !important; color: var(--text) !important; box-shadow: var(--lg-edge)}
-.btn.primary{background: linear-gradient(135deg,#2563eb,#0ea5e9) !important; border-color: transparent !important; color:#fff !important; box-shadow:0 16px 40px rgba(37,99,235,.4)}
-.badge,.plat,.step,.contact{background: var(--lg-pill) !important; border:1px solid var(--line) !important}
-.plat.soon{background: rgba(91,155,255,.14) !important; color: var(--accent) !important}
+.btn,.lang{background: var(--lg-pill) !important; border:1px solid var(--line) !important; color: var(--text) !important; box-shadow: var(--lg-spec)}
+.btn.primary{background: linear-gradient(180deg,#3fc0b0,#1f8a7e) !important; border-color: transparent !important; color:#04201d !important; box-shadow: var(--lg-spec), 0 16px 34px rgba(31,138,126,.38)}
+.badge,.plat,.step,.contact,.eyebrow{background: var(--lg-pill) !important; border:1px solid var(--line) !important; color: var(--muted)}
+.badge,.eyebrow{color: var(--text)}
+.plat.soon{color: var(--text) !important}
 .list div{background: var(--lg-pill) !important; border:1px solid var(--line) !important; color: var(--muted)}
-.note{background: rgba(91,155,255,.10) !important; border:1px solid var(--line) !important; border-left:3px solid var(--accent) !important}
+.note{background: rgba(255,255,255,.05) !important; border:1px solid var(--line) !important; border-left:2px solid var(--accent) !important}
 .note p{color: var(--text) !important}
 
-/* gradient brand title (was flat). Use background-image longhand so the
-   shorthand !important does not reset background-clip back to border-box. */
-.grad{
-  background-image: linear-gradient(110deg,#5b9bff,#22d3ee 52%,#c084fc) !important;
-  -webkit-background-clip: text !important; background-clip: text !important;
-  -webkit-text-fill-color: transparent !important; color: transparent !important;
-}
-
-/* misc accents on black */
+/* misc */
 .gp-badge{border:1px solid rgba(255,255,255,.16) !important}
-.kicker{background: rgba(91,155,255,.14) !important; border:1px solid var(--line) !important; color: var(--accent) !important}
-.icon{background: rgba(91,155,255,.14) !important; color: var(--accent) !important}
+.kicker{background: var(--lg-pill) !important; border:1px solid var(--line) !important; color: var(--accent) !important}
+.icon{background: linear-gradient(180deg, rgba(255,255,255,.14), rgba(255,255,255,.05)) !important; color:#fff !important; box-shadow: var(--lg-spec)}
 strong{color: var(--text)}
+.dot{background:#7fd4c8 !important; box-shadow:0 0 12px #7fd4c8 !important}
+a{color:inherit}
 
-/* fallback: no backdrop-filter -> solid dark surfaces */
+/* new app icon as header logo (every page) */
+.logo{
+  background-color:#000 !important; background-image:url("logo.png") !important;
+  background-size:cover !important; background-position:center !important; background-repeat:no-repeat !important;
+  color:transparent !important; overflow:hidden;
+  box-shadow:0 6px 18px rgba(0,0,0,.5), inset 0 0 0 1px rgba(255,255,255,.1) !important;
+}
+.logo small{display:none !important}
+
+/* fallback: no backdrop-filter */
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))){
-  header{background:#0b0e16 !important}
-  .card,.panel,.keyboard-preview,table,.hero-phone .phone,.feature .phone,.media .phone{background:#0e111a !important}
-  .btn,.lang,.badge,.plat,.list div,.step,.contact,.note{background:rgba(255,255,255,.08) !important}
+  header{background:#0c0f13 !important}
+  .card,.panel,.keyboard-preview,table,.cmd,.hero-phone .phone,.feature .phone,.media .phone{background:#11151b !important}
+  .btn,.lang,.badge,.plat,.list div,.step,.contact,.note,.kicker,.eyebrow{background:rgba(255,255,255,.08) !important}
 }
