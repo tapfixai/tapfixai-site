@@ -174,7 +174,15 @@
     "foot.privacy": "Política de privacidad",
     "foot.acc": "Accessibility Disclosure",
     "nav.keyboard": "Teclado",
-    "nav.privacy": "Privacidad"
+    "nav.privacy": "Privacidad",
+    "plat.android": "Disponible en Google Play",
+    "plat.ios": "se está preparando para su lanzamiento en la App Store",
+    "hero.local": "La escritura normal funciona localmente. Las funciones de IA usan la red solo cuando tocas una acción de IA.",
+    "gp.small": "Disponible en",
+    "as.small": "Próximamente en",
+    "as.tag": "Pronto",
+    "nav.terms": "Términos",
+    "nav.delete": "Eliminar datos"
   },
   "pt": {
     "nav.home": "Início",
@@ -258,7 +266,15 @@
     "foot.privacy": "Política de privacidade",
     "foot.acc": "Accessibility Disclosure",
     "nav.keyboard": "Teclado",
-    "nav.privacy": "Privacidade"
+    "nav.privacy": "Privacidade",
+    "plat.android": "Disponível no Google Play",
+    "plat.ios": "está sendo preparado para lançamento na App Store",
+    "hero.local": "A digitação normal funciona localmente. Os recursos de IA usam a rede apenas quando você toca em uma ação de IA.",
+    "gp.small": "Disponível no",
+    "as.small": "Em breve na",
+    "as.tag": "Em breve",
+    "nav.terms": "Termos",
+    "nav.delete": "Excluir dados"
   },
   "fr": {
     "nav.home": "Accueil",
@@ -342,7 +358,15 @@
     "foot.privacy": "Politique de confidentialité",
     "foot.acc": "Accessibility Disclosure",
     "nav.keyboard": "Clavier",
-    "nav.privacy": "Confidentialité"
+    "nav.privacy": "Confidentialité",
+    "plat.android": "Disponible sur Google Play",
+    "plat.ios": "est en préparation pour sa sortie sur l'App Store",
+    "hero.local": "La saisie normale fonctionne en local. Les fonctions IA n'utilisent le réseau que lorsque vous appuyez sur une action IA.",
+    "gp.small": "Disponible sur",
+    "as.small": "Bientôt sur",
+    "as.tag": "Bientôt",
+    "nav.terms": "Conditions",
+    "nav.delete": "Suppression des données"
   },
   "de": {
     "nav.home": "Start",
@@ -426,7 +450,15 @@
     "foot.privacy": "Datenschutzerklärung",
     "foot.acc": "Accessibility Disclosure",
     "nav.keyboard": "Tastatur",
-    "nav.privacy": "Datenschutz"
+    "nav.privacy": "Datenschutz",
+    "plat.android": "Verfügbar bei Google Play",
+    "plat.ios": "wird für die Veröffentlichung im App Store vorbereitet",
+    "hero.local": "Normales Tippen funktioniert lokal. KI-Funktionen nutzen das Netzwerk nur, wenn du eine KI-Aktion antippst.",
+    "gp.small": "Jetzt bei",
+    "as.small": "Demnächst im",
+    "as.tag": "Bald",
+    "nav.terms": "Nutzungsbedingungen",
+    "nav.delete": "Daten löschen"
   },
   "it": {
     "nav.home": "Home",
@@ -510,6 +542,14 @@
     "foot.privacy": "Informativa sulla privacy",
     "foot.acc": "Accessibility Disclosure",
     "nav.keyboard": "Tastiera",
-    "nav.privacy": "Privacy"
+    "nav.privacy": "Privacy",
+    "plat.android": "Disponibile su Google Play",
+    "plat.ios": "è in preparazione per il rilascio su App Store",
+    "hero.local": "La digitazione normale funziona in locale. Le funzioni IA usano la rete solo quando tocchi un'azione IA.",
+    "gp.small": "Disponibile su",
+    "as.small": "Presto su",
+    "as.tag": "Presto",
+    "nav.terms": "Termini",
+    "nav.delete": "Elimina dati"
   }
 }

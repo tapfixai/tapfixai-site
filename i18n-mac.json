@@ -138,7 +138,10 @@
     "foot.acc": "Accessibility",
     "nav.permissions": "Permisos",
     "nav.button": "Botón IA",
-    "nav.mac": "Mac"
+    "nav.mac": "Mac",
+    "nav.support": "Soporte",
+    "nav.terms": "Términos",
+    "nav.delete": "Eliminar datos"
   },
   "pt": {
     "nav.features": "Recursos",
@@ -207,7 +210,10 @@
     "foot.acc": "Accessibility",
     "nav.permissions": "Permissões",
     "nav.button": "Botão IA",
-    "nav.mac": "Mac"
+    "nav.mac": "Mac",
+    "nav.support": "Suporte",
+    "nav.terms": "Termos",
+    "nav.delete": "Excluir dados"
   },
   "fr": {
     "nav.features": "Fonctions",
@@ -276,7 +282,10 @@
     "foot.acc": "Accessibility",
     "nav.permissions": "Autorisations",
     "nav.button": "Bouton IA",
-    "nav.mac": "Mac"
+    "nav.mac": "Mac",
+    "nav.support": "Assistance",
+    "nav.terms": "Conditions",
+    "nav.delete": "Suppression des données"
   },
   "de": {
     "nav.features": "Funktionen",
@@ -345,7 +354,10 @@
     "foot.acc": "Accessibility",
     "nav.permissions": "Berechtigungen",
     "nav.button": "KI-Button",
-    "nav.mac": "Mac"
+    "nav.mac": "Mac",
+    "nav.support": "Support",
+    "nav.terms": "Nutzungsbedingungen",
+    "nav.delete": "Daten löschen"
   },
   "it": {
     "nav.features": "Funzioni",
@@ -414,6 +426,9 @@
     "foot.acc": "Accessibility",
     "nav.permissions": "Autorizzazioni",
     "nav.button": "Pulsante IA",
-    "nav.mac": "Mac"
+    "nav.mac": "Mac",
+    "nav.support": "Supporto",
+    "nav.terms": "Termini",
+    "nav.delete": "Elimina dati"
   }
 }
