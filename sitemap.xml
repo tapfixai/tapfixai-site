@@ -1004,6 +1004,24 @@
     <loc>https://tapfixai.app/support</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://tapfixai.app/support"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://tapfixai.app/ru/support"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tapfixai.app/es/support"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://tapfixai.app/pt/support"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tapfixai.app/fr/support"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tapfixai.app/de/support"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tapfixai.app/it/support"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://tapfixai.app/nl/support"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://tapfixai.app/pl/support"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://tapfixai.app/uk/support"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tapfixai.app/tr/support"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://tapfixai.app/id/support"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://tapfixai.app/vi/support"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://tapfixai.app/th/support"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://tapfixai.app/zh/support"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tapfixai.app/ja/support"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://tapfixai.app/ko/support"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://tapfixai.app/hi/support"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://tapfixai.app/ar/support"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://tapfixai.app/fa/support"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://tapfixai.app/support"/>
     <lastmod>2026-06-30</lastmod>
   </url>
@@ -1011,6 +1029,474 @@
     <loc>https://tapfixai.app/ru/support</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://tapfixai.app/support"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://tapfixai.app/ru/support"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tapfixai.app/es/support"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://tapfixai.app/pt/support"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tapfixai.app/fr/support"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tapfixai.app/de/support"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tapfixai.app/it/support"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://tapfixai.app/nl/support"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://tapfixai.app/pl/support"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://tapfixai.app/uk/support"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tapfixai.app/tr/support"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://tapfixai.app/id/support"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://tapfixai.app/vi/support"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://tapfixai.app/th/support"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://tapfixai.app/zh/support"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tapfixai.app/ja/support"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://tapfixai.app/ko/support"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://tapfixai.app/hi/support"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://tapfixai.app/ar/support"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://tapfixai.app/fa/support"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tapfixai.app/support"/>
+    <lastmod>2026-06-30</lastmod>
+  </url>
+  <url>
+    <loc>https://tapfixai.app/es/support</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tapfixai.app/support"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tapfixai.app/ru/support"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tapfixai.app/es/support"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://tapfixai.app/pt/support"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tapfixai.app/fr/support"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tapfixai.app/de/support"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tapfixai.app/it/support"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://tapfixai.app/nl/support"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://tapfixai.app/pl/support"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://tapfixai.app/uk/support"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tapfixai.app/tr/support"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://tapfixai.app/id/support"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://tapfixai.app/vi/support"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://tapfixai.app/th/support"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://tapfixai.app/zh/support"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tapfixai.app/ja/support"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://tapfixai.app/ko/support"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://tapfixai.app/hi/support"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://tapfixai.app/ar/support"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://tapfixai.app/fa/support"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tapfixai.app/support"/>
+    <lastmod>2026-06-30</lastmod>
+  </url>
+  <url>
+    <loc>https://tapfixai.app/pt/support</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tapfixai.app/support"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tapfixai.app/ru/support"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tapfixai.app/es/support"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://tapfixai.app/pt/support"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tapfixai.app/fr/support"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tapfixai.app/de/support"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tapfixai.app/it/support"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://tapfixai.app/nl/support"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://tapfixai.app/pl/support"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://tapfixai.app/uk/support"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tapfixai.app/tr/support"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://tapfixai.app/id/support"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://tapfixai.app/vi/support"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://tapfixai.app/th/support"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://tapfixai.app/zh/support"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tapfixai.app/ja/support"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://tapfixai.app/ko/support"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://tapfixai.app/hi/support"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://tapfixai.app/ar/support"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://tapfixai.app/fa/support"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tapfixai.app/support"/>
+    <lastmod>2026-06-30</lastmod>
+  </url>
+  <url>
+    <loc>https://tapfixai.app/fr/support</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tapfixai.app/support"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tapfixai.app/ru/support"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tapfixai.app/es/support"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://tapfixai.app/pt/support"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tapfixai.app/fr/support"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tapfixai.app/de/support"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tapfixai.app/it/support"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://tapfixai.app/nl/support"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://tapfixai.app/pl/support"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://tapfixai.app/uk/support"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tapfixai.app/tr/support"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://tapfixai.app/id/support"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://tapfixai.app/vi/support"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://tapfixai.app/th/support"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://tapfixai.app/zh/support"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tapfixai.app/ja/support"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://tapfixai.app/ko/support"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://tapfixai.app/hi/support"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://tapfixai.app/ar/support"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://tapfixai.app/fa/support"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tapfixai.app/support"/>
+    <lastmod>2026-06-30</lastmod>
+  </url>
+  <url>
+    <loc>https://tapfixai.app/de/support</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tapfixai.app/support"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tapfixai.app/ru/support"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tapfixai.app/es/support"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://tapfixai.app/pt/support"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tapfixai.app/fr/support"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tapfixai.app/de/support"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tapfixai.app/it/support"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://tapfixai.app/nl/support"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://tapfixai.app/pl/support"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://tapfixai.app/uk/support"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tapfixai.app/tr/support"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://tapfixai.app/id/support"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://tapfixai.app/vi/support"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://tapfixai.app/th/support"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://tapfixai.app/zh/support"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tapfixai.app/ja/support"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://tapfixai.app/ko/support"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://tapfixai.app/hi/support"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://tapfixai.app/ar/support"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://tapfixai.app/fa/support"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tapfixai.app/support"/>
+    <lastmod>2026-06-30</lastmod>
+  </url>
+  <url>
+    <loc>https://tapfixai.app/it/support</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tapfixai.app/support"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tapfixai.app/ru/support"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tapfixai.app/es/support"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://tapfixai.app/pt/support"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tapfixai.app/fr/support"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tapfixai.app/de/support"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tapfixai.app/it/support"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://tapfixai.app/nl/support"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://tapfixai.app/pl/support"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://tapfixai.app/uk/support"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tapfixai.app/tr/support"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://tapfixai.app/id/support"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://tapfixai.app/vi/support"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://tapfixai.app/th/support"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://tapfixai.app/zh/support"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tapfixai.app/ja/support"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://tapfixai.app/ko/support"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://tapfixai.app/hi/support"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://tapfixai.app/ar/support"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://tapfixai.app/fa/support"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tapfixai.app/support"/>
+    <lastmod>2026-06-30</lastmod>
+  </url>
+  <url>
+    <loc>https://tapfixai.app/nl/support</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tapfixai.app/support"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tapfixai.app/ru/support"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tapfixai.app/es/support"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://tapfixai.app/pt/support"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tapfixai.app/fr/support"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tapfixai.app/de/support"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tapfixai.app/it/support"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://tapfixai.app/nl/support"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://tapfixai.app/pl/support"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://tapfixai.app/uk/support"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tapfixai.app/tr/support"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://tapfixai.app/id/support"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://tapfixai.app/vi/support"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://tapfixai.app/th/support"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://tapfixai.app/zh/support"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tapfixai.app/ja/support"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://tapfixai.app/ko/support"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://tapfixai.app/hi/support"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://tapfixai.app/ar/support"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://tapfixai.app/fa/support"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tapfixai.app/support"/>
+    <lastmod>2026-06-30</lastmod>
+  </url>
+  <url>
+    <loc>https://tapfixai.app/pl/support</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tapfixai.app/support"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tapfixai.app/ru/support"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tapfixai.app/es/support"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://tapfixai.app/pt/support"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tapfixai.app/fr/support"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tapfixai.app/de/support"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tapfixai.app/it/support"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://tapfixai.app/nl/support"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://tapfixai.app/pl/support"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://tapfixai.app/uk/support"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tapfixai.app/tr/support"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://tapfixai.app/id/support"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://tapfixai.app/vi/support"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://tapfixai.app/th/support"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://tapfixai.app/zh/support"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tapfixai.app/ja/support"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://tapfixai.app/ko/support"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://tapfixai.app/hi/support"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://tapfixai.app/ar/support"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://tapfixai.app/fa/support"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tapfixai.app/support"/>
+    <lastmod>2026-06-30</lastmod>
+  </url>
+  <url>
+    <loc>https://tapfixai.app/uk/support</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tapfixai.app/support"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tapfixai.app/ru/support"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tapfixai.app/es/support"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://tapfixai.app/pt/support"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tapfixai.app/fr/support"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tapfixai.app/de/support"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tapfixai.app/it/support"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://tapfixai.app/nl/support"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://tapfixai.app/pl/support"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://tapfixai.app/uk/support"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tapfixai.app/tr/support"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://tapfixai.app/id/support"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://tapfixai.app/vi/support"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://tapfixai.app/th/support"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://tapfixai.app/zh/support"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tapfixai.app/ja/support"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://tapfixai.app/ko/support"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://tapfixai.app/hi/support"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://tapfixai.app/ar/support"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://tapfixai.app/fa/support"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tapfixai.app/support"/>
+    <lastmod>2026-06-30</lastmod>
+  </url>
+  <url>
+    <loc>https://tapfixai.app/tr/support</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tapfixai.app/support"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tapfixai.app/ru/support"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tapfixai.app/es/support"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://tapfixai.app/pt/support"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tapfixai.app/fr/support"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tapfixai.app/de/support"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tapfixai.app/it/support"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://tapfixai.app/nl/support"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://tapfixai.app/pl/support"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://tapfixai.app/uk/support"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tapfixai.app/tr/support"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://tapfixai.app/id/support"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://tapfixai.app/vi/support"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://tapfixai.app/th/support"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://tapfixai.app/zh/support"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tapfixai.app/ja/support"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://tapfixai.app/ko/support"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://tapfixai.app/hi/support"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://tapfixai.app/ar/support"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://tapfixai.app/fa/support"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tapfixai.app/support"/>
+    <lastmod>2026-06-30</lastmod>
+  </url>
+  <url>
+    <loc>https://tapfixai.app/id/support</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tapfixai.app/support"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tapfixai.app/ru/support"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tapfixai.app/es/support"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://tapfixai.app/pt/support"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tapfixai.app/fr/support"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tapfixai.app/de/support"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tapfixai.app/it/support"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://tapfixai.app/nl/support"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://tapfixai.app/pl/support"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://tapfixai.app/uk/support"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tapfixai.app/tr/support"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://tapfixai.app/id/support"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://tapfixai.app/vi/support"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://tapfixai.app/th/support"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://tapfixai.app/zh/support"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tapfixai.app/ja/support"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://tapfixai.app/ko/support"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://tapfixai.app/hi/support"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://tapfixai.app/ar/support"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://tapfixai.app/fa/support"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tapfixai.app/support"/>
+    <lastmod>2026-06-30</lastmod>
+  </url>
+  <url>
+    <loc>https://tapfixai.app/vi/support</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tapfixai.app/support"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tapfixai.app/ru/support"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tapfixai.app/es/support"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://tapfixai.app/pt/support"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tapfixai.app/fr/support"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tapfixai.app/de/support"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tapfixai.app/it/support"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://tapfixai.app/nl/support"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://tapfixai.app/pl/support"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://tapfixai.app/uk/support"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tapfixai.app/tr/support"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://tapfixai.app/id/support"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://tapfixai.app/vi/support"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://tapfixai.app/th/support"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://tapfixai.app/zh/support"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tapfixai.app/ja/support"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://tapfixai.app/ko/support"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://tapfixai.app/hi/support"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://tapfixai.app/ar/support"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://tapfixai.app/fa/support"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tapfixai.app/support"/>
+    <lastmod>2026-06-30</lastmod>
+  </url>
+  <url>
+    <loc>https://tapfixai.app/th/support</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tapfixai.app/support"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tapfixai.app/ru/support"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tapfixai.app/es/support"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://tapfixai.app/pt/support"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tapfixai.app/fr/support"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tapfixai.app/de/support"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tapfixai.app/it/support"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://tapfixai.app/nl/support"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://tapfixai.app/pl/support"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://tapfixai.app/uk/support"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tapfixai.app/tr/support"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://tapfixai.app/id/support"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://tapfixai.app/vi/support"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://tapfixai.app/th/support"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://tapfixai.app/zh/support"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tapfixai.app/ja/support"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://tapfixai.app/ko/support"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://tapfixai.app/hi/support"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://tapfixai.app/ar/support"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://tapfixai.app/fa/support"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tapfixai.app/support"/>
+    <lastmod>2026-06-30</lastmod>
+  </url>
+  <url>
+    <loc>https://tapfixai.app/zh/support</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tapfixai.app/support"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tapfixai.app/ru/support"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tapfixai.app/es/support"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://tapfixai.app/pt/support"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tapfixai.app/fr/support"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tapfixai.app/de/support"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tapfixai.app/it/support"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://tapfixai.app/nl/support"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://tapfixai.app/pl/support"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://tapfixai.app/uk/support"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tapfixai.app/tr/support"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://tapfixai.app/id/support"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://tapfixai.app/vi/support"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://tapfixai.app/th/support"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://tapfixai.app/zh/support"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tapfixai.app/ja/support"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://tapfixai.app/ko/support"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://tapfixai.app/hi/support"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://tapfixai.app/ar/support"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://tapfixai.app/fa/support"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tapfixai.app/support"/>
+    <lastmod>2026-06-30</lastmod>
+  </url>
+  <url>
+    <loc>https://tapfixai.app/ja/support</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tapfixai.app/support"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tapfixai.app/ru/support"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tapfixai.app/es/support"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://tapfixai.app/pt/support"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tapfixai.app/fr/support"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tapfixai.app/de/support"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tapfixai.app/it/support"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://tapfixai.app/nl/support"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://tapfixai.app/pl/support"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://tapfixai.app/uk/support"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tapfixai.app/tr/support"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://tapfixai.app/id/support"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://tapfixai.app/vi/support"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://tapfixai.app/th/support"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://tapfixai.app/zh/support"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tapfixai.app/ja/support"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://tapfixai.app/ko/support"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://tapfixai.app/hi/support"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://tapfixai.app/ar/support"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://tapfixai.app/fa/support"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tapfixai.app/support"/>
+    <lastmod>2026-06-30</lastmod>
+  </url>
+  <url>
+    <loc>https://tapfixai.app/ko/support</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tapfixai.app/support"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tapfixai.app/ru/support"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tapfixai.app/es/support"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://tapfixai.app/pt/support"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tapfixai.app/fr/support"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tapfixai.app/de/support"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tapfixai.app/it/support"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://tapfixai.app/nl/support"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://tapfixai.app/pl/support"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://tapfixai.app/uk/support"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tapfixai.app/tr/support"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://tapfixai.app/id/support"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://tapfixai.app/vi/support"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://tapfixai.app/th/support"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://tapfixai.app/zh/support"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tapfixai.app/ja/support"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://tapfixai.app/ko/support"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://tapfixai.app/hi/support"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://tapfixai.app/ar/support"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://tapfixai.app/fa/support"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tapfixai.app/support"/>
+    <lastmod>2026-06-30</lastmod>
+  </url>
+  <url>
+    <loc>https://tapfixai.app/hi/support</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tapfixai.app/support"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tapfixai.app/ru/support"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tapfixai.app/es/support"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://tapfixai.app/pt/support"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tapfixai.app/fr/support"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tapfixai.app/de/support"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tapfixai.app/it/support"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://tapfixai.app/nl/support"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://tapfixai.app/pl/support"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://tapfixai.app/uk/support"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tapfixai.app/tr/support"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://tapfixai.app/id/support"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://tapfixai.app/vi/support"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://tapfixai.app/th/support"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://tapfixai.app/zh/support"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tapfixai.app/ja/support"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://tapfixai.app/ko/support"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://tapfixai.app/hi/support"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://tapfixai.app/ar/support"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://tapfixai.app/fa/support"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tapfixai.app/support"/>
+    <lastmod>2026-06-30</lastmod>
+  </url>
+  <url>
+    <loc>https://tapfixai.app/ar/support</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tapfixai.app/support"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tapfixai.app/ru/support"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tapfixai.app/es/support"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://tapfixai.app/pt/support"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tapfixai.app/fr/support"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tapfixai.app/de/support"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tapfixai.app/it/support"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://tapfixai.app/nl/support"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://tapfixai.app/pl/support"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://tapfixai.app/uk/support"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tapfixai.app/tr/support"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://tapfixai.app/id/support"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://tapfixai.app/vi/support"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://tapfixai.app/th/support"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://tapfixai.app/zh/support"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tapfixai.app/ja/support"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://tapfixai.app/ko/support"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://tapfixai.app/hi/support"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://tapfixai.app/ar/support"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://tapfixai.app/fa/support"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tapfixai.app/support"/>
+    <lastmod>2026-06-30</lastmod>
+  </url>
+  <url>
+    <loc>https://tapfixai.app/fa/support</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tapfixai.app/support"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tapfixai.app/ru/support"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tapfixai.app/es/support"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://tapfixai.app/pt/support"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tapfixai.app/fr/support"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tapfixai.app/de/support"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tapfixai.app/it/support"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://tapfixai.app/nl/support"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://tapfixai.app/pl/support"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://tapfixai.app/uk/support"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tapfixai.app/tr/support"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://tapfixai.app/id/support"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://tapfixai.app/vi/support"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://tapfixai.app/th/support"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://tapfixai.app/zh/support"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tapfixai.app/ja/support"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://tapfixai.app/ko/support"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://tapfixai.app/hi/support"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://tapfixai.app/ar/support"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://tapfixai.app/fa/support"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://tapfixai.app/support"/>
     <lastmod>2026-06-30</lastmod>
   </url>
