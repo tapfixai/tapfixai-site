@@ -65,7 +65,8 @@
     "foot.privacy": "Политика конфиденциальности",
     "foot.acc": "Accessibility",
     "nav.permissions": "Разрешения",
-    "nav.button": "AI-кнопка"
+    "nav.button": "AI-кнопка",
+    "nav.mac": "Mac"
   },
   "es": {
     "nav.features": "Funciones",
@@ -133,7 +134,8 @@
     "foot.privacy": "Política de privacidad",
     "foot.acc": "Accessibility",
     "nav.permissions": "Permisos",
-    "nav.button": "Botón IA"
+    "nav.button": "Botón IA",
+    "nav.mac": "Mac"
   },
   "pt": {
     "nav.features": "Recursos",
@@ -201,7 +203,8 @@
     "foot.privacy": "Política de privacidade",
     "foot.acc": "Accessibility",
     "nav.permissions": "Permissões",
-    "nav.button": "Botão IA"
+    "nav.button": "Botão IA",
+    "nav.mac": "Mac"
   },
   "fr": {
     "nav.features": "Fonctions",
@@ -269,7 +272,8 @@
     "foot.privacy": "Politique de confidentialité",
     "foot.acc": "Accessibility",
     "nav.permissions": "Autorisations",
-    "nav.button": "Bouton IA"
+    "nav.button": "Bouton IA",
+    "nav.mac": "Mac"
   },
   "de": {
     "nav.features": "Funktionen",
@@ -337,7 +341,8 @@
     "foot.privacy": "Datenschutzerklärung",
     "foot.acc": "Accessibility",
     "nav.permissions": "Berechtigungen",
-    "nav.button": "KI-Button"
+    "nav.button": "KI-Button",
+    "nav.mac": "Mac"
   },
   "it": {
     "nav.features": "Funzioni",
@@ -405,6 +410,7 @@
     "foot.privacy": "Informativa sulla privacy",
     "foot.acc": "Accessibility",
     "nav.permissions": "Autorizzazioni",
-    "nav.button": "Pulsante IA"
+    "nav.button": "Pulsante IA",
+    "nav.mac": "Mac"
   }
 }
