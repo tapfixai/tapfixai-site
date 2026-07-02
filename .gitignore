@@ -2,6 +2,7 @@ node_modules/
 .DS_Store
 *.log
 *.zip
+_site/
 *.jks
 .env
 .env.*
