@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>__TITLE__</title>
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <meta name="description" content="__DESC__">
+  <meta name="keywords" content="__KEYWORDS__">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="TapFix AI">
+  <meta property="og:title" content="__OG_TITLE__">
+  <meta property="og:description" content="__DESC__">
+  <meta property="og:image" content="https://tapfixai.app/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="__OG_TITLE__">
+  <meta name="twitter:description" content="__DESC__">
+  <meta name="twitter:image" content="https://tapfixai.app/og-image.png">
+  <style>
+:root{color-scheme:light dark;--bg:#f6f7fb;--surface:#fff;--surface-2:#eef2f7;--card:#ffffffcc;--text:#111827;--muted:#667085;--line:#d9e0ea;--accent:#2563eb;--accent2:#0ea5e9;--accent-soft:#e8f1ff;--shadow:0 24px 70px rgba(15,23,42,.12);--radius:24px}
+@media (prefers-color-scheme:dark){:root{--bg:#0c111d;--surface:#101826;--surface-2:#151f2e;--card:#111827cc;--text:#f8fafc;--muted:#9aa4b2;--line:#263244;--accent:#60a5fa;--accent2:#22d3ee;--accent-soft:#10243d;--shadow:0 30px 90px rgba(0,0,0,.45)}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text",Inter,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,var(--bg),var(--surface-2));color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}.wrap{width:min(1160px,calc(100% - 40px));margin:0 auto}
+header{position:sticky;top:0;z-index:20;backdrop-filter:blur(18px);background:color-mix(in srgb,var(--bg) 82%,transparent);border-bottom:1px solid var(--line)}
+.nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:12px;font-weight:850;color:var(--text)}.logo{width:46px;height:46px;border-radius:16px;display:grid;place-items:center;font-weight:900;background:linear-gradient(145deg,#111827,#2563eb);box-shadow:var(--shadow);color:#fff;position:relative}.logo small{position:absolute;right:7px;bottom:5px;font-size:10px;color:#bfdbfe}.links{display:flex;align-items:center;gap:22px;color:var(--muted);font-size:14px}.links a:hover{color:var(--text)}
+.hero{padding:82px 0 58px}.hero-inner{display:grid;grid-template-columns:1fr .85fr;align-items:center;gap:54px}.badge{display:inline-flex;align-items:center;gap:9px;padding:9px 14px;border:1px solid var(--line);border-radius:999px;color:var(--accent);background:var(--accent-soft);font-size:13px;margin-bottom:24px;font-weight:800}.dot{width:8px;height:8px;border-radius:50%;background:var(--accent)}
+h1{margin:0;font-size:clamp(42px,6.8vw,74px);line-height:.98;letter-spacing:-.032em}h2{margin:0;font-size:clamp(30px,4vw,48px);line-height:1.04;letter-spacing:-.022em}h3{letter-spacing:-.012em}.lead{max-width:720px;margin:24px 0 0;font-size:clamp(18px,2vw,22px);line-height:1.55;color:var(--muted);letter-spacing:-.008em}.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px;align-items:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 22px;border-radius:999px;font-weight:800;border:1px solid var(--line);background:var(--surface);box-shadow:0 8px 24px rgba(15,23,42,.06);letter-spacing:-.006em;transition:transform .15s ease,box-shadow .15s ease}.btn:hover{transform:translateY(-1px)}.btn.primary{border-color:transparent;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;box-shadow:0 18px 46px color-mix(in srgb,var(--accent) 28%,transparent)}
+.gp-badge{display:inline-flex;align-items:center;gap:13px;padding:0 22px;min-height:58px;border-radius:15px;background:#000;border:1px solid #2a2f3a;color:#fff;box-shadow:0 16px 38px rgba(0,0,0,.24);transition:transform .15s ease,box-shadow .15s ease}.gp-badge:hover{transform:translateY(-1px);box-shadow:0 20px 44px rgba(0,0,0,.32);color:#fff}.gp-badge svg{width:27px;height:27px;flex:none;display:block}.gp-t{display:flex;flex-direction:column;line-height:1.04;text-align:left}.gp-t small{font-size:10px;letter-spacing:.13em;text-transform:uppercase;opacity:.92;font-weight:600}.gp-t b{font-size:20px;font-weight:600;letter-spacing:.01em}.soon-badge{opacity:.55;cursor:default;box-shadow:none;position:relative}.soon-badge:hover{transform:none;box-shadow:none}.soon-tag{position:absolute;top:-9px;right:-8px;background:var(--accent);color:var(--bg);font-size:9px;font-weight:900;letter-spacing:.04em;text-transform:uppercase;padding:2px 7px;border-radius:999px}
+.phone{width:100%;max-width:300px;padding:9px;border-radius:34px;background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);margin-left:auto}.screen{overflow:hidden;border-radius:26px;aspect-ratio:720/1560;background:#0b1220}.screen img{width:100%;height:100%;object-fit:cover;display:block}
+section{padding:72px 0}.section-head{max-width:790px;margin-bottom:30px}.section-head p{color:var(--muted);font-size:18px;margin:16px 0 0}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.card,.step,.panel{padding:26px;border-radius:var(--radius);background:var(--card);border:1px solid var(--line);box-shadow:0 14px 38px rgba(15,23,42,.05)}.card h3,.step h3{margin:0 0 10px;font-size:20px}.card p,.step p,.panel p{margin:0;color:var(--muted)}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.step span{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);font-weight:900;margin-bottom:16px}.cta{padding:48px;border-radius:32px;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow);text-align:center}.cta p{max-width:760px;margin:16px auto 0;color:var(--muted);font-size:18px}.related{padding-top:0}.related .panel{display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}.related a{color:var(--text);font-weight:800}.related p{margin:0;color:var(--muted)}
+footer{padding:44px 0;border-top:1px solid var(--line);color:var(--muted)}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot a{color:var(--text)}
+@media(max-width:920px){.hero-inner{grid-template-columns:1fr}.links{display:none}.grid{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:1fr}.phone{margin:0 auto}}
+@media(max-width:560px){.wrap{width:min(100% - 24px,1160px)}.hero{padding-top:54px}.grid{grid-template-columns:1fr}.cta{padding:32px 22px}.gp-badge{width:100%;justify-content:center}}
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css?v=2">
+  <script type="application/ld+json">__JSON_LD__</script>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="TapFix AI Home"><span class="logo">TF<small>AI</small></span><span>TapFix AI</span></a>
+    <nav class="links" aria-label="TapFix navigation">
+      <a href="index.html">Keyboard</a>
+      <a href="mac.html">Mac</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div>
+        <div class="badge"><span class="dot"></span>__BADGE__</div>
+        <h1>__H1__</h1>
+        <p class="lead">__LEAD__</p>
+        <div class="actions">
+          <a class="gp-badge" href="https://play.google.com/store/apps/details?id=com.tapfixai.keyboard" target="_blank" rel="noopener" aria-label="Get TapFix AI Keyboard on Google Play">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polygon points="3,2.2 3,21.8 12.7,12" fill="#00d2ff"/><polygon points="3,2.2 16.2,9.6 16.2,12 12.7,12" fill="#00f076"/><polygon points="3,21.8 16.2,14.4 16.2,12 12.7,12" fill="#ff3b44"/><polygon points="16.2,9.6 20.5,12 16.2,14.4" fill="#ffcd00"/></svg>
+            <span class="gp-t"><small>Get it on</small><b>Google Play</b></span>
+          </a>
+          <span class="gp-badge soon-badge" role="img" aria-label="App Store coming soon">
+            <span class="gp-t"><small>Coming soon to</small><b>App Store</b></span>
+            <span class="soon-tag">Soon</span>
+          </span>
+        </div>
+      </div>
+      <div class="phone"><div class="screen"><img src="__HERO_IMG__" alt="__HERO_ALT__" loading="eager"></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <h2>__EXPLAIN_TITLE__</h2>
+        <p>__EXPLAIN__</p>
+      </div>
+      <div class="grid">
+__CARDS__
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head"><h2>__FLOW_TITLE__</h2></div>
+      <div class="steps">
+__STEPS__
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap cta">
+      <h2>__CTA_TITLE__</h2>
+      <p>__CTA_TEXT__</p>
+      <div class="actions" style="justify-content:center">
+        <a class="gp-badge" href="https://play.google.com/store/apps/details?id=com.tapfixai.keyboard" target="_blank" rel="noopener" aria-label="Get TapFix AI Keyboard on Google Play">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polygon points="3,2.2 3,21.8 12.7,12" fill="#00d2ff"/><polygon points="3,2.2 16.2,9.6 16.2,12 12.7,12" fill="#00f076"/><polygon points="3,21.8 16.2,14.4 16.2,12 12.7,12" fill="#ff3b44"/><polygon points="16.2,9.6 20.5,12 16.2,14.4" fill="#ffcd00"/></svg>
+          <span class="gp-t"><small>Get it on</small><b>Google Play</b></span>
+        </a>
+        <span class="gp-badge soon-badge" role="img" aria-label="App Store coming soon"><span class="gp-t"><small>Coming soon to</small><b>App Store</b></span><span class="soon-tag">Soon</span></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="related">
+    <div class="wrap panel">
+      <p>More TapFix AI Keyboard guides</p>
+      <div>__RELATED__</div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>© 2026 TapFix AI Studio. All rights reserved.</div>
+    <div><a href="index.html">Home</a> · <a href="support.html">Support</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></div>
+  </div>
+</footer>
+</body>
+</html>
