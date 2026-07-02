@@ -13,3 +13,8 @@ kb-preview.html
 
 icon-source.png
 build.py
+
+# keep old macOS release artifacts out of the GitHub Pages site artifact
+downloads/TapFix-AI*.dmg
+downloads/TapFixAI-Testers-latest.dmg
+!downloads/TapFixAI-macOS-latest.dmg
