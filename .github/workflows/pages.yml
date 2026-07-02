@@ -21,7 +21,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    timeout-minutes: 35
+    timeout-minutes: 15
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -48,8 +48,85 @@ jobs:
         with:
           path: _site
 
-      - name: Deploy to GitHub Pages
+      - name: Create Pages deployment
         id: deployment
-        uses: actions/deploy-pages@v4
-        with:
-          timeout: 1800000
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          import os
+          import time
+          import urllib.request
+
+          api_url = os.environ.get("GITHUB_API_URL", "https://api.github.com")
+          repo = os.environ["GITHUB_REPOSITORY"]
+          run_id = os.environ["GITHUB_RUN_ID"]
+          sha = os.environ["GITHUB_SHA"]
+          token = os.environ["GITHUB_TOKEN"]
+
+          github_headers = {
+              "Authorization": f"Bearer {token}",
+              "Accept": "application/vnd.github+json",
+              "X-GitHub-Api-Version": "2022-11-28",
+              "User-Agent": "tapfix-pages-deploy",
+          }
+
+          def request_json(url, method="GET", headers=None, payload=None):
+              body = None
+              if payload is not None:
+                  body = json.dumps(payload).encode("utf-8")
+              req = urllib.request.Request(url, data=body, method=method)
+              for key, value in (headers or {}).items():
+                  req.add_header(key, value)
+              if payload is not None:
+                  req.add_header("Content-Type", "application/json")
+              with urllib.request.urlopen(req, timeout=30) as response:
+                  return json.load(response)
+
+          artifact = None
+          artifacts_url = f"{api_url}/repos/{repo}/actions/runs/{run_id}/artifacts?per_page=100"
+          for _ in range(12):
+              artifacts = request_json(artifacts_url, headers=github_headers)
+              matches = [
+                  item for item in artifacts.get("artifacts", [])
+                  if item.get("name") == "github-pages" and not item.get("expired")
+              ]
+              if len(matches) == 1:
+                  artifact = matches[0]
+                  break
+              time.sleep(5)
+
+          if not artifact:
+              raise SystemExit("Could not find exactly one non-expired github-pages artifact.")
+
+          oidc_headers = {
+              "Authorization": f"bearer {os.environ['ACTIONS_ID_TOKEN_REQUEST_TOKEN']}",
+              "Accept": "application/json",
+              "User-Agent": "tapfix-pages-deploy",
+          }
+          oidc = request_json(os.environ["ACTIONS_ID_TOKEN_REQUEST_URL"], headers=oidc_headers)
+
+          deployment = request_json(
+              f"{api_url}/repos/{repo}/pages/deployments",
+              method="POST",
+              headers=github_headers,
+              payload={
+                  "artifact_id": artifact["id"],
+                  "pages_build_version": sha,
+                  "oidc_token": oidc["value"],
+              },
+          )
+
+          status_url = deployment.get("status_url", "")
+          deployment_id = status_url.rstrip("/").split("/")[-1] if status_url else sha
+          page_url = deployment.get("page_url") or "https://tapfixai.app/"
+
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as output:
+              print(f"page_url={page_url}", file=output)
+              print(f"deployment_id={deployment_id}", file=output)
+
+          print(f"Created Pages deployment {deployment_id} for {sha}.")
+          print(f"Page URL: {page_url}")
+          PY
