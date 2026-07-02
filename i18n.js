@@ -34,6 +34,12 @@ window.TF_LANGS = [
   function meta(l){ for(var i=0;i<LANGS.length;i++) if(LANGS[i].c===l) return LANGS[i]; return {c:l,n:l}; }
   function isRTL(l){ return !!meta(l).rtl; }
   function has(l){ return AVAIL.indexOf(l) !== -1; }
+  function choices(){
+    if(!STATIC) return LANGS;
+    var out = [];
+    for(var i=0;i<LANGS.length;i++) if(has(LANGS[i].c)) out.push(LANGS[i]);
+    return out.length ? out : LANGS;
+  }
 
   // browser/OS language -> one of our codes; CIS locales -> Russian
   function detect(){
@@ -71,22 +77,21 @@ window.TF_LANGS = [
     try{ localStorage.setItem("tapfix_lang", lang); }catch(e){}
     if(lang===CUR) return;
     if(has(lang)){ location.href=urlFor(lang); return; }            // navigate to localized URL
+    if(STATIC) return;                                              // avoid partial swaps on pre-rendered pages
     if(Object.keys(DATA).length){ applySwap(lang); }                // fallback: swap in place
     else fetch((window.TF_I18N||"/i18n.json")+"?v=3").then(function(r){return r.json();}).then(function(j){DATA=j;applySwap(lang);}).catch(function(){});
   }
 
   function init(){
     var sel=document.getElementById("lang");
-    if(sel){ sel.innerHTML=""; LANGS.forEach(function(o){var op=document.createElement("option");op.value=o.c;op.textContent=o.n;sel.appendChild(op);}); sel.value=CUR; sel.addEventListener("change",function(){go(this.value);}); }
+    if(sel){ sel.innerHTML=""; choices().forEach(function(o){var op=document.createElement("option");op.value=o.c;op.textContent=o.n;sel.appendChild(op);}); sel.value=CUR; sel.addEventListener("change",function(){go(this.value);}); }
     document.documentElement.dir=isRTL(CUR)?"rtl":"ltr";
 
-    // first-visit auto-detect: only on a pre-rendered English home, only if no saved choice
-    if(STATIC && CUR==="en" && PAGE==="index.html"){
+    // first-visit/saved-language auto-detect for pre-rendered English pages
+    if(STATIC && CUR==="en"){
       var saved=null; try{saved=localStorage.getItem("tapfix_lang");}catch(e){}
-      if(!saved){
-        var want=detect();
-        if(want!=="en" && has(want)){ location.replace(urlFor(want)); return; }
-      }
+      var want=saved||detect();
+      if(want!=="en" && has(want)){ location.replace(urlFor(want)); return; }
     }
 
     // non-pre-rendered pages keep the legacy in-place behaviour
