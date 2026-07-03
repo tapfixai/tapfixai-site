@@ -27,7 +27,6 @@
 .btn.primary,.contact{background:var(--accent) !important;color:var(--bg) !important;border-color:transparent !important;box-shadow:0 10px 30px rgba(0,0,0,.14) !important}
 /* keep official store badges legible on both themes */
 .gp-badge{border:1px solid var(--line) !important}
-.soon-tag{background:var(--accent) !important;color:var(--bg) !important}
 
 /* ---- light modern polish: subtle motion + smoothing ---- */
 body{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
