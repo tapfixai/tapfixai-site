@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TapFix AI for macOS — Fix, rewrite & translate in any app</title>
+  <title>TapFixAI for macOS — AI text fixer, rewrite and translate</title>
 
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
-  <meta name="description" content="TapFix AI for macOS fixes mistakes, rewrites in any style, translates 100 languages, fixes keyboard layout and more — right inside any app. Notarized by Apple. macOS 14+, Apple Silicon." />
-  <meta property="og:title" content="TapFix AI for macOS" />
-  <meta property="og:description" content="Fix, rewrite, translate and assist with text in any app on your Mac. Notarized by Apple." />
+  <meta name="description" content="TapFixAI for macOS is a notarized AI text fixer, rewrite and translate app for Mac. Download the DMG, start a 3-day free trial, then choose $5/month or $50/year." />
+  <meta property="og:title" content="TapFixAI for macOS — AI text fixer, rewrite and translate" />
+  <meta property="og:description" content="Download the notarized macOS app, start a 3-day free trial, then choose TapFixAI Pro monthly or yearly." />
   <meta property="og:type" content="website" />
   <meta name="theme-color" content="#f6f7fb" media="(prefers-color-scheme: light)" />
   <meta name="theme-color" content="#0c111d" media="(prefers-color-scheme: dark)" />
@@ -178,6 +178,18 @@
       color: var(--muted); border: 1px solid var(--line); }
     .list strong { color: var(--text); }
 
+    .pricing-grid { display: grid; grid-template-columns: .95fr 1.05fr; gap: 18px; align-items: stretch; }
+    .price-card { padding: 30px; border-radius: 28px; background: var(--card); border: 1px solid var(--line);
+      box-shadow: 0 14px 38px rgba(15,23,42,.06); }
+    .price-card.featured { border-color: color-mix(in srgb, var(--accent) 44%, var(--line));
+      box-shadow: 0 22px 54px color-mix(in srgb, var(--accent) 16%, transparent); }
+    .plan-name { color: var(--accent); font-size: 13px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+    .price { margin: 12px 0 8px; font-size: clamp(36px, 5vw, 58px); line-height: 1; font-weight: 900; letter-spacing: -.025em; }
+    .price span { color: var(--muted); font-size: 18px; font-weight: 800; letter-spacing: 0; }
+    .price-card p { color: var(--muted); line-height: 1.55; }
+    .plan-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 22px; }
+    .fineprint { margin-top: 18px; color: var(--muted); font-size: 14px; line-height: 1.55; }
+
     .cta { text-align: center; padding: 56px 24px; border-radius: 34px;
       background: linear-gradient(135deg, var(--accent-soft), var(--card)); border: 1px solid var(--line); box-shadow: var(--shadow); }
     .cta h2 { margin-bottom: 14px; }
@@ -189,6 +201,7 @@
 
     @media (max-width: 920px) {
       .hero, .twocol { grid-template-columns: 1fr; }
+      .pricing-grid { grid-template-columns: 1fr; }
       .grid { grid-template-columns: repeat(2, 1fr); }
       .steps { grid-template-columns: 1fr; }
       .links { display: none; }
@@ -252,6 +265,7 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
       <nav class="links" aria-label="Main navigation">
         <a href="/pl/" data-i18n="nav.keyboard">Klawiatura</a>
         <a href="/pl/mac" data-i18n="nav.mac">Mac</a>
+        <a href="#pricing">Pricing</a>
         <a href="/pl/support" data-i18n="nav.support">Pomoc</a>
         <a href="/privacy" data-i18n="nav.privacy">Prywatność</a>
       </nav>
@@ -272,7 +286,7 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
         <p class="lead" data-i18n="hero.lead">Poprawiaj, przepisuj, tłumacz i uzyskaj pomoc z tekstem — bezpośrednio w aplikacji, w której piszesz. Zaznacz tekst, naciśnij skrót, gotowe.</p>
         <div class="actions">
           <a class="btn primary" href="/downloads/TapFixAI-macOS-latest.dmg" data-i18n="hero.cta">Pobierz na macOS</a>
-          <a class="btn" href="#features" data-i18n="hero.cta2">Zobacz funkcje</a>
+          <a class="btn" href="#pricing">View pricing</a>
         </div>
         <div class="trust">
           <span data-i18n="hero.t1">macOS 14 i nowszy</span>
@@ -293,6 +307,41 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
         <img class="heropanel" id="heroPanel" data-pngbase="mac-panel" src="/images/mac-panel-en.png?v=7" alt="TapFix AI quick panel">
       </div>
     </div>
+
+    <section id="pricing">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>TapFixAI Pro pricing</h2>
+          <p>Start with a 3-day free trial. Trial includes up to 100 AI requests per day. TapFixAI Pro is $5/month or $50/year and includes up to 1000 successful AI requests per day.</p>
+        </div>
+        <div class="pricing-grid">
+          <article class="price-card featured">
+            <div class="plan-name">TapFixAI Pro</div>
+            <div class="price">$5<span>/month</span></div>
+            <p>Monthly access to the notarized macOS app with AI fix, rewrite, translate, assistant, hotkeys, floating button, clipboard history and notes.</p>
+            <div class="plan-actions">
+              <a class="btn primary" href="#" data-plan="monthly">Subscribe monthly</a>
+              <a class="btn" href="/downloads/TapFixAI-macOS-latest.dmg">Download for macOS</a>
+            </div>
+          </article>
+          <article class="price-card">
+            <div class="plan-name">Best value</div>
+            <div class="price">$50<span>/year</span></div>
+            <p>Annual TapFixAI Pro subscription with the same Pro limits and license terms, billed yearly through our payment provider.</p>
+            <div class="plan-actions">
+              <a class="btn primary" href="#" data-plan="yearly">Subscribe yearly</a>
+            </div>
+          </article>
+        </div>
+        <div class="list">
+          <div><strong>Free trial:</strong> 3 days with up to 100 AI requests per day.</div>
+          <div><strong>Paid limit:</strong> up to 1000 successful AI requests per day.</div>
+          <div><strong>License:</strong> one license works on one active Mac at a time. You can transfer your license to another Mac anytime by activating it on the new device; the previous Mac will lose Pro access after transfer.</div>
+          <div><strong>Distribution:</strong> downloadable notarized macOS app, works outside the Mac App Store, requires macOS 14+ and Apple Silicon.</div>
+        </div>
+        <p class="fineprint">Checkout links are placeholders until the payment provider creates the final monthly and yearly checkout URLs.</p>
+      </div>
+    </section>
 
     <section id="about">
       <div class="wrap">
@@ -391,9 +440,12 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
       <div data-i18n="foot.copy">© 2026 TapFix AI Studio. Wszelkie prawa zastrzeżone.</div>
       <div>
         <a href="/pl/" data-i18n="nav.keyboard">Keyboard</a> ·
+        <a href="/pl/mac" data-i18n="nav.mac">Mac</a> ·
+        <a href="/pl/mac#pricing">Pricing</a> ·
         <a href="/pl/support" data-i18n="nav.support">Support</a> ·
         <a href="/privacy" data-i18n="foot.privacy">Polityka prywatności</a> ·
         <a href="/terms" data-i18n="nav.terms">Regulamin</a> ·
+        <a href="/refunds">Refund policy</a> ·
         <a href="/accessibility-disclosure" data-i18n="foot.acc">Dostępność</a> · <a href="/pl/delete-data" data-i18n="nav.delete">Usuń dane</a>
       </div>
     </div>
