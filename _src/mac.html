@@ -479,6 +479,11 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
         }
       }
 
+      function cleanAutoCheckoutUrl() {
+        if (!window.history || !window.history.replaceState) return;
+        window.history.replaceState(null, document.title, window.location.pathname);
+      }
+
       if (params.get("checkout") === "success") {
         setCheckoutStatus("Checkout complete. Open TapFix AI on your Mac to activate Pro access securely through your license.", "ok");
       }
@@ -518,7 +523,10 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
           requestedButton.disabled = true;
           window.setTimeout(() => { requestedButton.disabled = false; }, 1800);
         }
-        window.setTimeout(() => { openCheckout(requestedPriceId); }, 250);
+        window.setTimeout(() => {
+          cleanAutoCheckoutUrl();
+          openCheckout(requestedPriceId);
+        }, 250);
       }
 
       checkoutButtons.forEach((button) => {
