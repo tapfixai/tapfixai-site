@@ -29,6 +29,7 @@ window.TF_LANGS = [
   var PAGE  = window.TF_PAGE  || "index.html";    // current page file
   var CUR   = window.TF_LANG  || "en";            // language of THIS page
   var STATIC= !!window.TF_STATIC;                 // true on pre-rendered pages
+  var PARAMS= new URLSearchParams(window.location.search || "");
   var DATA  = {};
 
   function meta(l){ for(var i=0;i<LANGS.length;i++) if(LANGS[i].c===l) return LANGS[i]; return {c:l,n:l}; }
@@ -53,9 +54,18 @@ window.TF_LANGS = [
     return "en";
   }
 
-  function urlFor(lang){
+  function keepUrlState(url){
+    return url + (window.location.search || "") + (window.location.hash || "");
+  }
+
+  function shouldStayOnCurrentUrl(){
+    return (PARAMS.get("source") === "mac_app" && !!PARAMS.get("price_id")) || PARAMS.has("checkout");
+  }
+
+  function urlFor(lang, keepState){
     var base = PAGE.replace(/\.html$/,"").replace(/^index$/,"");   // "" for home, "mac" for /mac
-    return (lang==="en") ? ("/"+base) : ("/"+lang+"/"+base);
+    var url = (lang==="en") ? ("/"+base) : ("/"+lang+"/"+base);
+    return keepState ? keepUrlState(url) : url;
   }
 
   // client-side swap (only for languages that don't have a static page yet)
@@ -76,7 +86,7 @@ window.TF_LANGS = [
   function go(lang){
     try{ localStorage.setItem("tapfix_lang", lang); }catch(e){}
     if(lang===CUR) return;
-    if(has(lang)){ location.href=urlFor(lang); return; }            // navigate to localized URL
+    if(has(lang)){ location.href=urlFor(lang, true); return; }      // navigate to localized URL, keep query/hash
     if(STATIC) return;                                              // avoid partial swaps on pre-rendered pages
     if(Object.keys(DATA).length){ applySwap(lang); }                // fallback: swap in place
     else fetch((window.TF_I18N||"/i18n.json")+"?v=3").then(function(r){return r.json();}).then(function(j){DATA=j;applySwap(lang);}).catch(function(){});
@@ -88,10 +98,10 @@ window.TF_LANGS = [
     document.documentElement.dir=isRTL(CUR)?"rtl":"ltr";
 
     // first-visit/saved-language auto-detect for pre-rendered English pages
-    if(STATIC && CUR==="en"){
+    if(STATIC && CUR==="en" && !shouldStayOnCurrentUrl()){
       var saved=null; try{saved=localStorage.getItem("tapfix_lang");}catch(e){}
       var want=saved||detect();
-      if(want!=="en" && has(want)){ location.replace(urlFor(want)); return; }
+      if(want!=="en" && has(want)){ location.replace(urlFor(want, true)); return; }
     }
 
     // non-pre-rendered pages keep the legacy in-place behaviour
