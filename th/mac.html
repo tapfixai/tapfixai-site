@@ -465,6 +465,10 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
       const CHECKOUT_SUCCESS_URL = "https://tapfixai.app/mac?checkout=success";
       const checkoutButtons = Array.from(document.querySelectorAll("[data-paddle-price]"));
       const checkoutStatus = document.getElementById("checkoutStatus");
+      const params = new URLSearchParams(window.location.search);
+      const allowedPrices = new Set(checkoutButtons.map((button) => button.getAttribute("data-paddle-price")).filter(Boolean));
+      const requestedPriceId = params.get("price_id");
+      const shouldAutoOpenCheckout = params.get("source") === "mac_app" && requestedPriceId && allowedPrices.has(requestedPriceId);
 
       function setCheckoutStatus(message, state) {
         if (!checkoutStatus) return;
@@ -478,7 +482,26 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
         setCheckoutStatus(message, "err");
       }
 
-      if (new URLSearchParams(window.location.search).get("checkout") === "success") {
+      function openCheckout(priceId) {
+        if (!priceId) return;
+        setCheckoutStatus("Opening secure Paddle Checkout...", "");
+
+        try {
+          window.Paddle.Checkout.open({
+            items: [{ priceId, quantity: 1 }],
+            settings: {
+              displayMode: "overlay",
+              theme: "light",
+              successUrl: CHECKOUT_SUCCESS_URL,
+              showAddDiscounts: true
+            }
+          });
+        } catch (error) {
+          setCheckoutStatus("Checkout could not open. Please refresh the page or contact support@tapfixai.app.", "err");
+        }
+      }
+
+      if (params.get("checkout") === "success") {
         setCheckoutStatus("Checkout complete. Open TapFix AI on your Mac to activate Pro access securely through your license.", "ok");
       }
 
@@ -511,29 +534,23 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
         return;
       }
 
+      if (shouldAutoOpenCheckout) {
+        const requestedButton = checkoutButtons.find((button) => button.getAttribute("data-paddle-price") === requestedPriceId);
+        if (requestedButton) {
+          requestedButton.disabled = true;
+          window.setTimeout(() => { requestedButton.disabled = false; }, 1800);
+        }
+        window.setTimeout(() => { openCheckout(requestedPriceId); }, 250);
+      }
+
       checkoutButtons.forEach((button) => {
         button.addEventListener("click", () => {
           const priceId = button.getAttribute("data-paddle-price");
           if (!priceId) return;
 
           button.disabled = true;
-          setCheckoutStatus("Opening secure Paddle Checkout...", "");
-
-          try {
-            window.Paddle.Checkout.open({
-              items: [{ priceId, quantity: 1 }],
-              settings: {
-                displayMode: "overlay",
-                theme: "light",
-                successUrl: CHECKOUT_SUCCESS_URL,
-                showAddDiscounts: true
-              }
-            });
-          } catch (error) {
-            setCheckoutStatus("Checkout could not open. Please refresh the page or contact support@tapfixai.app.", "err");
-          } finally {
-            window.setTimeout(() => { button.disabled = false; }, 1800);
-          }
+          openCheckout(priceId);
+          window.setTimeout(() => { button.disabled = false; }, 1800);
         });
       });
     }());
