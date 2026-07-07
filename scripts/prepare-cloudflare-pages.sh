@@ -32,4 +32,17 @@ if [ -d "$out_dir/downloads" ]; then
   find "$out_dir/downloads" -type f ! -name 'TapFixAI-macOS-latest.dmg' -delete
 fi
 
+if command -v perl >/dev/null 2>&1; then
+  find "$out_dir" -type f -name '*.html' -exec perl -0pi -e 's/__PADDLE_CLIENT_TOKEN__/$ENV{PADDLE_CLIENT_TOKEN} || ""/ge' {} +
+else
+  find "$out_dir" -type f -name '*.html' -exec sh -c '
+    token=${PADDLE_CLIENT_TOKEN:-}
+    for file do
+      tmp="${file}.tmp"
+      awk -v token="$token" "{gsub(/__PADDLE_CLIENT_TOKEN__/, token); print}" "$file" > "$tmp"
+      mv "$tmp" "$file"
+    done
+  ' sh {} +
+fi
+
 du -sh "$out_dir"

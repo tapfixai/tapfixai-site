@@ -94,11 +94,13 @@
       min-height: 50px; padding: 0 22px; border-radius: 999px; font-weight: 800;
       border: 1px solid var(--line); background: var(--surface);
       box-shadow: 0 8px 24px rgba(15,23,42,.06);
+      color: var(--text); cursor: pointer; font-family: inherit; font-size: inherit;
     }
     .btn.primary {
       border: none; background: linear-gradient(135deg, var(--accent), var(--accent2)); color: #fff;
       box-shadow: 0 18px 46px color-mix(in srgb, var(--accent) 28%, transparent);
     }
+    .btn:disabled { cursor: not-allowed; opacity: .55; box-shadow: none; }
     .btn.sm { min-height: 44px; padding: 0 18px; font-size: 14px; }
 
     .hero { padding: 88px 0 58px; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 58px; }
@@ -188,6 +190,9 @@
     .price span { color: var(--muted); font-size: 18px; font-weight: 800; letter-spacing: 0; }
     .price-card p { color: var(--muted); line-height: 1.55; }
     .plan-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 22px; }
+    .checkout-state { min-height: 22px; margin-top: 18px; color: var(--muted); font-size: 14px; line-height: 1.55; }
+    .checkout-state.ok { color: #16a34a; }
+    .checkout-state.err { color: #dc2626; }
     .fineprint { margin-top: 18px; color: var(--muted); font-size: 14px; line-height: 1.55; }
 
     .cta { text-align: center; padding: 56px 24px; border-radius: 34px;
@@ -229,6 +234,7 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
   <meta property="og:image" content="https://tapfixai.app/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://tapfixai.app/og-image.png">
+  <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
   <link rel="canonical" href="https://tapfixai.app/fr/mac">
   <meta property="og:url" content="https://tapfixai.app/fr/mac">
   <meta property="og:locale" content="fr_FR">
@@ -320,7 +326,7 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
             <div class="price">$5<span>/month</span></div>
             <p>Monthly access to the notarized macOS app with AI fix, rewrite, translate, assistant, hotkeys, floating button, clipboard history and notes.</p>
             <div class="plan-actions">
-              <a class="btn primary" href="#" data-plan="monthly">Subscribe monthly</a>
+              <button class="btn primary" type="button" data-paddle-price="pri_01kwvzf21hx5p8za7p3z6gtt6h">Start 3-day trial — $5/month</button>
               <a class="btn" href="/downloads/TapFixAI-macOS-latest.dmg">Download for macOS</a>
             </div>
           </article>
@@ -329,17 +335,18 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
             <div class="price">$50<span>/year</span></div>
             <p>Annual TapFixAI Pro subscription with the same Pro limits and license terms, billed yearly through our payment provider.</p>
             <div class="plan-actions">
-              <a class="btn primary" href="#" data-plan="yearly">Subscribe yearly</a>
+              <button class="btn primary" type="button" data-paddle-price="pri_01kwvzsjwy0yv6brryxety5erk">Start 3-day trial — $50/year</button>
             </div>
           </article>
         </div>
+        <div class="checkout-state" id="checkoutStatus" role="status" aria-live="polite"></div>
         <div class="list">
           <div><strong>Free trial:</strong> 3 days with up to 100 AI requests per day.</div>
           <div><strong>Paid limit:</strong> up to 1000 successful AI requests per day.</div>
           <div><strong>License:</strong> one license works on one active Mac at a time. You can transfer your license to another Mac anytime by activating it on the new device; the previous Mac will lose Pro access after transfer.</div>
           <div><strong>Distribution:</strong> downloadable notarized macOS app, works outside the Mac App Store, requires macOS 14+ and Apple Silicon.</div>
         </div>
-        <p class="fineprint">Checkout links are placeholders until the payment provider creates the final monthly and yearly checkout URLs.</p>
+        <p class="fineprint">Payments are opened securely with Paddle Checkout. After checkout, there is nothing to activate manually on this website: TapFix AI for macOS and the TapFix AI server handle license activation and status.</p>
       </div>
     </section>
 
@@ -452,6 +459,83 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
   </footer>
 
   <script>window.TF_I18N="/i18n-mac.json";</script>
+  <script>
+    (function () {
+      const PADDLE_CLIENT_TOKEN = "__PADDLE_CLIENT_TOKEN__";
+      const CHECKOUT_SUCCESS_URL = "https://tapfixai.app/mac?checkout=success";
+      const checkoutButtons = Array.from(document.querySelectorAll("[data-paddle-price]"));
+      const checkoutStatus = document.getElementById("checkoutStatus");
+
+      function setCheckoutStatus(message, state) {
+        if (!checkoutStatus) return;
+        checkoutStatus.textContent = message || "";
+        checkoutStatus.classList.toggle("ok", state === "ok");
+        checkoutStatus.classList.toggle("err", state === "err");
+      }
+
+      function disableCheckout(message) {
+        checkoutButtons.forEach((button) => { button.disabled = true; });
+        setCheckoutStatus(message, "err");
+      }
+
+      if (new URLSearchParams(window.location.search).get("checkout") === "success") {
+        setCheckoutStatus("Checkout complete. Open TapFix AI on your Mac to activate Pro access securely through your license.", "ok");
+      }
+
+      if (!checkoutButtons.length) return;
+
+      if (!PADDLE_CLIENT_TOKEN || PADDLE_CLIENT_TOKEN.indexOf("__PADDLE_") === 0) {
+        disableCheckout("Checkout is temporarily unavailable. Please download the app or contact support@tapfixai.app.");
+        return;
+      }
+
+      if (!window.Paddle) {
+        disableCheckout("Paddle Checkout could not load. Please refresh the page or contact support@tapfixai.app.");
+        return;
+      }
+
+      try {
+        window.Paddle.Initialize({
+          token: PADDLE_CLIENT_TOKEN,
+          checkout: {
+            settings: {
+              displayMode: "overlay",
+              theme: "light",
+              successUrl: CHECKOUT_SUCCESS_URL
+            }
+          }
+        });
+      } catch (error) {
+        disableCheckout("Paddle Checkout could not initialize. Please refresh the page or contact support@tapfixai.app.");
+        return;
+      }
+
+      checkoutButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const priceId = button.getAttribute("data-paddle-price");
+          if (!priceId) return;
+
+          button.disabled = true;
+          setCheckoutStatus("Opening secure Paddle Checkout...", "");
+
+          try {
+            window.Paddle.Checkout.open({
+              items: [{ priceId, quantity: 1 }],
+              settings: {
+                displayMode: "overlay",
+                theme: "light",
+                successUrl: CHECKOUT_SUCCESS_URL
+              }
+            });
+          } catch (error) {
+            setCheckoutStatus("Checkout could not open. Please refresh the page or contact support@tapfixai.app.", "err");
+          } finally {
+            window.setTimeout(() => { button.disabled = false; }, 1800);
+          }
+        });
+      });
+    }());
+  </script>
   <script>window.TF_STATIC=true;window.TF_LANG="fr";window.TF_PAGE="mac.html";window.TF_AVAIL=["en", "ru", "es", "pt", "fr", "de", "it", "nl", "pl", "uk", "tr", "id", "vi", "th", "zh", "ja", "ko", "hi", "ar", "fa"];</script>
 <script src="/i18n.js?v=3"></script>
 </body>
