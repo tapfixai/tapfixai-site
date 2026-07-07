@@ -446,7 +446,7 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
       const params = new URLSearchParams(window.location.search);
       const allowedPrices = new Set(checkoutButtons.map((button) => button.getAttribute("data-paddle-price")).filter(Boolean));
       const requestedPriceId = params.get("price_id");
-      const shouldAutoOpenCheckout = params.get("source") === "mac_app" && requestedPriceId && allowedPrices.has(requestedPriceId);
+      const shouldOpenPricingOnly = params.get("source") === "mac_app" && requestedPriceId && allowedPrices.has(requestedPriceId);
 
       function setCheckoutStatus(message, state) {
         if (!checkoutStatus) return;
@@ -479,9 +479,13 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
         }
       }
 
-      function cleanAutoCheckoutUrl() {
+      function cleanMacAppCheckoutUrl() {
         if (!window.history || !window.history.replaceState) return;
         window.history.replaceState(null, document.title, window.location.pathname + "#pricing");
+      }
+
+      if (shouldOpenPricingOnly) {
+        cleanMacAppCheckoutUrl();
       }
 
       if (params.get("checkout") === "success") {
@@ -515,21 +519,6 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
       } catch (error) {
         disableCheckout("Paddle Checkout could not initialize. Please refresh the page or contact support@tapfixai.app.");
         return;
-      }
-
-      if (shouldAutoOpenCheckout) {
-        const requestedButton = checkoutButtons.find((button) => button.getAttribute("data-paddle-price") === requestedPriceId);
-        if (requestedButton) {
-          window.setTimeout(() => {
-            cleanAutoCheckoutUrl();
-            requestedButton.click();
-          }, 900);
-        } else {
-          window.setTimeout(() => {
-            cleanAutoCheckoutUrl();
-            openCheckout(requestedPriceId);
-          }, 900);
-        }
       }
 
       checkoutButtons.forEach((button) => {
