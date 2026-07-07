@@ -503,7 +503,7 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
 
       function cleanAutoCheckoutUrl() {
         if (!window.history || !window.history.replaceState) return;
-        window.history.replaceState(null, document.title, window.location.pathname);
+        window.history.replaceState(null, document.title, window.location.pathname + "#pricing");
       }
 
       if (params.get("checkout") === "success") {
@@ -542,13 +542,16 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
       if (shouldAutoOpenCheckout) {
         const requestedButton = checkoutButtons.find((button) => button.getAttribute("data-paddle-price") === requestedPriceId);
         if (requestedButton) {
-          requestedButton.disabled = true;
-          window.setTimeout(() => { requestedButton.disabled = false; }, 1800);
+          window.setTimeout(() => {
+            cleanAutoCheckoutUrl();
+            requestedButton.click();
+          }, 900);
+        } else {
+          window.setTimeout(() => {
+            cleanAutoCheckoutUrl();
+            openCheckout(requestedPriceId);
+          }, 900);
         }
-        window.setTimeout(() => {
-          cleanAutoCheckoutUrl();
-          openCheckout(requestedPriceId);
-        }, 250);
       }
 
       checkoutButtons.forEach((button) => {
