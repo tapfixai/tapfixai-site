@@ -182,8 +182,9 @@
 
     .pricing-grid { display: grid; grid-template-columns: .95fr 1.05fr; gap: 18px; align-items: stretch; }
     .price-card { padding: 30px; border-radius: 28px; background: var(--card); border: 1px solid var(--line);
-      box-shadow: 0 14px 38px rgba(15,23,42,.06); display: flex; flex-direction: column; }
-    .price-card.featured { border-color: color-mix(in srgb, var(--accent) 44%, var(--line));
+      box-shadow: 0 14px 38px rgba(15,23,42,.06); display: flex; flex-direction: column;
+      transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease; }
+    .price-card:hover, .price-card:focus-within { border-color: color-mix(in srgb, var(--accent) 44%, var(--line));
       box-shadow: 0 22px 54px color-mix(in srgb, var(--accent) 16%, transparent); }
     .plan-name { color: var(--accent); font-size: 13px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
     .price { margin: 12px 0 8px; font-size: clamp(36px, 5vw, 58px); line-height: 1; font-weight: 900; letter-spacing: -.025em; }
@@ -304,7 +305,7 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
           <p>Start with a 3-day free trial. Trial includes up to 100 AI requests per day. TapFixAI Pro is $5/month or $50/year and includes up to 1000 successful AI requests per day.</p>
         </div>
         <div class="pricing-grid">
-          <article class="price-card featured">
+          <article class="price-card">
             <div class="plan-name">TapFixAI Pro</div>
             <div class="price">$5<span>/month</span></div>
             <p>Monthly access to the notarized macOS app with AI fix, rewrite, translate, assistant, hotkeys, floating button, clipboard history and notes.</p>
