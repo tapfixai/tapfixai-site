@@ -157,6 +157,7 @@
     .card p { margin: 0; color: var(--muted); line-height: 1.55; }
 
     .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .faq-grid { margin-top: 16px; }
     .step { padding: 26px; border-radius: var(--radius); background: var(--card); border: 1px solid var(--line); }
     .step .n { width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center;
       background: var(--accent-soft); color: var(--accent); font-weight: 900; margin-bottom: 16px; }
@@ -425,6 +426,44 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
             <div data-i18n="perm.l2"><strong>输入监控：</strong>让你的快捷键和悬浮按钮在任意应用中触发操作。</div>
             <div data-i18n="perm.l3"><strong>位置：</strong>系统设置 → 隐私与安全性 → 辅助功能 和 输入监控。</div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="install-update-uninstall">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 data-i18n="compliance.h">安装、更新和卸载 TapFix AI</h2>
+          <p data-i18n="compliance.p">TapFix AI for macOS 桌面软件的官方信息。</p>
+        </div>
+        <div class="twocol">
+          <div class="panel">
+            <div class="list">
+              <div data-i18n="compliance.product"><strong>产品：</strong>TapFix AI for macOS</div>
+              <div data-i18n="compliance.developer"><strong>开发者：</strong>TapFix AI</div>
+              <div><strong data-i18n="compliance.websiteLabel">官方网站：</strong> <a href="https://tapfixai.app">https://tapfixai.app</a></div>
+              <div><strong data-i18n="compliance.supportLabel">支持：</strong> <a href="mailto:support@tapfixai.app">support@tapfixai.app</a></div>
+              <div data-i18n="compliance.requirements"><strong>要求：</strong>macOS 14+，Apple Silicon M1+</div>
+              <div data-i18n="compliance.distribution"><strong>分发：</strong>仅通过 tapfixai.app 提供官方已公证 DMG。</div>
+            </div>
+          </div>
+          <div class="panel">
+            <h3 data-i18n="compliance.uninstallH">卸载 TapFix AI</h3>
+            <div class="list">
+              <div data-i18n="compliance.uninstall1">1. 从菜单栏退出 TapFix AI。</div>
+              <div data-i18n="compliance.uninstall2">2. 打开 Applications。</div>
+              <div data-i18n="compliance.uninstall3">3. 将 TapFix AI.app 拖到废纸篓。</div>
+              <div data-i18n="compliance.uninstall4">4. 清空废纸篓。</div>
+              <div data-i18n="compliance.uninstall5">5. 如果启用了 Accessibility/Input Monitoring 权限，可在 System Settings → Privacy & Security 中移除。</div>
+              <div data-i18n="compliance.background"><strong>后台组件：</strong>TapFix AI 不会安装捆绑的第三方软件，也不需要单独的第三方卸载器。如果你在应用中启用了登录时启动，请在卸载前关闭。移除 TapFix AI.app 后，不需要单独的清理工具。</div>
+            </div>
+          </div>
+        </div>
+        <div class="steps faq-grid">
+          <div class="step"><div class="n">?</div><h3 data-i18n="compliance.faq1h">TapFix AI 是否经过 Apple 公证？</h3><p data-i18n="compliance.faq1p">是。macOS 应用已由 Apple 签名并公证。</p></div>
+          <div class="step"><div class="n">?</div><h3 data-i18n="compliance.faq2h">它会安装其他软件吗？</h3><p data-i18n="compliance.faq2p">不会。TapFix AI 不包含捆绑的第三方安装器。</p></div>
+          <div class="step"><div class="n">?</div><h3 data-i18n="compliance.faq3h">我可以随时卸载吗？</h3><p data-i18n="compliance.faq3p">可以。随时按上面的步骤卸载。</p></div>
+          <div class="step"><div class="n">?</div><h3 data-i18n="compliance.faq4h">数据/隐私信息在哪里？</h3><p><a href="/privacy" data-i18n="compliance.faq4p">阅读隐私政策。</a></p></div>
         </div>
       </div>
     </section>

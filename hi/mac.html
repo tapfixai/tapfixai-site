@@ -157,6 +157,7 @@
     .card p { margin: 0; color: var(--muted); line-height: 1.55; }
 
     .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .faq-grid { margin-top: 16px; }
     .step { padding: 26px; border-radius: var(--radius); background: var(--card); border: 1px solid var(--line); }
     .step .n { width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center;
       background: var(--accent-soft); color: var(--accent); font-weight: 900; margin-bottom: 16px; }
@@ -425,6 +426,44 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
             <div data-i18n="perm.l2"><strong>इनपुट मॉनिटरिंग:</strong> आपकी हॉटकी और फ़्लोटिंग बटन को किसी भी ऐप में क्रिया चलाने देती है।</div>
             <div data-i18n="perm.l3"><strong>कहाँ:</strong> सिस्टम सेटिंग्स → गोपनीयता और सुरक्षा → सुलभता और इनपुट मॉनिटरिंग।</div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="install-update-uninstall">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 data-i18n="compliance.h">TapFix AI इंस्टॉल, अपडेट और अनइंस्टॉल करें</h2>
+          <p data-i18n="compliance.p">macOS के लिए TapFix AI डेस्कटॉप सॉफ़्टवेयर की आधिकारिक जानकारी।</p>
+        </div>
+        <div class="twocol">
+          <div class="panel">
+            <div class="list">
+              <div data-i18n="compliance.product"><strong>प्रोडक्ट:</strong> macOS के लिए TapFix AI</div>
+              <div data-i18n="compliance.developer"><strong>डेवलपर:</strong> TapFix AI</div>
+              <div><strong data-i18n="compliance.websiteLabel">आधिकारिक वेबसाइट:</strong> <a href="https://tapfixai.app">https://tapfixai.app</a></div>
+              <div><strong data-i18n="compliance.supportLabel">सपोर्ट:</strong> <a href="mailto:support@tapfixai.app">support@tapfixai.app</a></div>
+              <div data-i18n="compliance.requirements"><strong>आवश्यकताएँ:</strong> macOS 14+, Apple Silicon M1+</div>
+              <div data-i18n="compliance.distribution"><strong>वितरण:</strong> केवल tapfixai.app से आधिकारिक notarized DMG।</div>
+            </div>
+          </div>
+          <div class="panel">
+            <h3 data-i18n="compliance.uninstallH">TapFix AI अनइंस्टॉल करें</h3>
+            <div class="list">
+              <div data-i18n="compliance.uninstall1">1. मेनू बार से TapFix AI बंद करें।</div>
+              <div data-i18n="compliance.uninstall2">2. Applications खोलें।</div>
+              <div data-i18n="compliance.uninstall3">3. TapFix AI.app को Trash में खींचें।</div>
+              <div data-i18n="compliance.uninstall4">4. Trash खाली करें।</div>
+              <div data-i18n="compliance.uninstall5">5. यदि आपने Accessibility/Input Monitoring अनुमतियाँ चालू की थीं, तो उन्हें System Settings → Privacy & Security में हटाएँ।</div>
+              <div data-i18n="compliance.background"><strong>बैकग्राउंड कंपोनेंट:</strong> TapFix AI कोई bundled third-party software या अलग third-party uninstaller इंस्टॉल नहीं करता। यदि आपने ऐप में launch at login चालू किया है, तो uninstall से पहले उसे बंद करें। TapFix AI.app हटाने के बाद अलग cleanup tool की जरूरत नहीं है।</div>
+            </div>
+          </div>
+        </div>
+        <div class="steps faq-grid">
+          <div class="step"><div class="n">?</div><h3 data-i18n="compliance.faq1h">क्या TapFix AI Apple द्वारा notarized है?</h3><p data-i18n="compliance.faq1p">हाँ। macOS ऐप Apple द्वारा signed और notarized है।</p></div>
+          <div class="step"><div class="n">?</div><h3 data-i18n="compliance.faq2h">क्या यह अन्य software install करता है?</h3><p data-i18n="compliance.faq2p">नहीं। TapFix AI में bundled third-party installers शामिल नहीं हैं।</p></div>
+          <div class="step"><div class="n">?</div><h3 data-i18n="compliance.faq3h">क्या मैं इसे कभी भी uninstall कर सकता हूँ?</h3><p data-i18n="compliance.faq3p">हाँ। ऊपर दिए गए uninstall steps कभी भी इस्तेमाल करें।</p></div>
+          <div class="step"><div class="n">?</div><h3 data-i18n="compliance.faq4h">मेरा data/privacy info कहाँ है?</h3><p><a href="/privacy" data-i18n="compliance.faq4p">Privacy Policy पढ़ें।</a></p></div>
         </div>
       </div>
     </section>

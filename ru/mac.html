@@ -157,6 +157,7 @@
     .card p { margin: 0; color: var(--muted); line-height: 1.55; }
 
     .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .faq-grid { margin-top: 16px; }
     .step { padding: 26px; border-radius: var(--radius); background: var(--card); border: 1px solid var(--line); }
     .step .n { width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center;
       background: var(--accent-soft); color: var(--accent); font-weight: 900; margin-bottom: 16px; }
@@ -425,6 +426,44 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
             <div data-i18n="perm.l2"><strong>Мониторинг ввода:</strong> позволяет хоткеям и плавающей кнопке запускать действия в любом приложении.</div>
             <div data-i18n="perm.l3"><strong>Где:</strong> Системные настройки → Конфиденциальность и безопасность → Универсальный доступ и Мониторинг ввода.</div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="install-update-uninstall">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 data-i18n="compliance.h">Установка, обновление и удаление TapFix AI</h2>
+          <p data-i18n="compliance.p">Официальная информация о настольном приложении TapFix AI для macOS.</p>
+        </div>
+        <div class="twocol">
+          <div class="panel">
+            <div class="list">
+              <div data-i18n="compliance.product"><strong>Продукт:</strong> TapFix AI для macOS</div>
+              <div data-i18n="compliance.developer"><strong>Разработчик:</strong> TapFix AI</div>
+              <div><strong data-i18n="compliance.websiteLabel">Официальный сайт:</strong> <a href="https://tapfixai.app">https://tapfixai.app</a></div>
+              <div><strong data-i18n="compliance.supportLabel">Поддержка:</strong> <a href="mailto:support@tapfixai.app">support@tapfixai.app</a></div>
+              <div data-i18n="compliance.requirements"><strong>Требования:</strong> macOS 14+, Apple Silicon M1+</div>
+              <div data-i18n="compliance.distribution"><strong>Распространение:</strong> только официальный нотариально заверенный DMG с tapfixai.app.</div>
+            </div>
+          </div>
+          <div class="panel">
+            <h3 data-i18n="compliance.uninstallH">Удаление TapFix AI</h3>
+            <div class="list">
+              <div data-i18n="compliance.uninstall1">1. Закройте TapFix AI через строку меню.</div>
+              <div data-i18n="compliance.uninstall2">2. Откройте папку «Программы».</div>
+              <div data-i18n="compliance.uninstall3">3. Перетащите TapFix AI.app в Корзину.</div>
+              <div data-i18n="compliance.uninstall4">4. Очистите Корзину.</div>
+              <div data-i18n="compliance.uninstall5">5. Если вы включали разрешения Accessibility/Input Monitoring, удалите их в System Settings → Privacy & Security.</div>
+              <div data-i18n="compliance.background"><strong>Фоновые компоненты:</strong> TapFix AI не устанавливает стороннее ПО в комплекте и не требует отдельного стороннего деинсталлятора. Если в приложении был включён запуск при входе, отключите его перед удалением. После удаления TapFix AI.app отдельный инструмент очистки не нужен.</div>
+            </div>
+          </div>
+        </div>
+        <div class="steps faq-grid">
+          <div class="step"><div class="n">?</div><h3 data-i18n="compliance.faq1h">TapFix AI нотариально заверен Apple?</h3><p data-i18n="compliance.faq1p">Да. Приложение для macOS подписано и нотариально заверено Apple.</p></div>
+          <div class="step"><div class="n">?</div><h3 data-i18n="compliance.faq2h">Оно устанавливает другое ПО?</h3><p data-i18n="compliance.faq2p">Нет. В TapFix AI нет сторонних установщиков в комплекте.</p></div>
+          <div class="step"><div class="n">?</div><h3 data-i18n="compliance.faq3h">Можно удалить приложение в любое время?</h3><p data-i18n="compliance.faq3p">Да. Используйте шаги удаления выше в любой момент.</p></div>
+          <div class="step"><div class="n">?</div><h3 data-i18n="compliance.faq4h">Где информация о данных и приватности?</h3><p><a href="/privacy" data-i18n="compliance.faq4p">Откройте Политику конфиденциальности.</a></p></div>
         </div>
       </div>
     </section>

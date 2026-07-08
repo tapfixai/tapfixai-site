@@ -157,6 +157,7 @@
     .card p { margin: 0; color: var(--muted); line-height: 1.55; }
 
     .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .faq-grid { margin-top: 16px; }
     .step { padding: 26px; border-radius: var(--radius); background: var(--card); border: 1px solid var(--line); }
     .step .n { width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center;
       background: var(--accent-soft); color: var(--accent); font-weight: 900; margin-bottom: 16px; }
@@ -425,6 +426,44 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
             <div data-i18n="perm.l2"><strong>Giám sát nhập:</strong> cho phép phím tắt và nút nổi kích hoạt thao tác trong bất kỳ ứng dụng nào.</div>
             <div data-i18n="perm.l3"><strong>Ở đâu:</strong> Cài đặt hệ thống → Quyền riêng tư &amp; Bảo mật → Trợ năng và Giám sát nhập.</div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="install-update-uninstall">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 data-i18n="compliance.h">Cài đặt, cập nhật và gỡ TapFix AI</h2>
+          <p data-i18n="compliance.p">Thông tin chính thức về phần mềm desktop TapFix AI cho macOS.</p>
+        </div>
+        <div class="twocol">
+          <div class="panel">
+            <div class="list">
+              <div data-i18n="compliance.product"><strong>Sản phẩm:</strong> TapFix AI cho macOS</div>
+              <div data-i18n="compliance.developer"><strong>Nhà phát triển:</strong> TapFix AI</div>
+              <div><strong data-i18n="compliance.websiteLabel">Website chính thức:</strong> <a href="https://tapfixai.app">https://tapfixai.app</a></div>
+              <div><strong data-i18n="compliance.supportLabel">Hỗ trợ:</strong> <a href="mailto:support@tapfixai.app">support@tapfixai.app</a></div>
+              <div data-i18n="compliance.requirements"><strong>Yêu cầu:</strong> macOS 14+, Apple Silicon M1+</div>
+              <div data-i18n="compliance.distribution"><strong>Phân phối:</strong> chỉ DMG chính thức đã được notarize từ tapfixai.app.</div>
+            </div>
+          </div>
+          <div class="panel">
+            <h3 data-i18n="compliance.uninstallH">Gỡ TapFix AI</h3>
+            <div class="list">
+              <div data-i18n="compliance.uninstall1">1. Thoát TapFix AI từ thanh menu.</div>
+              <div data-i18n="compliance.uninstall2">2. Mở Applications.</div>
+              <div data-i18n="compliance.uninstall3">3. Kéo TapFix AI.app vào Trash.</div>
+              <div data-i18n="compliance.uninstall4">4. Dọn Trash.</div>
+              <div data-i18n="compliance.uninstall5">5. Nếu đã bật quyền Accessibility/Input Monitoring, bạn có thể gỡ trong System Settings → Privacy & Security.</div>
+              <div data-i18n="compliance.background"><strong>Thành phần nền:</strong> TapFix AI không cài phần mềm bên thứ ba đi kèm hoặc trình gỡ bên thứ ba riêng. Nếu bạn bật khởi chạy khi đăng nhập trong app, hãy tắt trước khi gỡ. Sau khi xóa TapFix AI.app, không cần công cụ dọn dẹp riêng.</div>
+            </div>
+          </div>
+        </div>
+        <div class="steps faq-grid">
+          <div class="step"><div class="n">?</div><h3 data-i18n="compliance.faq1h">TapFix AI có được Apple notarize không?</h3><p data-i18n="compliance.faq1p">Có. Ứng dụng macOS được Apple ký và notarize.</p></div>
+          <div class="step"><div class="n">?</div><h3 data-i18n="compliance.faq2h">Ứng dụng có cài phần mềm khác không?</h3><p data-i18n="compliance.faq2p">Không. TapFix AI không kèm trình cài đặt bên thứ ba.</p></div>
+          <div class="step"><div class="n">?</div><h3 data-i18n="compliance.faq3h">Tôi có thể gỡ bất cứ lúc nào không?</h3><p data-i18n="compliance.faq3p">Có. Dùng các bước gỡ ở trên bất cứ lúc nào.</p></div>
+          <div class="step"><div class="n">?</div><h3 data-i18n="compliance.faq4h">Thông tin dữ liệu/quyền riêng tư ở đâu?</h3><p><a href="/privacy" data-i18n="compliance.faq4p">Đọc Chính sách quyền riêng tư.</a></p></div>
         </div>
       </div>
     </section>

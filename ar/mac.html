@@ -157,6 +157,7 @@
     .card p { margin: 0; color: var(--muted); line-height: 1.55; }
 
     .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .faq-grid { margin-top: 16px; }
     .step { padding: 26px; border-radius: var(--radius); background: var(--card); border: 1px solid var(--line); }
     .step .n { width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center;
       background: var(--accent-soft); color: var(--accent); font-weight: 900; margin-bottom: 16px; }
@@ -425,6 +426,44 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
             <div data-i18n="perm.l2"><strong>مراقبة الإدخال:</strong> تتيح لاختصاراتك وللزر العائم تشغيل الإجراءات في أي تطبيق.</div>
             <div data-i18n="perm.l3"><strong>أين:</strong> إعدادات النظام → الخصوصية والأمان → إمكانية الوصول ومراقبة الإدخال.</div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="install-update-uninstall">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 data-i18n="compliance.h">تثبيت TapFix AI وتحديثه وإزالته</h2>
+          <p data-i18n="compliance.p">معلومات رسمية عن برنامج TapFix AI لسطح المكتب على macOS.</p>
+        </div>
+        <div class="twocol">
+          <div class="panel">
+            <div class="list">
+              <div data-i18n="compliance.product"><strong>المنتج:</strong> TapFix AI لنظام macOS</div>
+              <div data-i18n="compliance.developer"><strong>المطوّر:</strong> TapFix AI</div>
+              <div><strong data-i18n="compliance.websiteLabel">الموقع الرسمي:</strong> <a href="https://tapfixai.app">https://tapfixai.app</a></div>
+              <div><strong data-i18n="compliance.supportLabel">الدعم:</strong> <a href="mailto:support@tapfixai.app">support@tapfixai.app</a></div>
+              <div data-i18n="compliance.requirements"><strong>المتطلبات:</strong> macOS 14+، Apple Silicon M1+</div>
+              <div data-i18n="compliance.distribution"><strong>التوزيع:</strong> ملف DMG رسمي موثّق من tapfixai.app فقط.</div>
+            </div>
+          </div>
+          <div class="panel">
+            <h3 data-i18n="compliance.uninstallH">إزالة TapFix AI</h3>
+            <div class="list">
+              <div data-i18n="compliance.uninstall1">1. أغلق TapFix AI من شريط القوائم.</div>
+              <div data-i18n="compliance.uninstall2">2. افتح Applications.</div>
+              <div data-i18n="compliance.uninstall3">3. اسحب TapFix AI.app إلى Trash.</div>
+              <div data-i18n="compliance.uninstall4">4. أفرغ Trash.</div>
+              <div data-i18n="compliance.uninstall5">5. إذا فعّلت أذونات Accessibility/Input Monitoring، يمكنك إزالتها من System Settings → Privacy & Security.</div>
+              <div data-i18n="compliance.background"><strong>مكوّنات الخلفية:</strong> لا يثبّت TapFix AI برامج خارجية مرفقة ولا مزيل تثبيت خارجي منفصل. إذا فعّلت التشغيل عند تسجيل الدخول داخل التطبيق، أوقفه قبل الإزالة. بعد حذف TapFix AI.app، لا توجد حاجة إلى أداة تنظيف منفصلة.</div>
+            </div>
+          </div>
+        </div>
+        <div class="steps faq-grid">
+          <div class="step"><div class="n">?</div><h3 data-i18n="compliance.faq1h">هل TapFix AI موثّق من Apple؟</h3><p data-i18n="compliance.faq1p">نعم. تطبيق macOS موقّع وموثّق من Apple.</p></div>
+          <div class="step"><div class="n">?</div><h3 data-i18n="compliance.faq2h">هل يثبّت برامج أخرى؟</h3><p data-i18n="compliance.faq2p">لا. لا يتضمن TapFix AI مثبّتات خارجية مرفقة.</p></div>
+          <div class="step"><div class="n">?</div><h3 data-i18n="compliance.faq3h">هل يمكنني إزالته في أي وقت؟</h3><p data-i18n="compliance.faq3p">نعم. استخدم خطوات الإزالة أعلاه في أي وقت.</p></div>
+          <div class="step"><div class="n">?</div><h3 data-i18n="compliance.faq4h">أين معلومات البيانات والخصوصية؟</h3><p><a href="/privacy" data-i18n="compliance.faq4p">اقرأ سياسة الخصوصية.</a></p></div>
         </div>
       </div>
     </section>

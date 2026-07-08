@@ -157,6 +157,7 @@
     .card p { margin: 0; color: var(--muted); line-height: 1.55; }
 
     .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .faq-grid { margin-top: 16px; }
     .step { padding: 26px; border-radius: var(--radius); background: var(--card); border: 1px solid var(--line); }
     .step .n { width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center;
       background: var(--accent-soft); color: var(--accent); font-weight: 900; margin-bottom: 16px; }
@@ -425,6 +426,44 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
             <div data-i18n="perm.l2"><strong>입력 모니터링:</strong> 단축키와 떠 있는 버튼이 어떤 앱에서든 동작을 실행하게 합니다.</div>
             <div data-i18n="perm.l3"><strong>위치:</strong> 시스템 설정 → 개인정보 보호 및 보안 → 손쉬운 사용 및 입력 모니터링.</div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="install-update-uninstall">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 data-i18n="compliance.h">TapFix AI 설치, 업데이트 및 제거</h2>
+          <p data-i18n="compliance.p">macOS용 TapFix AI 데스크톱 소프트웨어의 공식 정보입니다.</p>
+        </div>
+        <div class="twocol">
+          <div class="panel">
+            <div class="list">
+              <div data-i18n="compliance.product"><strong>제품:</strong> macOS용 TapFix AI</div>
+              <div data-i18n="compliance.developer"><strong>개발자:</strong> TapFix AI</div>
+              <div><strong data-i18n="compliance.websiteLabel">공식 웹사이트:</strong> <a href="https://tapfixai.app">https://tapfixai.app</a></div>
+              <div><strong data-i18n="compliance.supportLabel">지원:</strong> <a href="mailto:support@tapfixai.app">support@tapfixai.app</a></div>
+              <div data-i18n="compliance.requirements"><strong>요구 사항:</strong> macOS 14+, Apple Silicon M1+</div>
+              <div data-i18n="compliance.distribution"><strong>배포:</strong> tapfixai.app에서 제공되는 공식 notarized DMG만 사용합니다.</div>
+            </div>
+          </div>
+          <div class="panel">
+            <h3 data-i18n="compliance.uninstallH">TapFix AI 제거</h3>
+            <div class="list">
+              <div data-i18n="compliance.uninstall1">1. 메뉴 막대에서 TapFix AI를 종료합니다.</div>
+              <div data-i18n="compliance.uninstall2">2. Applications를 엽니다.</div>
+              <div data-i18n="compliance.uninstall3">3. TapFix AI.app을 휴지통으로 드래그합니다.</div>
+              <div data-i18n="compliance.uninstall4">4. 휴지통을 비웁니다.</div>
+              <div data-i18n="compliance.uninstall5">5. Accessibility/Input Monitoring 권한을 활성화했다면 System Settings → Privacy & Security에서 제거할 수 있습니다.</div>
+              <div data-i18n="compliance.background"><strong>백그라운드 구성 요소:</strong> TapFix AI는 번들된 타사 소프트웨어나 별도의 타사 제거 프로그램을 설치하지 않습니다. 앱에서 로그인 시 실행을 활성화했다면 제거 전에 끄세요. TapFix AI.app을 제거한 뒤 별도의 정리 도구는 필요하지 않습니다.</div>
+            </div>
+          </div>
+        </div>
+        <div class="steps faq-grid">
+          <div class="step"><div class="n">?</div><h3 data-i18n="compliance.faq1h">TapFix AI는 Apple에서 notarized 되었나요?</h3><p data-i18n="compliance.faq1p">예. macOS 앱은 Apple에서 서명 및 notarized 되었습니다.</p></div>
+          <div class="step"><div class="n">?</div><h3 data-i18n="compliance.faq2h">다른 소프트웨어를 설치하나요?</h3><p data-i18n="compliance.faq2p">아니요. TapFix AI에는 번들된 타사 설치 프로그램이 없습니다.</p></div>
+          <div class="step"><div class="n">?</div><h3 data-i18n="compliance.faq3h">언제든 제거할 수 있나요?</h3><p data-i18n="compliance.faq3p">예. 위 단계를 언제든 사용할 수 있습니다.</p></div>
+          <div class="step"><div class="n">?</div><h3 data-i18n="compliance.faq4h">데이터/개인정보 정보는 어디에 있나요?</h3><p><a href="/privacy" data-i18n="compliance.faq4p">개인정보 처리방침을 읽어보세요.</a></p></div>
         </div>
       </div>
     </section>

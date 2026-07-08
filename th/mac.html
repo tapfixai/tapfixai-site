@@ -157,6 +157,7 @@
     .card p { margin: 0; color: var(--muted); line-height: 1.55; }
 
     .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .faq-grid { margin-top: 16px; }
     .step { padding: 26px; border-radius: var(--radius); background: var(--card); border: 1px solid var(--line); }
     .step .n { width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center;
       background: var(--accent-soft); color: var(--accent); font-weight: 900; margin-bottom: 16px; }
@@ -425,6 +426,44 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
             <div data-i18n="perm.l2"><strong>การตรวจสอบการป้อนข้อมูล:</strong> ให้ปุ่มลัดและปุ่มลอยเรียกใช้การกระทำในแอปใดก็ได้</div>
             <div data-i18n="perm.l3"><strong>ที่ไหน:</strong> การตั้งค่าระบบ → ความเป็นส่วนตัวและความปลอดภัย → การช่วยการเข้าถึง และ การตรวจสอบการป้อนข้อมูล</div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="install-update-uninstall">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 data-i18n="compliance.h">ติดตั้ง อัปเดต และถอนการติดตั้ง TapFix AI</h2>
+          <p data-i18n="compliance.p">ข้อมูลอย่างเป็นทางการของซอฟต์แวร์เดสก์ท็อป TapFix AI สำหรับ macOS</p>
+        </div>
+        <div class="twocol">
+          <div class="panel">
+            <div class="list">
+              <div data-i18n="compliance.product"><strong>ผลิตภัณฑ์:</strong> TapFix AI สำหรับ macOS</div>
+              <div data-i18n="compliance.developer"><strong>ผู้พัฒนา:</strong> TapFix AI</div>
+              <div><strong data-i18n="compliance.websiteLabel">เว็บไซต์ทางการ:</strong> <a href="https://tapfixai.app">https://tapfixai.app</a></div>
+              <div><strong data-i18n="compliance.supportLabel">ฝ่ายสนับสนุน:</strong> <a href="mailto:support@tapfixai.app">support@tapfixai.app</a></div>
+              <div data-i18n="compliance.requirements"><strong>ข้อกำหนด:</strong> macOS 14+, Apple Silicon M1+</div>
+              <div data-i18n="compliance.distribution"><strong>การเผยแพร่:</strong> DMG ทางการที่ notarized จาก tapfixai.app เท่านั้น</div>
+            </div>
+          </div>
+          <div class="panel">
+            <h3 data-i18n="compliance.uninstallH">ถอนการติดตั้ง TapFix AI</h3>
+            <div class="list">
+              <div data-i18n="compliance.uninstall1">1. ปิด TapFix AI จากแถบเมนู</div>
+              <div data-i18n="compliance.uninstall2">2. เปิด Applications</div>
+              <div data-i18n="compliance.uninstall3">3. ลาก TapFix AI.app ไปที่ Trash</div>
+              <div data-i18n="compliance.uninstall4">4. ล้าง Trash</div>
+              <div data-i18n="compliance.uninstall5">5. หากเปิดสิทธิ์ Accessibility/Input Monitoring ให้ลบได้ใน System Settings → Privacy & Security</div>
+              <div data-i18n="compliance.background"><strong>คอมโพเนนต์เบื้องหลัง:</strong> TapFix AI ไม่ติดตั้งซอฟต์แวร์บุคคลที่สามแบบ bundled หรือ uninstaller บุคคลที่สามแยกต่างหาก หากเปิด launch at login ในแอป ให้ปิดก่อนถอนการติดตั้ง หลังลบ TapFix AI.app แล้ว ไม่จำเป็นต้องใช้เครื่องมือ cleanup แยกต่างหาก</div>
+            </div>
+          </div>
+        </div>
+        <div class="steps faq-grid">
+          <div class="step"><div class="n">?</div><h3 data-i18n="compliance.faq1h">TapFix AI ได้รับ notarized จาก Apple หรือไม่?</h3><p data-i18n="compliance.faq1p">ใช่ แอป macOS ได้รับการลงนามและ notarized โดย Apple</p></div>
+          <div class="step"><div class="n">?</div><h3 data-i18n="compliance.faq2h">ติดตั้งซอฟต์แวร์อื่นหรือไม่?</h3><p data-i18n="compliance.faq2p">ไม่ TapFix AI ไม่มี installer บุคคลที่สามแบบ bundled</p></div>
+          <div class="step"><div class="n">?</div><h3 data-i18n="compliance.faq3h">ถอนการติดตั้งได้ทุกเมื่อไหม?</h3><p data-i18n="compliance.faq3p">ได้ ใช้ขั้นตอนด้านบนได้ทุกเมื่อ</p></div>
+          <div class="step"><div class="n">?</div><h3 data-i18n="compliance.faq4h">ข้อมูลและความเป็นส่วนตัวอยู่ที่ไหน?</h3><p><a href="/privacy" data-i18n="compliance.faq4p">อ่านนโยบายความเป็นส่วนตัว</a></p></div>
         </div>
       </div>
     </section>

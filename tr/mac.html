@@ -157,6 +157,7 @@
     .card p { margin: 0; color: var(--muted); line-height: 1.55; }
 
     .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .faq-grid { margin-top: 16px; }
     .step { padding: 26px; border-radius: var(--radius); background: var(--card); border: 1px solid var(--line); }
     .step .n { width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center;
       background: var(--accent-soft); color: var(--accent); font-weight: 900; margin-bottom: 16px; }
@@ -425,6 +426,44 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
             <div data-i18n="perm.l2"><strong>Giriş İzleme:</strong> kısayollarınızın ve yüzen düğmenin herhangi bir uygulamada işlem başlatmasını sağlar.</div>
             <div data-i18n="perm.l3"><strong>Nerede:</strong> Sistem Ayarları → Gizlilik ve Güvenlik → Erişilebilirlik ve Giriş İzleme.</div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="install-update-uninstall">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 data-i18n="compliance.h">TapFix AI'yi yükleme, güncelleme ve kaldırma</h2>
+          <p data-i18n="compliance.p">macOS için TapFix AI masaüstü yazılımına ait resmi bilgiler.</p>
+        </div>
+        <div class="twocol">
+          <div class="panel">
+            <div class="list">
+              <div data-i18n="compliance.product"><strong>Ürün:</strong> macOS için TapFix AI</div>
+              <div data-i18n="compliance.developer"><strong>Geliştirici:</strong> TapFix AI</div>
+              <div><strong data-i18n="compliance.websiteLabel">Resmi web sitesi:</strong> <a href="https://tapfixai.app">https://tapfixai.app</a></div>
+              <div><strong data-i18n="compliance.supportLabel">Destek:</strong> <a href="mailto:support@tapfixai.app">support@tapfixai.app</a></div>
+              <div data-i18n="compliance.requirements"><strong>Gereksinimler:</strong> macOS 14+, Apple Silicon M1+</div>
+              <div data-i18n="compliance.distribution"><strong>Dağıtım:</strong> yalnızca tapfixai.app üzerinden resmi noter onaylı DMG.</div>
+            </div>
+          </div>
+          <div class="panel">
+            <h3 data-i18n="compliance.uninstallH">TapFix AI'yi kaldırma</h3>
+            <div class="list">
+              <div data-i18n="compliance.uninstall1">1. Menü çubuğundan TapFix AI'yi kapatın.</div>
+              <div data-i18n="compliance.uninstall2">2. Applications klasörünü açın.</div>
+              <div data-i18n="compliance.uninstall3">3. TapFix AI.app'i Çöp Sepeti'ne sürükleyin.</div>
+              <div data-i18n="compliance.uninstall4">4. Çöp Sepeti'ni boşaltın.</div>
+              <div data-i18n="compliance.uninstall5">5. Accessibility/Input Monitoring izinlerini etkinleştirdiyseniz, bunları System Settings → Privacy & Security bölümünden kaldırabilirsiniz.</div>
+              <div data-i18n="compliance.background"><strong>Arka plan bileşenleri:</strong> TapFix AI paketlenmiş üçüncü taraf yazılımı veya ayrı bir üçüncü taraf kaldırıcı yüklemez. Uygulamada oturum açılışında başlatmayı etkinleştirdiyseniz, kaldırmadan önce kapatın. TapFix AI.app kaldırıldıktan sonra ayrı bir temizleme aracı gerekmez.</div>
+            </div>
+          </div>
+        </div>
+        <div class="steps faq-grid">
+          <div class="step"><div class="n">?</div><h3 data-i18n="compliance.faq1h">TapFix AI Apple tarafından noter onaylı mı?</h3><p data-i18n="compliance.faq1p">Evet. macOS uygulaması Apple tarafından imzalanmış ve noter onaylıdır.</p></div>
+          <div class="step"><div class="n">?</div><h3 data-i18n="compliance.faq2h">Başka yazılım yükler mi?</h3><p data-i18n="compliance.faq2p">Hayır. TapFix AI paketlenmiş üçüncü taraf yükleyiciler içermez.</p></div>
+          <div class="step"><div class="n">?</div><h3 data-i18n="compliance.faq3h">İstediğim zaman kaldırabilir miyim?</h3><p data-i18n="compliance.faq3p">Evet. Yukarıdaki kaldırma adımlarını istediğiniz zaman kullanın.</p></div>
+          <div class="step"><div class="n">?</div><h3 data-i18n="compliance.faq4h">Veri/gizlilik bilgileri nerede?</h3><p><a href="/privacy" data-i18n="compliance.faq4p">Gizlilik Politikasını okuyun.</a></p></div>
         </div>
       </div>
     </section>

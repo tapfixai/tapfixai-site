@@ -157,6 +157,7 @@
     .card p { margin: 0; color: var(--muted); line-height: 1.55; }
 
     .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .faq-grid { margin-top: 16px; }
     .step { padding: 26px; border-radius: var(--radius); background: var(--card); border: 1px solid var(--line); }
     .step .n { width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center;
       background: var(--accent-soft); color: var(--accent); font-weight: 900; margin-bottom: 16px; }
@@ -425,6 +426,44 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
             <div data-i18n="perm.l2"><strong>پایش ورودی:</strong> به میان‌برها و دکمهٔ شناور اجازه می‌دهد کنش‌ها را در هر برنامه‌ای اجرا کنند.</div>
             <div data-i18n="perm.l3"><strong>کجا:</strong> تنظیمات سیستم → حریم خصوصی و امنیت → دسترس‌پذیری و پایش ورودی.</div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="install-update-uninstall">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 data-i18n="compliance.h">نصب، به‌روزرسانی و حذف TapFix AI</h2>
+          <p data-i18n="compliance.p">اطلاعات رسمی نرم‌افزار دسکتاپ TapFix AI برای macOS.</p>
+        </div>
+        <div class="twocol">
+          <div class="panel">
+            <div class="list">
+              <div data-i18n="compliance.product"><strong>محصول:</strong> TapFix AI برای macOS</div>
+              <div data-i18n="compliance.developer"><strong>توسعه‌دهنده:</strong> TapFix AI</div>
+              <div><strong data-i18n="compliance.websiteLabel">وب‌سایت رسمی:</strong> <a href="https://tapfixai.app">https://tapfixai.app</a></div>
+              <div><strong data-i18n="compliance.supportLabel">پشتیبانی:</strong> <a href="mailto:support@tapfixai.app">support@tapfixai.app</a></div>
+              <div data-i18n="compliance.requirements"><strong>نیازمندی‌ها:</strong> macOS 14+، Apple Silicon M1+</div>
+              <div data-i18n="compliance.distribution"><strong>توزیع:</strong> فقط DMG رسمی notarized از tapfixai.app.</div>
+            </div>
+          </div>
+          <div class="panel">
+            <h3 data-i18n="compliance.uninstallH">حذف TapFix AI</h3>
+            <div class="list">
+              <div data-i18n="compliance.uninstall1">1. TapFix AI را از نوار منو ببندید.</div>
+              <div data-i18n="compliance.uninstall2">2. Applications را باز کنید.</div>
+              <div data-i18n="compliance.uninstall3">3. TapFix AI.app را به Trash بکشید.</div>
+              <div data-i18n="compliance.uninstall4">4. Trash را خالی کنید.</div>
+              <div data-i18n="compliance.uninstall5">5. اگر مجوزهای Accessibility/Input Monitoring را فعال کرده‌اید، آن‌ها را در System Settings → Privacy & Security حذف کنید.</div>
+              <div data-i18n="compliance.background"><strong>اجزای پس‌زمینه:</strong> TapFix AI نرم‌افزار شخص ثالث بسته‌بندی‌شده یا uninstaller جداگانه شخص ثالث نصب نمی‌کند. اگر launch at login را داخل برنامه فعال کرده‌اید، قبل از حذف خاموش کنید. پس از حذف TapFix AI.app، ابزار پاک‌سازی جداگانه لازم نیست.</div>
+            </div>
+          </div>
+        </div>
+        <div class="steps faq-grid">
+          <div class="step"><div class="n">?</div><h3 data-i18n="compliance.faq1h">آیا TapFix AI توسط Apple notarized شده است؟</h3><p data-i18n="compliance.faq1p">بله. برنامه macOS توسط Apple امضا و notarized شده است.</p></div>
+          <div class="step"><div class="n">?</div><h3 data-i18n="compliance.faq2h">آیا نرم‌افزار دیگری نصب می‌کند؟</h3><p data-i18n="compliance.faq2p">خیر. TapFix AI نصب‌کننده شخص ثالث بسته‌بندی‌شده ندارد.</p></div>
+          <div class="step"><div class="n">?</div><h3 data-i18n="compliance.faq3h">آیا هر زمان می‌توانم آن را حذف کنم؟</h3><p data-i18n="compliance.faq3p">بله. هر زمان خواستید از مراحل حذف بالا استفاده کنید.</p></div>
+          <div class="step"><div class="n">?</div><h3 data-i18n="compliance.faq4h">اطلاعات داده و حریم خصوصی کجاست؟</h3><p><a href="/privacy" data-i18n="compliance.faq4p">سیاست حریم خصوصی را بخوانید.</a></p></div>
         </div>
       </div>
     </section>
