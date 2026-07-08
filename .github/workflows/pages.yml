@@ -42,7 +42,7 @@ jobs:
             _site/README_DEPLOYMENT.md \
             _site/google-play-data-safety-keyboard.md \
             _site/package.json
-          find _site/downloads -type f ! -name 'TapFixAI-macOS-latest.dmg' -delete
+          find _site/downloads -type f ! \( -name 'TapFixAI-macOS-latest.dmg' -o -name 'TapFixAI-macOS-*.dmg' \) -delete
           find _site -type f -name '*.html' -exec perl -0pi -e 's/__PADDLE_CLIENT_TOKEN__/$ENV{PADDLE_CLIENT_TOKEN} || ""/ge' {} +
           du -sh _site
 
