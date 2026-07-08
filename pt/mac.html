@@ -277,7 +277,7 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
       <nav class="links" aria-label="Main navigation">
         <a href="/pt/" data-i18n="nav.keyboard">Teclado</a>
         <a href="/pt/mac" data-i18n="nav.mac">Mac</a>
-        <a href="#pricing">Pricing</a>
+        <a href="#pricing" data-i18n="nav.pricing">Preços</a>
         <a href="/pt/support" data-i18n="nav.support">Suporte</a>
         <a href="/privacy" data-i18n="nav.privacy">Privacidade</a>
       </nav>
@@ -298,7 +298,7 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
         <p class="lead" data-i18n="hero.lead">Corrige, reescreve, traduz e ajuda com o texto — dentro do app onde você digita. Selecione o texto, aperte um atalho e pronto.</p>
         <div class="actions">
           <a class="btn primary" href="/downloads/TapFixAI-macOS-latest.dmg" data-i18n="hero.cta">Baixar para macOS</a>
-          <a class="btn" href="#pricing">View pricing</a>
+          <a class="btn" href="#pricing" data-i18n="hero.pricing">Ver preços</a>
         </div>
         <div class="trust">
           <span data-i18n="hero.t1">macOS 14 e mais recente</span>
@@ -323,39 +323,47 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
     <section id="pricing">
       <div class="wrap">
         <div class="section-head">
-          <h2>TapFixAI Pro pricing</h2>
-          <p>Start with a 3-day free trial. Trial includes up to 100 AI requests per day. TapFixAI Pro is $5/month or $50/year and includes up to 1000 successful AI requests per day.</p>
+          <h2 data-i18n="pricing.h">Preços do TapFixAI Pro</h2>
+          <p data-i18n="pricing.p">Comece com um teste grátis de 3 dias. O teste inclui até 100 solicitações de IA por dia. O TapFixAI Pro custa $5/mês ou $50/ano e inclui até 1000 solicitações de IA bem-sucedidas por dia.</p>
         </div>
         <div class="pricing-grid">
           <article class="price-card">
             <div class="plan-name">TapFixAI Pro</div>
-            <div class="price">$5<span>/month</span></div>
-            <p>Monthly access to the notarized macOS app with AI fix, rewrite, translate, assistant, hotkeys, floating button, clipboard history and notes.</p>
+            <div class="price">$5<span data-i18n="pricing.monthUnit">/mês</span></div>
+            <p data-i18n="pricing.monthDesc">Acesso mensal ao app notarizado para macOS com correção por IA, reescrita, tradução, assistente, atalhos, botão flutuante, histórico da área de transferência e notas.</p>
             <div class="plan-actions">
-              <button class="btn primary" type="button" data-plan="monthly" data-checkout-action="trial" data-fallback-price="pri_01kwvzfz1hx5p8za7p3z6gtt6h" data-paddle-price="pri_01kwvzfz1hx5p8za7p3z6gtt6h">Start 3-day trial — $5/month</button>
-              <button class="btn" type="button" data-plan="monthly" data-checkout-action="pay_now" hidden>Pay now — $5/month</button>
-              <a class="btn" href="/downloads/TapFixAI-macOS-latest.dmg">Download for macOS</a>
+              <button class="btn primary" type="button" data-plan="monthly" data-checkout-action="trial" data-fallback-price="pri_01kwvzfz1hx5p8za7p3z6gtt6h" data-paddle-price="pri_01kwvzfz1hx5p8za7p3z6gtt6h" data-i18n="pricing.trialMonthly">Teste 3 dias — $5/mês</button>
+              <button class="btn" type="button" data-plan="monthly" data-checkout-action="pay_now" data-i18n="pricing.payMonthly" hidden>Pagar agora — $5/mês</button>
+              <a class="btn" href="/downloads/TapFixAI-macOS-latest.dmg" data-i18n="pricing.downloadMonthly">Baixar para macOS</a>
             </div>
           </article>
           <article class="price-card">
-            <div class="plan-name">Best value</div>
-            <div class="price">$50<span>/year</span></div>
-            <p>Annual TapFixAI Pro subscription with the same Pro limits and license terms, billed yearly through our payment provider.</p>
+            <div class="plan-name" data-i18n="pricing.bestValue">Melhor valor</div>
+            <div class="price">$50<span data-i18n="pricing.yearUnit">/ano</span></div>
+            <p data-i18n="pricing.yearDesc">Assinatura anual do TapFixAI Pro com os mesmos limites Pro e termos de licença, cobrada anualmente pelo nosso provedor de pagamentos.</p>
             <div class="plan-actions">
-              <button class="btn primary" type="button" data-plan="yearly" data-checkout-action="trial" data-fallback-price="pri_01kwvzsjwy0yv6brrxxety5erk" data-paddle-price="pri_01kwvzsjwy0yv6brrxxety5erk">Start 3-day trial — $50/year</button>
-              <button class="btn" type="button" data-plan="yearly" data-checkout-action="pay_now" hidden>Pay now — $50/year</button>
-              <a class="btn" href="/downloads/TapFixAI-macOS-latest.dmg">Download for macOS</a>
+              <button class="btn primary" type="button" data-plan="yearly" data-checkout-action="trial" data-fallback-price="pri_01kwvzsjwy0yv6brrxxety5erk" data-paddle-price="pri_01kwvzsjwy0yv6brrxxety5erk" data-i18n="pricing.trialYearly">Teste 3 dias — $50/ano</button>
+              <button class="btn" type="button" data-plan="yearly" data-checkout-action="pay_now" data-i18n="pricing.payYearly" hidden>Pagar agora — $50/ano</button>
+              <a class="btn" href="/downloads/TapFixAI-macOS-latest.dmg" data-i18n="pricing.downloadYearly">Baixar para macOS</a>
             </div>
           </article>
         </div>
         <div class="checkout-state" id="checkoutStatus" role="status" aria-live="polite"></div>
-        <div class="list">
-          <div><strong>Free trial:</strong> 3 days with up to 100 AI requests per day.</div>
-          <div><strong>Paid limit:</strong> up to 1000 successful AI requests per day.</div>
-          <div><strong>License:</strong> one license works on one active Mac at a time. You can transfer your license to another Mac anytime by activating it on the new device; the previous Mac will lose Pro access after transfer.</div>
-          <div><strong>Distribution:</strong> downloadable notarized macOS app, works outside the Mac App Store, requires macOS 14+ and Apple Silicon.</div>
+        <div hidden aria-hidden="true">
+          <span data-checkout-msg="opening" data-i18n="checkout.opening">Abrindo Paddle Checkout seguro...</span>
+          <span data-checkout-msg="openError" data-i18n="checkout.openError">Não foi possível abrir o checkout. Atualize a página ou entre em contato pelo support@tapfixai.app.</span>
+          <span data-checkout-msg="success" data-i18n="checkout.success">Checkout concluído. Abra o TapFix AI no Mac para ativar o acesso Pro com segurança pela sua licença.</span>
+          <span data-checkout-msg="unavailable" data-i18n="checkout.unavailable">O checkout está temporariamente indisponível. Baixe o app ou entre em contato pelo support@tapfixai.app.</span>
+          <span data-checkout-msg="loadError" data-i18n="checkout.loadError">O Paddle Checkout não pôde carregar. Atualize a página ou entre em contato pelo support@tapfixai.app.</span>
+          <span data-checkout-msg="initError" data-i18n="checkout.initError">O Paddle Checkout não pôde iniciar. Atualize a página ou entre em contato pelo support@tapfixai.app.</span>
         </div>
-        <p class="fineprint">Payments are opened securely with Paddle Checkout. After checkout, there is nothing to activate manually on this website: TapFix AI for macOS and the TapFix AI server handle license activation and status.</p>
+        <div class="list">
+          <div data-i18n="pricing.trialInfo"><strong>Teste grátis:</strong> 3 dias com até 100 solicitações de IA por dia.</div>
+          <div data-i18n="pricing.paidLimit"><strong>Limite pago:</strong> até 1000 solicitações de IA bem-sucedidas por dia.</div>
+          <div data-i18n="pricing.license"><strong>Licença:</strong> uma licença funciona em um Mac ativo por vez. Você pode transferi-la para outro Mac a qualquer momento ativando no novo dispositivo; o Mac anterior perderá o acesso Pro após a transferência.</div>
+          <div data-i18n="pricing.distribution"><strong>Distribuição:</strong> app notarizado para macOS para download, funciona fora da Mac App Store, requer macOS 14+ e Apple Silicon.</div>
+        </div>
+        <p class="fineprint" data-i18n="pricing.fineprint">Os pagamentos são abertos com segurança pelo Paddle Checkout. Depois do checkout, não há nada para ativar manualmente neste site: o TapFix AI para macOS e o servidor TapFix AI cuidam da ativação e do status da licença.</p>
       </div>
     </section>
 
@@ -408,7 +416,7 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
           <h2 data-i18n="perm.h">Primeira execução — permissões</h2>
           <p class="lead" data-i18n="perm.p">O macOS vai pedir duas permissões para o TapFix funcionar em todos os apps. Concedidas uma só vez.</p>
           <div class="actions">
-            <a class="btn primary" href="/accessibility-disclosure" data-i18n="perm.cta">Accessibility Disclosure</a>
+            <a class="btn primary" href="/accessibility-disclosure" data-i18n="perm.cta">Divulgação de acessibilidade</a>
           </div>
         </div>
         <div class="panel">
@@ -455,14 +463,14 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
     <div class="wrap foot">
       <div data-i18n="foot.copy">© 2026 TapFix AI Studio. Todos os direitos reservados.</div>
       <div>
-        <a href="/pt/" data-i18n="nav.keyboard">Keyboard</a> ·
-        <a href="/pt/mac" data-i18n="nav.mac">Mac</a> ·
-        <a href="/pt/mac#pricing">Pricing</a> ·
-        <a href="/pt/support" data-i18n="nav.support">Support</a> ·
+        <a href="/pt/" data-i18n="foot.keyboard">Teclado</a> ·
+        <a href="/pt/mac" data-i18n="foot.mac">Mac</a> ·
+        <a href="/pt/mac#pricing" data-i18n="foot.pricing">Preços</a> ·
+        <a href="/pt/support" data-i18n="foot.support">Suporte</a> ·
         <a href="/privacy" data-i18n="foot.privacy">Política de privacidade</a> ·
-        <a href="/terms" data-i18n="nav.terms">Termos</a> ·
-        <a href="/refunds">Refund policy</a> ·
-        <a href="/accessibility-disclosure" data-i18n="foot.acc">Accessibility</a> · <a href="/pt/delete-data" data-i18n="nav.delete">Excluir dados</a>
+        <a href="/terms" data-i18n="foot.terms">Termos</a> ·
+        <a href="/refunds" data-i18n="foot.refunds">Reembolsos</a> ·
+        <a href="/accessibility-disclosure" data-i18n="foot.acc">Acessibilidade</a> · <a href="/pt/delete-data" data-i18n="foot.delete">Excluir dados</a>
       </div>
     </div>
   </footer>
@@ -483,6 +491,11 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
         checkoutStatus.textContent = message || "";
         checkoutStatus.classList.toggle("ok", state === "ok");
         checkoutStatus.classList.toggle("err", state === "err");
+      }
+
+      function checkoutMessage(key) {
+        const message = document.querySelector("[data-checkout-msg=\"" + key + "\"]");
+        return message ? message.textContent.trim() : "";
       }
 
       function disableCheckout(message) {
@@ -544,7 +557,7 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
 
       function openCheckout(priceId) {
         if (!priceId) return;
-        setCheckoutStatus("Opening secure Paddle Checkout...", "");
+        setCheckoutStatus(checkoutMessage("opening"), "");
 
         try {
           window.Paddle.Checkout.open({
@@ -557,7 +570,7 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
             }
           });
         } catch (error) {
-          setCheckoutStatus("Checkout could not open. Please refresh the page or contact support@tapfixai.app.", "err");
+          setCheckoutStatus(checkoutMessage("openError"), "err");
         }
       }
 
@@ -573,18 +586,18 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
       loadPlanPrices();
 
       if (params.get("checkout") === "success") {
-        setCheckoutStatus("Checkout complete. Open TapFix AI on your Mac to activate Pro access securely through your license.", "ok");
+        setCheckoutStatus(checkoutMessage("success"), "ok");
       }
 
       if (!checkoutButtons.length) return;
 
       if (!PADDLE_CLIENT_TOKEN || PADDLE_CLIENT_TOKEN.indexOf("__PADDLE_") === 0) {
-        disableCheckout("Checkout is temporarily unavailable. Please download the app or contact support@tapfixai.app.");
+        disableCheckout(checkoutMessage("unavailable"));
         return;
       }
 
       if (!window.Paddle) {
-        disableCheckout("Paddle Checkout could not load. Please refresh the page or contact support@tapfixai.app.");
+        disableCheckout(checkoutMessage("loadError"));
         return;
       }
 
@@ -601,7 +614,7 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
           }
         });
       } catch (error) {
-        disableCheckout("Paddle Checkout could not initialize. Please refresh the page or contact support@tapfixai.app.");
+        disableCheckout(checkoutMessage("initError"));
         return;
       }
 

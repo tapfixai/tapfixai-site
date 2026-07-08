@@ -277,7 +277,7 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
       <nav class="links" aria-label="Main navigation">
         <a href="/ko/" data-i18n="nav.keyboard">키보드</a>
         <a href="/ko/mac" data-i18n="nav.mac">Mac</a>
-        <a href="#pricing">Pricing</a>
+        <a href="#pricing" data-i18n="nav.pricing">가격</a>
         <a href="/ko/support" data-i18n="nav.support">지원</a>
         <a href="/privacy" data-i18n="nav.privacy">개인정보</a>
       </nav>
@@ -298,7 +298,7 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
         <p class="lead" data-i18n="hero.lead">입력 중인 어떤 앱 안에서도 텍스트를 바로 교정·다시쓰기·번역하고 도와줍니다. 텍스트를 선택하고 단축키를 누르면 끝.</p>
         <div class="actions">
           <a class="btn primary" href="/downloads/TapFixAI-macOS-latest.dmg" data-i18n="hero.cta">macOS용 다운로드</a>
-          <a class="btn" href="#pricing">View pricing</a>
+          <a class="btn" href="#pricing" data-i18n="hero.pricing">가격 보기</a>
         </div>
         <div class="trust">
           <span data-i18n="hero.t1">macOS 14 이상</span>
@@ -323,39 +323,47 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
     <section id="pricing">
       <div class="wrap">
         <div class="section-head">
-          <h2>TapFixAI Pro pricing</h2>
-          <p>Start with a 3-day free trial. Trial includes up to 100 AI requests per day. TapFixAI Pro is $5/month or $50/year and includes up to 1000 successful AI requests per day.</p>
+          <h2 data-i18n="pricing.h">TapFixAI Pro 가격</h2>
+          <p data-i18n="pricing.p">3일 무료 체험으로 시작하세요. 체험 기간에는 하루 최대 100개의 AI 요청을 사용할 수 있습니다. TapFixAI Pro는 월 $5 또는 연 $50이며 하루 최대 1000개의 성공한 AI 요청을 포함합니다.</p>
         </div>
         <div class="pricing-grid">
           <article class="price-card">
             <div class="plan-name">TapFixAI Pro</div>
-            <div class="price">$5<span>/month</span></div>
-            <p>Monthly access to the notarized macOS app with AI fix, rewrite, translate, assistant, hotkeys, floating button, clipboard history and notes.</p>
+            <div class="price">$5<span data-i18n="pricing.monthUnit">/월</span></div>
+            <p data-i18n="pricing.monthDesc">AI 수정, 다시 쓰기, 번역, 어시스턴트, 단축키, 플로팅 버튼, 클립보드 기록과 노트를 포함한 공증된 macOS 앱의 월간 이용권입니다.</p>
             <div class="plan-actions">
-              <button class="btn primary" type="button" data-plan="monthly" data-checkout-action="trial" data-fallback-price="pri_01kwvzfz1hx5p8za7p3z6gtt6h" data-paddle-price="pri_01kwvzfz1hx5p8za7p3z6gtt6h">Start 3-day trial — $5/month</button>
-              <button class="btn" type="button" data-plan="monthly" data-checkout-action="pay_now" hidden>Pay now — $5/month</button>
-              <a class="btn" href="/downloads/TapFixAI-macOS-latest.dmg">Download for macOS</a>
+              <button class="btn primary" type="button" data-plan="monthly" data-checkout-action="trial" data-fallback-price="pri_01kwvzfz1hx5p8za7p3z6gtt6h" data-paddle-price="pri_01kwvzfz1hx5p8za7p3z6gtt6h" data-i18n="pricing.trialMonthly">3일 체험 — $5/월</button>
+              <button class="btn" type="button" data-plan="monthly" data-checkout-action="pay_now" data-i18n="pricing.payMonthly" hidden>지금 결제 — $5/월</button>
+              <a class="btn" href="/downloads/TapFixAI-macOS-latest.dmg" data-i18n="pricing.downloadMonthly">macOS용 다운로드</a>
             </div>
           </article>
           <article class="price-card">
-            <div class="plan-name">Best value</div>
-            <div class="price">$50<span>/year</span></div>
-            <p>Annual TapFixAI Pro subscription with the same Pro limits and license terms, billed yearly through our payment provider.</p>
+            <div class="plan-name" data-i18n="pricing.bestValue">최고의 가치</div>
+            <div class="price">$50<span data-i18n="pricing.yearUnit">/년</span></div>
+            <p data-i18n="pricing.yearDesc">동일한 Pro 한도와 라이선스 조건을 제공하는 TapFixAI Pro 연간 구독이며, 결제 제공업체를 통해 매년 청구됩니다.</p>
             <div class="plan-actions">
-              <button class="btn primary" type="button" data-plan="yearly" data-checkout-action="trial" data-fallback-price="pri_01kwvzsjwy0yv6brrxxety5erk" data-paddle-price="pri_01kwvzsjwy0yv6brrxxety5erk">Start 3-day trial — $50/year</button>
-              <button class="btn" type="button" data-plan="yearly" data-checkout-action="pay_now" hidden>Pay now — $50/year</button>
-              <a class="btn" href="/downloads/TapFixAI-macOS-latest.dmg">Download for macOS</a>
+              <button class="btn primary" type="button" data-plan="yearly" data-checkout-action="trial" data-fallback-price="pri_01kwvzsjwy0yv6brrxxety5erk" data-paddle-price="pri_01kwvzsjwy0yv6brrxxety5erk" data-i18n="pricing.trialYearly">3일 체험 — $50/년</button>
+              <button class="btn" type="button" data-plan="yearly" data-checkout-action="pay_now" data-i18n="pricing.payYearly" hidden>지금 결제 — $50/년</button>
+              <a class="btn" href="/downloads/TapFixAI-macOS-latest.dmg" data-i18n="pricing.downloadYearly">macOS용 다운로드</a>
             </div>
           </article>
         </div>
         <div class="checkout-state" id="checkoutStatus" role="status" aria-live="polite"></div>
-        <div class="list">
-          <div><strong>Free trial:</strong> 3 days with up to 100 AI requests per day.</div>
-          <div><strong>Paid limit:</strong> up to 1000 successful AI requests per day.</div>
-          <div><strong>License:</strong> one license works on one active Mac at a time. You can transfer your license to another Mac anytime by activating it on the new device; the previous Mac will lose Pro access after transfer.</div>
-          <div><strong>Distribution:</strong> downloadable notarized macOS app, works outside the Mac App Store, requires macOS 14+ and Apple Silicon.</div>
+        <div hidden aria-hidden="true">
+          <span data-checkout-msg="opening" data-i18n="checkout.opening">안전한 Paddle Checkout을 여는 중...</span>
+          <span data-checkout-msg="openError" data-i18n="checkout.openError">Checkout을 열 수 없습니다. 페이지를 새로고침하거나 support@tapfixai.app으로 문의하세요.</span>
+          <span data-checkout-msg="success" data-i18n="checkout.success">Checkout이 완료되었습니다. Mac에서 TapFix AI를 열어 라이선스를 통해 Pro 접근 권한을 안전하게 활성화하세요.</span>
+          <span data-checkout-msg="unavailable" data-i18n="checkout.unavailable">Checkout을 일시적으로 사용할 수 없습니다. 앱을 다운로드하거나 support@tapfixai.app으로 문의하세요.</span>
+          <span data-checkout-msg="loadError" data-i18n="checkout.loadError">Paddle Checkout을 불러올 수 없습니다. 페이지를 새로고침하거나 support@tapfixai.app으로 문의하세요.</span>
+          <span data-checkout-msg="initError" data-i18n="checkout.initError">Paddle Checkout을 시작할 수 없습니다. 페이지를 새로고침하거나 support@tapfixai.app으로 문의하세요.</span>
         </div>
-        <p class="fineprint">Payments are opened securely with Paddle Checkout. After checkout, there is nothing to activate manually on this website: TapFix AI for macOS and the TapFix AI server handle license activation and status.</p>
+        <div class="list">
+          <div data-i18n="pricing.trialInfo"><strong>무료 체험:</strong> 3일 동안 하루 최대 100개의 AI 요청.</div>
+          <div data-i18n="pricing.paidLimit"><strong>유료 한도:</strong> 하루 최대 1000개의 성공한 AI 요청.</div>
+          <div data-i18n="pricing.license"><strong>라이선스:</strong> 하나의 라이선스는 한 번에 활성 Mac 한 대에서만 작동합니다. 새 기기에서 활성화하면 언제든지 다른 Mac으로 라이선스를 이전할 수 있으며, 이전 Mac은 이전 후 Pro 접근 권한을 잃습니다.</div>
+          <div data-i18n="pricing.distribution"><strong>배포:</strong> 다운로드 가능한 공증된 macOS 앱이며 Mac App Store 밖에서 작동하고 macOS 14+ 및 Apple Silicon이 필요합니다.</div>
+        </div>
+        <p class="fineprint" data-i18n="pricing.fineprint">결제는 Paddle Checkout으로 안전하게 열립니다. Checkout 후 이 웹사이트에서 수동으로 활성화할 것은 없습니다. macOS용 TapFix AI와 TapFix AI 서버가 라이선스 활성화와 상태를 처리합니다.</p>
       </div>
     </section>
 
@@ -408,7 +416,7 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
           <h2 data-i18n="perm.h">첫 실행 — 권한</h2>
           <p class="lead" data-i18n="perm.p">TapFix가 모든 앱에서 작동하도록 macOS가 두 가지 권한을 요청합니다. 한 번만 허용하면 됩니다.</p>
           <div class="actions">
-            <a class="btn primary" href="/accessibility-disclosure" data-i18n="perm.cta">접근성 고지</a>
+            <a class="btn primary" href="/accessibility-disclosure" data-i18n="perm.cta">손쉬운 사용 공개</a>
           </div>
         </div>
         <div class="panel">
@@ -455,14 +463,14 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
     <div class="wrap foot">
       <div data-i18n="foot.copy">© 2026 TapFix AI Studio. 모든 권리 보유.</div>
       <div>
-        <a href="/ko/" data-i18n="nav.keyboard">Keyboard</a> ·
-        <a href="/ko/mac" data-i18n="nav.mac">Mac</a> ·
-        <a href="/ko/mac#pricing">Pricing</a> ·
-        <a href="/ko/support" data-i18n="nav.support">Support</a> ·
+        <a href="/ko/" data-i18n="foot.keyboard">키보드</a> ·
+        <a href="/ko/mac" data-i18n="foot.mac">Mac</a> ·
+        <a href="/ko/mac#pricing" data-i18n="foot.pricing">가격</a> ·
+        <a href="/ko/support" data-i18n="foot.support">지원</a> ·
         <a href="/privacy" data-i18n="foot.privacy">개인정보 처리방침</a> ·
-        <a href="/terms" data-i18n="nav.terms">약관</a> ·
-        <a href="/refunds">Refund policy</a> ·
-        <a href="/accessibility-disclosure" data-i18n="foot.acc">접근성</a> · <a href="/ko/delete-data" data-i18n="nav.delete">데이터 삭제</a>
+        <a href="/terms" data-i18n="foot.terms">약관</a> ·
+        <a href="/refunds" data-i18n="foot.refunds">환불</a> ·
+        <a href="/accessibility-disclosure" data-i18n="foot.acc">손쉬운 사용</a> · <a href="/ko/delete-data" data-i18n="foot.delete">데이터 삭제</a>
       </div>
     </div>
   </footer>
@@ -483,6 +491,11 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
         checkoutStatus.textContent = message || "";
         checkoutStatus.classList.toggle("ok", state === "ok");
         checkoutStatus.classList.toggle("err", state === "err");
+      }
+
+      function checkoutMessage(key) {
+        const message = document.querySelector("[data-checkout-msg=\"" + key + "\"]");
+        return message ? message.textContent.trim() : "";
       }
 
       function disableCheckout(message) {
@@ -544,7 +557,7 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
 
       function openCheckout(priceId) {
         if (!priceId) return;
-        setCheckoutStatus("Opening secure Paddle Checkout...", "");
+        setCheckoutStatus(checkoutMessage("opening"), "");
 
         try {
           window.Paddle.Checkout.open({
@@ -557,7 +570,7 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
             }
           });
         } catch (error) {
-          setCheckoutStatus("Checkout could not open. Please refresh the page or contact support@tapfixai.app.", "err");
+          setCheckoutStatus(checkoutMessage("openError"), "err");
         }
       }
 
@@ -573,18 +586,18 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
       loadPlanPrices();
 
       if (params.get("checkout") === "success") {
-        setCheckoutStatus("Checkout complete. Open TapFix AI on your Mac to activate Pro access securely through your license.", "ok");
+        setCheckoutStatus(checkoutMessage("success"), "ok");
       }
 
       if (!checkoutButtons.length) return;
 
       if (!PADDLE_CLIENT_TOKEN || PADDLE_CLIENT_TOKEN.indexOf("__PADDLE_") === 0) {
-        disableCheckout("Checkout is temporarily unavailable. Please download the app or contact support@tapfixai.app.");
+        disableCheckout(checkoutMessage("unavailable"));
         return;
       }
 
       if (!window.Paddle) {
-        disableCheckout("Paddle Checkout could not load. Please refresh the page or contact support@tapfixai.app.");
+        disableCheckout(checkoutMessage("loadError"));
         return;
       }
 
@@ -601,7 +614,7 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
           }
         });
       } catch (error) {
-        disableCheckout("Paddle Checkout could not initialize. Please refresh the page or contact support@tapfixai.app.");
+        disableCheckout(checkoutMessage("initError"));
         return;
       }
 
