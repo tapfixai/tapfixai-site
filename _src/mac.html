@@ -182,14 +182,16 @@
 
     .pricing-grid { display: grid; grid-template-columns: .95fr 1.05fr; gap: 18px; align-items: stretch; }
     .price-card { padding: 30px; border-radius: 28px; background: var(--card); border: 1px solid var(--line);
-      box-shadow: 0 14px 38px rgba(15,23,42,.06); }
+      box-shadow: 0 14px 38px rgba(15,23,42,.06); display: flex; flex-direction: column; }
     .price-card.featured { border-color: color-mix(in srgb, var(--accent) 44%, var(--line));
       box-shadow: 0 22px 54px color-mix(in srgb, var(--accent) 16%, transparent); }
     .plan-name { color: var(--accent); font-size: 13px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
     .price { margin: 12px 0 8px; font-size: clamp(36px, 5vw, 58px); line-height: 1; font-weight: 900; letter-spacing: -.025em; }
     .price span { color: var(--muted); font-size: 18px; font-weight: 800; letter-spacing: 0; }
-    .price-card p { color: var(--muted); line-height: 1.55; }
-    .plan-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 22px; }
+    .price-card p { color: var(--muted); line-height: 1.55; margin: 0; flex: 1; }
+    .plan-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 22px; }
+    .plan-actions .btn { width: 100%; min-width: 0; padding-inline: 18px; white-space: nowrap; }
+    .plan-actions .btn.primary { grid-column: 1 / -1; }
     .plan-actions .btn[hidden] { display: none; }
     .checkout-state { min-height: 22px; margin-top: 18px; color: var(--muted); font-size: 14px; line-height: 1.55; }
     .checkout-state.ok { color: #16a34a; }
@@ -221,6 +223,8 @@
       .stage { min-height: 470px; }
       .appwin { left: 0; top: 40px; width: 60%; }
       .heropanel { left: 48%; top: 0; height: 400px; }
+      .plan-actions { grid-template-columns: 1fr; }
+      .plan-actions .btn.primary { grid-column: auto; }
     }
   
 h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.lead{letter-spacing:-.008em}.btn{letter-spacing:-.006em}
