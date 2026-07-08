@@ -190,6 +190,7 @@
     .price span { color: var(--muted); font-size: 18px; font-weight: 800; letter-spacing: 0; }
     .price-card p { color: var(--muted); line-height: 1.55; }
     .plan-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 22px; }
+    .plan-actions .btn[hidden] { display: none; }
     .checkout-state { min-height: 22px; margin-top: 18px; color: var(--muted); font-size: 14px; line-height: 1.55; }
     .checkout-state.ok { color: #16a34a; }
     .checkout-state.err { color: #dc2626; }
@@ -304,7 +305,8 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
             <div class="price">$5<span>/month</span></div>
             <p>Monthly access to the notarized macOS app with AI fix, rewrite, translate, assistant, hotkeys, floating button, clipboard history and notes.</p>
             <div class="plan-actions">
-              <button class="btn primary" type="button" data-paddle-price="pri_01kwvzfz1hx5p8za7p3z6gtt6h">Start 3-day trial — $5/month</button>
+              <button class="btn primary" type="button" data-plan="monthly" data-checkout-action="trial" data-fallback-price="pri_01kwvzfz1hx5p8za7p3z6gtt6h" data-paddle-price="pri_01kwvzfz1hx5p8za7p3z6gtt6h">Start 3-day trial — $5/month</button>
+              <button class="btn" type="button" data-plan="monthly" data-checkout-action="pay_now" hidden>Pay now — $5/month</button>
               <a class="btn" href="downloads/TapFixAI-macOS-latest.dmg">Download for macOS</a>
             </div>
           </article>
@@ -313,7 +315,8 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
             <div class="price">$50<span>/year</span></div>
             <p>Annual TapFixAI Pro subscription with the same Pro limits and license terms, billed yearly through our payment provider.</p>
             <div class="plan-actions">
-              <button class="btn primary" type="button" data-paddle-price="pri_01kwvzsjwy0yv6brrxxety5erk">Start 3-day trial — $50/year</button>
+              <button class="btn primary" type="button" data-plan="yearly" data-checkout-action="trial" data-fallback-price="pri_01kwvzsjwy0yv6brrxxety5erk" data-paddle-price="pri_01kwvzsjwy0yv6brrxxety5erk">Start 3-day trial — $50/year</button>
+              <button class="btn" type="button" data-plan="yearly" data-checkout-action="pay_now" hidden>Pay now — $50/year</button>
             </div>
           </article>
         </div>
@@ -439,9 +442,10 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
   <script>window.TF_I18N="i18n-mac.json";</script>
   <script>
     (function () {
+      const PLANS_URL = "https://api.tapfixai.app/macos/billing/plans";
       const PADDLE_CLIENT_TOKEN = "__PADDLE_CLIENT_TOKEN__";
       const CHECKOUT_SUCCESS_URL = "https://tapfixai.app/mac?checkout=success";
-      const checkoutButtons = Array.from(document.querySelectorAll("[data-paddle-price]"));
+      const checkoutButtons = Array.from(document.querySelectorAll("[data-checkout-action]"));
       const checkoutStatus = document.getElementById("checkoutStatus");
       const params = new URLSearchParams(window.location.search);
       const shouldOpenPricingOnly = params.get("source") === "mac_app";
@@ -456,6 +460,58 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
       function disableCheckout(message) {
         checkoutButtons.forEach((button) => { button.disabled = true; });
         setCheckoutStatus(message, "err");
+      }
+
+      function resolvePriceId(plans, plan, action) {
+        if (!plans || !plan || !action) return "";
+        if (action === "trial") {
+          return plans[plan + "_trial_price_id"] || plans[plan + "_price_id"] || "";
+        }
+        if (action === "pay_now") {
+          return plans[plan + "_pay_now_price_id"] || "";
+        }
+        return "";
+      }
+
+      function applyPlanPrices(plans) {
+        checkoutButtons.forEach((button) => {
+          const plan = button.getAttribute("data-plan");
+          const action = button.getAttribute("data-checkout-action");
+          if (!plan || !action) return;
+
+          const priceId = resolvePriceId(plans, plan, action);
+          if (priceId) {
+            button.setAttribute("data-paddle-price", priceId);
+            button.hidden = false;
+            return;
+          }
+
+          if (action === "pay_now") {
+            button.removeAttribute("data-paddle-price");
+            button.hidden = true;
+            return;
+          }
+
+          const fallbackPriceId = button.getAttribute("data-fallback-price");
+          if (fallbackPriceId) {
+            button.setAttribute("data-paddle-price", fallbackPriceId);
+            button.hidden = false;
+          }
+        });
+      }
+
+      async function loadPlanPrices() {
+        try {
+          const response = await fetch(PLANS_URL, {
+            cache: "no-store",
+            headers: { "Accept": "application/json" }
+          });
+          if (!response.ok) return;
+          const plans = await response.json();
+          applyPlanPrices(plans);
+        } catch (error) {
+          applyPlanPrices(null);
+        }
       }
 
       function openCheckout(priceId) {
@@ -485,6 +541,8 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
       if (shouldOpenPricingOnly) {
         cleanMacAppCheckoutUrl();
       }
+
+      loadPlanPrices();
 
       if (params.get("checkout") === "success") {
         setCheckoutStatus("Checkout complete. Open TapFix AI on your Mac to activate Pro access securely through your license.", "ok");
