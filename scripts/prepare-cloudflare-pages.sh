@@ -29,7 +29,7 @@ rm -f \
   "$out_dir/package.json"
 
 if [ -d "$out_dir/downloads" ]; then
-  find "$out_dir/downloads" -type f ! \( -name 'TapFixAI-macOS-latest.dmg' -o -name 'TapFixAI-macOS-*.dmg' \) -delete
+  find "$out_dir/downloads" -type f ! \( -name 'TapFixAI-macOS-latest.dmg' -o -name 'TapFixAI-macOS-*.dmg' -o -name 'macos-app-version.json' \) -delete
 fi
 
 if command -v perl >/dev/null 2>&1; then

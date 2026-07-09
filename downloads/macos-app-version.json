@@ -1,0 +1,20 @@
+{
+  "latest_version": "1.0.2",
+  "latest_build": 102,
+  "min_supported_build": 100,
+  "download_url": "https://tapfixai.app/downloads/TapFixAI-macOS-1.0.2.dmg",
+  "sha256": "2784081d164ab615cdc80be725e09d0dc0577f1ebe6796fe78f764b44e8c6f55",
+  "published_at": "2026-07-09T00:00:00Z",
+  "title": {
+    "en": "TapFixAI 1.0.2 is available",
+    "ru": "Доступна версия TapFixAI 1.0.2"
+  },
+  "message": {
+    "en": "Version 1.0.2 is available.",
+    "ru": "Доступна версия 1.0.2."
+  },
+  "release_notes": {
+    "en": "Update checks, settings improvements, and stability fixes.",
+    "ru": "Проверка обновлений, улучшения настроек и стабильности."
+  }
+}
