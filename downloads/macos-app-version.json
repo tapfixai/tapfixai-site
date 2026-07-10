@@ -1,20 +1,20 @@
 {
-  "latest_version": "1.0.4",
-  "latest_build": 104,
+  "latest_version": "1.0.5",
+  "latest_build": 105,
   "min_supported_build": 100,
-  "download_url": "https://tapfixai.app/downloads/TapFixAI-macOS-1.0.4.dmg",
-  "sha256": "3c7840b5c12073cbe35cb8ad27ab06cf649f627138c4456ce77ecb3c4561bc95",
-  "published_at": "2026-07-10T03:15:54Z",
+  "download_url": "https://tapfixai.app/downloads/TapFixAI-macOS-1.0.5.dmg",
+  "sha256": "e6fd177d9a4afb10f3d07a34dd6f7db5015068ec38ed55fa7c6492889b4dbf37",
+  "published_at": "2026-07-10T16:48:21Z",
   "title": {
-    "en": "TapFixAI 1.0.4 is available",
-    "ru": "Доступна версия TapFixAI 1.0.4"
+    "en": "TapFixAI 1.0.5 is available",
+    "ru": "Доступна версия TapFixAI 1.0.5"
   },
   "message": {
-    "en": "Version 1.0.4 is available.",
-    "ru": "Доступна версия 1.0.4."
+    "en": "Version 1.0.5 is available.",
+    "ru": "Доступна версия 1.0.5."
   },
   "release_notes": {
-    "en": "Updates the macOS installer window and keeps the signed release, update manifest, and download links aligned.",
-    "ru": "Обновлено окно установки macOS; подписанный релиз, manifest обновлений и ссылки скачивания синхронизированы."
+    "en": "Adds configurable AI Reply styles and hotkeys, reply regeneration, emoji enhancement and translation controls, instant keyboard-layout correction, and in-place action previews in Settings.",
+    "ru": "Добавлены настраиваемые стили и хоткеи AI Reply, повтор ответа, добавление смайлов и перевод, мгновенное исправление раскладки и вывод результата прямо в тестовом поле настроек."
   }
 }
