@@ -1,20 +1,20 @@
 {
-  "latest_version": "1.0.3",
-  "latest_build": 103,
+  "latest_version": "1.0.4",
+  "latest_build": 104,
   "min_supported_build": 100,
-  "download_url": "https://tapfixai.app/downloads/TapFixAI-macOS-1.0.3.dmg",
-  "sha256": "463de534dd7c1303cd382899f79ac906c86e5d7c133d97d3717c5a57569ff07b",
-  "published_at": "2026-07-09T14:30:00Z",
+  "download_url": "https://tapfixai.app/downloads/TapFixAI-macOS-1.0.4.dmg",
+  "sha256": "3c7840b5c12073cbe35cb8ad27ab06cf649f627138c4456ce77ecb3c4561bc95",
+  "published_at": "2026-07-10T03:15:54Z",
   "title": {
-    "en": "TapFixAI 1.0.3 is available",
-    "ru": "Доступна версия TapFixAI 1.0.3"
+    "en": "TapFixAI 1.0.4 is available",
+    "ru": "Доступна версия TapFixAI 1.0.4"
   },
   "message": {
-    "en": "Version 1.0.3 is available.",
-    "ru": "Доступна версия 1.0.3."
+    "en": "Version 1.0.4 is available.",
+    "ru": "Доступна версия 1.0.4."
   },
   "release_notes": {
-    "en": "Moves Updates to the bottom of Settings and keeps update checks, release signing, and installer layout clean.",
-    "ru": "Раздел обновлений перенесён вниз настроек; проверка обновлений, подпись релиза и окно установки приведены в порядок."
+    "en": "Updates the macOS installer window and keeps the signed release, update manifest, and download links aligned.",
+    "ru": "Обновлено окно установки macOS; подписанный релиз, manifest обновлений и ссылки скачивания синхронизированы."
   }
 }

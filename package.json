@@ -1,6 +1,6 @@
 {
   "name": "tapfix-site",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "type": "module",
   "scripts": {
     "build": "echo Static site build complete"
