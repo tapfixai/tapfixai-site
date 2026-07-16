@@ -1,20 +1,20 @@
 {
-  "latest_version": "1.0.5",
-  "latest_build": 105,
+  "latest_version": "1.0.6",
+  "latest_build": 106,
   "min_supported_build": 100,
-  "download_url": "https://tapfixai.app/downloads/TapFixAI-macOS-1.0.5.dmg",
-  "sha256": "e6fd177d9a4afb10f3d07a34dd6f7db5015068ec38ed55fa7c6492889b4dbf37",
-  "published_at": "2026-07-10T16:48:21Z",
+  "download_url": "https://tapfixai.app/downloads/TapFixAI-macOS-1.0.6.dmg",
+  "sha256": "e1412a98332a3d5fa86a6eb8112e5df3bb3584897b66b6d43b6c6aeaff16fa84",
+  "published_at": "2026-07-16T15:30:41Z",
   "title": {
-    "en": "TapFixAI 1.0.5 is available",
-    "ru": "Доступна версия TapFixAI 1.0.5"
+    "en": "TapFixAI 1.0.6 is available",
+    "ru": "Доступна версия TapFixAI 1.0.6"
   },
   "message": {
-    "en": "Version 1.0.5 is available.",
-    "ru": "Доступна версия 1.0.5."
+    "en": "Version 1.0.6 is available.",
+    "ru": "Доступна версия 1.0.6."
   },
   "release_notes": {
-    "en": "Adds configurable AI Reply styles and hotkeys, reply regeneration, emoji enhancement and translation controls, instant keyboard-layout correction, and in-place action previews in Settings.",
-    "ru": "Добавлены настраиваемые стили и хоткеи AI Reply, повтор ответа, добавление смайлов и перевод, мгновенное исправление раскладки и вывод результата прямо в тестовом поле настроек."
+    "en": "Improves AI Reply insertion in Chrome, Codex, Claude, and other Chromium-based apps while preserving instant keyboard-layout correction.",
+    "ru": "Улучшена вставка AI Reply в Chrome, Codex, Claude и другие приложения на Chromium; мгновенное исправление раскладки сохранено."
   }
 }
