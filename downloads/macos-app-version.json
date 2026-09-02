@@ -1,20 +1,20 @@
 {
-  "latest_version": "1.0.7",
-  "latest_build": 107,
+  "latest_version": "1.0.8",
+  "latest_build": 108,
   "min_supported_build": 100,
-  "download_url": "https://tapfixai.app/downloads/TapFixAI-macOS-1.0.7.dmg",
-  "sha256": "cef19a4596dd9262f8344cab22c83724d7f42edcbba71e19f07c318d44b2d545",
-  "published_at": "2026-07-20T04:00:10Z",
+  "download_url": "https://tapfixai.app/downloads/TapFixAI-macOS-1.0.8.dmg",
+  "sha256": "dc62b48f741be7b10f41d81f899775c8a1360aa3198db332082532991fcf20ae",
+  "published_at": "2026-09-02T05:39:44Z",
   "title": {
-    "en": "TapFixAI 1.0.7 is available",
-    "ru": "Доступна версия TapFixAI 1.0.7"
+    "en": "TapFixAI 1.0.8 is available",
+    "ru": "Доступна версия TapFixAI 1.0.8"
   },
   "message": {
-    "en": "Version 1.0.7 is available.",
-    "ru": "Доступна версия 1.0.7."
+    "en": "Version 1.0.8 is available.",
+    "ru": "Доступна версия 1.0.8."
   },
   "release_notes": {
-    "en": "Restores instant keyboard-layout correction in Chrome and other Chromium-based editors without changing AI Reply behavior.",
-    "ru": "Восстановлено мгновенное исправление раскладки в Chrome и других редакторах на Chromium без изменения поведения AI Reply."
+    "en": "Adds per-app keyboard layouts. Assign any installed app its preferred input source, and TapFixAI switches automatically when the app becomes active.",
+    "ru": "Добавлены раскладки для приложений. Назначьте любому установленному приложению нужную раскладку, и TapFixAI автоматически переключит её при открытии приложения."
   }
 }
