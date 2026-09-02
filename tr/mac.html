@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TapFixAI for macOS — AI text fixer, rewrite and translate</title>
+  <title>Mac’te uygulamaya göre otomatik klavye düzeni değiştirme — TapFixAI</title>
 
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
-  <meta name="description" content="TapFixAI for macOS is a notarized AI text fixer, rewrite and translate app for Mac. Download the DMG, start a 3-day free trial, then choose $5/month or $50/year." />
-  <meta property="og:title" content="TapFixAI for macOS — AI text fixer, rewrite and translate" />
-  <meta property="og:description" content="Download the notarized macOS app, start a 3-day free trial, then choose TapFixAI Pro monthly or yearly." />
+  <meta name="description" content="TapFixAI automatically switches the keyboard layout when you move between Mac apps. Assign English, Russian or another installed layout to CapCut, Telegram, Mail and other applications." />
+  <meta property="og:title" content="Automatic keyboard layout switching per app on Mac — TapFixAI" />
+  <meta property="og:description" content="Give every Mac app its own keyboard layout. TapFixAI switches the input language automatically when you move between applications." />
   <meta property="og:type" content="website" />
   <meta name="theme-color" content="#f6f7fb" media="(prefers-color-scheme: light)" />
   <meta name="theme-color" content="#0c111d" media="(prefers-color-scheme: dark)" />
@@ -181,6 +181,18 @@
       color: var(--muted); border: 1px solid var(--line); }
     .list strong { color: var(--text); }
 
+    .layout-feature { padding-top: 42px; }
+    .layout-showcase { display: grid; grid-template-columns: 1.05fr .95fr; gap: 22px; align-items: center;
+      padding: 38px; border-radius: 34px; background: linear-gradient(135deg, var(--accent-soft), var(--card));
+      border: 1px solid var(--line); box-shadow: var(--shadow); }
+    .layout-copy .badge { margin-bottom: 18px; }
+    .layout-copy p { color: var(--muted); font-size: 18px; line-height: 1.6; }
+    .layout-rules { display: grid; gap: 12px; }
+    .layout-rule { display: flex; align-items: center; justify-content: space-between; gap: 18px;
+      padding: 18px 20px; border-radius: 18px; background: var(--surface); border: 1px solid var(--line);
+      box-shadow: 0 12px 28px rgba(15,23,42,.06); font-weight: 800; }
+    .layout-rule span:last-child { color: var(--accent); }
+
     .pricing-grid { display: grid; grid-template-columns: .95fr 1.05fr; gap: 18px; align-items: stretch; }
     .price-card { padding: 30px; border-radius: 28px; background: var(--card); border: 1px solid var(--line);
       box-shadow: 0 14px 38px rgba(15,23,42,.06); display: flex; flex-direction: column;
@@ -211,6 +223,7 @@
 
     @media (max-width: 920px) {
       .hero, .twocol { grid-template-columns: 1fr; }
+      .layout-showcase { grid-template-columns: 1fr; }
       .pricing-grid { grid-template-columns: 1fr; }
       .grid { grid-template-columns: repeat(2, 1fr); }
       .steps { grid-template-columns: 1fr; }
@@ -236,7 +249,7 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/theme.css?v=2">
   <meta name="robots" content="index, follow, max-image-preview:large">
-  <meta name="keywords" content="TapFix, TapFix AI Keyboard, AI keyboard, AI keyboard Android, AI keyboard iOS, AI клавиатура, клавиатура с ИИ, перевод, рерайт, исправление текста">
+  <meta name="keywords" content="keyboard layout per app Mac, automatic keyboard layout switcher macOS, app-specific keyboard layout Mac, automatically change input language Mac, automatic keyboard language switching, TapFixAI">
   <meta property="og:site_name" content="TapFix AI">
   <meta property="og:image" content="https://tapfixai.app/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -392,6 +405,24 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
           <article class="card"><div class="icon">⌘</div><h3 data-i18n="f6.h">Asistan penceresi</h3><p data-i18n="f6.p">Ayrı bir sohbet paneli — mevcut uygulamadan çıkmadan soru sorun ya da bir şey yazdırın veya açıklatın. Seçtiğiniz metinden çalışabilir.</p></article>
           <article class="card"><div class="icon">▤</div><h3 data-i18n="f7.h">Pano geçmişi ve notlar</h3><p data-i18n="f7.p">Kopyalama geçmişinizi tutar, böylece daha önce kopyaladığınızı yapıştırırsınız; ayrıca tek tıkla yeniden kullandığınız sabitlenmiş notlar (şablonlar, imzalar).</p></article>
           <article class="card"><div class="icon">✦</div><h3 data-i18n="f8.h">Yüzen düğme, kısayollar, menü çubuğu</h3><p data-i18n="f8.p">Seçimin yanındaki yüzen düğmeden, imleçteki hızlı panelden, kendi kısayollarınızdan veya menü çubuğu simgesinden çalıştırın. Temalar ve ayarlar dahil.</p></article>
+          <article class="card"><div class="icon">⌨</div><h3 data-i18n="layout.cardH">Her uygulama için ayrı klavye düzeni</h3><p data-i18n="layout.cardP">CapCut, Telegram, Mail veya başka bir uygulama için düzen seçin. TapFixAI giriş dilini otomatik değiştirir.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="layout-feature" id="keyboard-layout-per-app">
+      <div class="wrap layout-showcase">
+        <div class="layout-copy">
+          <div class="badge"><span class="dot"></span><span data-i18n="layout.badge">TapFixAI’da şimdi kullanılabilir</span></div>
+          <h2 data-i18n="layout.h">Doğru klavye düzeni kendiliğinden açılır</h2>
+          <p data-i18n="layout.p">Mac’inizdeki her uygulamaya bir giriş dili atayın: CapCut, Telegram, Mail, Safari, Slack, Notlar, Pages ve daha fazlası. TapFixAI seçtiğiniz macOS düzenini otomatik açar.</p>
+          <p data-i18n="layout.settings"><strong>Ayar:</strong> Ayarlar → Klavye Düzeni → Uygulamaya Göre Düzen. Kuralları açabilir, kapatabilir, düzenleyebilir veya silebilirsiniz.</p>
+          <div class="actions"><a class="btn primary" href="/tr/keyboard-layout-per-app" data-i18n="layout.more">Nasıl çalıştığını görün</a></div>
+        </div>
+        <div class="layout-rules" aria-label="Keyboard layout rules by app">
+          <div class="layout-rule"><span>CapCut</span><span>English</span></div>
+          <div class="layout-rule"><span>Telegram</span><span data-i18n="layout.secondLanguage">İspanyolca</span></div>
+          <div class="layout-rule"><span>Mail</span><span data-i18n="layout.thirdLanguage">Almanca</span></div>
         </div>
       </div>
     </section>
@@ -669,6 +700,7 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
       });
     }());
   </script>
-  <script src="/i18n.js?v=4"></script>
+  <script>window.TF_STATIC=true;window.TF_LANG="tr";window.TF_PAGE="mac.html";window.TF_AVAIL=["en", "ru", "es", "pt", "fr", "de", "it", "nl", "pl", "uk", "tr", "id", "vi", "th", "zh", "ja", "ko", "hi", "ar", "fa"];</script>
+<script src="/i18n.js?v=4"></script>
 </body>
 </html>

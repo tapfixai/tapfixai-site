@@ -1,0 +1,182 @@
+{
+  "es": {
+    "layout.cardH": "Una distribución para cada app",
+    "layout.cardP": "Elige una distribución para CapCut, Telegram, Mail o cualquier otra app. TapFixAI cambia el idioma de entrada automáticamente.",
+    "layout.badge": "Ya disponible en TapFixAI",
+    "layout.h": "La distribución correcta se activa sola",
+    "layout.p": "Asigna un idioma de entrada a cualquier app del Mac: CapCut, Telegram, Mail, Safari, Slack, Notas, Pages y más. TapFixAI activa automáticamente la distribución de macOS que elijas.",
+    "layout.settings": "<strong>Configuración:</strong> Ajustes → Distribución del teclado → Distribución por app. Puedes activar, desactivar, editar o eliminar las reglas.",
+    "layout.more": "Ver cómo funciona",
+    "layout.exampleLanguage": "Español", "layout.anyAppsH": "Cualquier app. Cualquier distribución instalada.", "layout.anyAppsP": "Funciona con las apps del Mac y las distribuciones disponibles en macOS.", "layout.localH": "Rápido, privado y local", "layout.localP": "El cambio es una automatización local: no usa IA ni envía datos.", "layout.setupH": "Configúralo en un minuto", "meta.title": "Cambio automático de distribución por aplicación en Mac — TapFixAI", "meta.desc": "TapFixAI cambia automáticamente la distribución del teclado al pasar de una aplicación a otra en Mac. Asigna español, inglés u otro idioma a cada app."
+  },
+  "pt": {
+    "layout.cardH": "Um layout para cada app",
+    "layout.cardP": "Escolha um layout para CapCut, Telegram, Mail ou qualquer outro app. O TapFixAI troca o idioma de entrada automaticamente.",
+    "layout.badge": "Já disponível no TapFixAI",
+    "layout.h": "O layout certo é ativado sozinho",
+    "layout.p": "Defina um idioma de entrada para qualquer app do Mac: CapCut, Telegram, Mail, Safari, Slack, Notas, Pages e muito mais. O TapFixAI ativa automaticamente o layout do macOS escolhido.",
+    "layout.settings": "<strong>Configuração:</strong> Ajustes → Layout do teclado → Layout por app. Ative, desative, edite ou exclua regras quando quiser.",
+    "layout.more": "Veja como funciona",
+    "layout.exampleLanguage": "Português", "layout.anyAppsH": "Qualquer app. Qualquer layout instalado.", "layout.anyAppsP": "Funciona com apps do Mac e layouts disponíveis no macOS.", "layout.localH": "Rápido, privado e local", "layout.localP": "A troca é uma automação local: não usa IA nem envia dados.", "layout.setupH": "Configure em um minuto", "meta.title": "Troca automática de layout por aplicativo no Mac — TapFixAI", "meta.desc": "O TapFixAI troca automaticamente o layout do teclado ao alternar entre aplicativos no Mac. Atribua português, inglês ou outro idioma a cada app."
+  },
+  "fr": {
+    "layout.cardH": "Une disposition par app",
+    "layout.cardP": "Choisissez une disposition pour CapCut, Telegram, Mail ou toute autre app. TapFixAI change automatiquement la langue de saisie.",
+    "layout.badge": "Déjà disponible dans TapFixAI",
+    "layout.h": "La bonne disposition s’active toute seule",
+    "layout.p": "Attribuez une langue de saisie à chaque app Mac : CapCut, Telegram, Mail, Safari, Slack, Notes, Pages et bien d’autres. TapFixAI active automatiquement la disposition macOS choisie.",
+    "layout.settings": "<strong>Réglage :</strong> Réglages → Disposition du clavier → Disposition par app. Activez, désactivez, modifiez ou supprimez vos règles.",
+    "layout.more": "Voir comment ça marche",
+    "layout.exampleLanguage": "Français", "layout.anyAppsH": "Toute app. Toute disposition installée.", "layout.anyAppsP": "Fonctionne avec les apps Mac et les dispositions disponibles dans macOS.", "layout.localH": "Rapide, privé et local", "layout.localP": "Le changement est une automatisation locale : aucune IA et aucune donnée envoyée.", "layout.setupH": "Configurez-la en une minute", "meta.title": "Changement automatique de disposition par application sur Mac — TapFixAI", "meta.desc": "TapFixAI change automatiquement la disposition du clavier lorsque vous passez d’une app à une autre sur Mac. Attribuez le français, l’anglais ou une autre langue à chaque app."
+  },
+  "de": {
+    "layout.cardH": "Ein Tastaturlayout pro App",
+    "layout.cardP": "Wähle ein Layout für CapCut, Telegram, Mail oder jede andere App. TapFixAI wechselt die Eingabesprache automatisch.",
+    "layout.badge": "Jetzt in TapFixAI verfügbar",
+    "layout.h": "Das richtige Tastaturlayout schaltet sich selbst ein",
+    "layout.p": "Lege für jede Mac-App eine Eingabesprache fest: CapCut, Telegram, Mail, Safari, Slack, Notizen, Pages und mehr. TapFixAI aktiviert automatisch das gewählte macOS-Layout.",
+    "layout.settings": "<strong>Einrichtung:</strong> Einstellungen → Tastaturlayout → Layout pro App. Regeln lassen sich jederzeit aktivieren, deaktivieren, bearbeiten oder löschen.",
+    "layout.more": "So funktioniert es",
+    "layout.exampleLanguage": "Deutsch", "layout.anyAppsH": "Jede App. Jedes installierte Layout.", "layout.anyAppsP": "Funktioniert mit Mac-Apps und den in macOS verfügbaren Tastaturlayouts.", "layout.localH": "Schnell, privat und lokal", "layout.localP": "Der Wechsel ist lokale Systemautomatisierung: keine KI und keine Datenübertragung.", "layout.setupH": "In einer Minute eingerichtet", "meta.title": "Automatischer Tastaturlayout-Wechsel pro App auf dem Mac — TapFixAI", "meta.desc": "TapFixAI wechselt beim Wechsel zwischen Mac-Apps automatisch das Tastaturlayout. Weise jeder App Deutsch, Englisch oder eine andere Sprache zu."
+  },
+  "it": {
+    "layout.cardH": "Un layout per ogni app",
+    "layout.cardP": "Scegli un layout per CapCut, Telegram, Mail o qualsiasi altra app. TapFixAI cambia automaticamente la lingua di input.",
+    "layout.badge": "Già disponibile in TapFixAI",
+    "layout.h": "Il layout giusto si attiva da solo",
+    "layout.p": "Assegna una lingua di input a ogni app Mac: CapCut, Telegram, Mail, Safari, Slack, Note, Pages e altre. TapFixAI attiva automaticamente il layout macOS scelto.",
+    "layout.settings": "<strong>Configurazione:</strong> Impostazioni → Layout tastiera → Layout per app. Puoi attivare, disattivare, modificare o eliminare le regole.",
+    "layout.more": "Scopri come funziona",
+    "layout.exampleLanguage": "Italiano", "layout.anyAppsH": "Qualsiasi app. Qualsiasi layout installato.", "layout.anyAppsP": "Funziona con le app Mac e i layout disponibili in macOS.", "layout.localH": "Veloce, privato e locale", "layout.localP": "Il cambio è un’automazione locale: non usa IA e non invia dati.", "layout.setupH": "Configuralo in un minuto", "meta.title": "Cambio automatico del layout per app su Mac — TapFixAI", "meta.desc": "TapFixAI cambia automaticamente il layout della tastiera quando passi tra le app sul Mac. Assegna italiano, inglese o un’altra lingua a ogni app."
+  },
+  "nl": {
+    "layout.cardH": "Een toetsenbordindeling per app",
+    "layout.cardP": "Kies een indeling voor CapCut, Telegram, Mail of elke andere app. TapFixAI wisselt automatisch van invoertaal.",
+    "layout.badge": "Nu beschikbaar in TapFixAI",
+    "layout.h": "De juiste toetsenbordindeling schakelt vanzelf in",
+    "layout.p": "Koppel een invoertaal aan elke Mac-app: CapCut, Telegram, Mail, Safari, Slack, Notities, Pages en meer. TapFixAI activeert automatisch de gekozen macOS-indeling.",
+    "layout.settings": "<strong>Instellen:</strong> Instellingen → Toetsenbordindeling → Indeling per app. Regels kun je altijd in- of uitschakelen, wijzigen of verwijderen.",
+    "layout.more": "Bekijk hoe het werkt",
+    "layout.exampleLanguage": "Nederlands", "layout.anyAppsH": "Elke app. Elke geïnstalleerde indeling.", "layout.anyAppsP": "Werkt met Mac-apps en toetsenbordindelingen die in macOS beschikbaar zijn.", "layout.localH": "Snel, privé en lokaal", "layout.localP": "Wisselen is lokale automatisering: geen AI en er worden geen gegevens verstuurd.", "layout.setupH": "Binnen een minuut ingesteld", "meta.title": "Automatisch toetsenbordindeling wisselen per app op Mac — TapFixAI", "meta.desc": "TapFixAI wisselt automatisch van toetsenbordindeling wanneer je tussen Mac-apps schakelt. Koppel Nederlands, Engels of een andere taal aan elke app."
+  },
+  "pl": {
+    "layout.cardH": "Układ klawiatury dla każdej aplikacji",
+    "layout.cardP": "Wybierz układ dla CapCut, Telegrama, Mail lub dowolnej aplikacji. TapFixAI automatycznie zmieni język wprowadzania.",
+    "layout.badge": "Już dostępne w TapFixAI",
+    "layout.h": "Właściwy układ klawiatury włącza się sam",
+    "layout.p": "Przypisz język do każdej aplikacji na Macu: CapCut, Telegram, Mail, Safari, Slack, Notatki, Pages i innych. TapFixAI automatycznie aktywuje wybrany układ macOS.",
+    "layout.settings": "<strong>Konfiguracja:</strong> Ustawienia → Układ klawiatury → Układ dla aplikacji. Reguły możesz włączać, wyłączać, edytować i usuwać.",
+    "layout.more": "Zobacz, jak to działa",
+    "layout.exampleLanguage": "Polski", "layout.anyAppsH": "Dowolna aplikacja. Dowolny zainstalowany układ.", "layout.anyAppsP": "Działa z aplikacjami na Macu i układami dostępnymi w macOS.", "layout.localH": "Szybko, prywatnie i lokalnie", "layout.localP": "Przełączanie jest lokalną automatyzacją: bez AI i wysyłania danych.", "layout.setupH": "Konfiguracja w minutę", "meta.title": "Automatyczne przełączanie układu dla aplikacji na Macu — TapFixAI", "meta.desc": "TapFixAI automatycznie zmienia układ klawiatury podczas przełączania aplikacji na Macu. Przypisz polski, angielski lub inny język do każdej aplikacji."
+  },
+  "uk": {
+    "layout.cardH": "Розкладка для кожної програми",
+    "layout.cardP": "Виберіть розкладку для CapCut, Telegram, Пошти або будь-якої програми. TapFixAI автоматично перемкне мову введення.",
+    "layout.badge": "Уже доступно в TapFixAI",
+    "layout.h": "Потрібна розкладка вмикається сама",
+    "layout.p": "Призначте мову введення будь-якій програмі на Mac: CapCut, Telegram, Пошті, Safari, Slack, Нотаткам, Pages та іншим. TapFixAI автоматично ввімкне вибрану розкладку macOS.",
+    "layout.settings": "<strong>Налаштування:</strong> Налаштування → Розкладка → Розкладка для програм. Правила можна вмикати, вимикати, змінювати або видаляти.",
+    "layout.more": "Подивитися, як це працює",
+    "layout.exampleLanguage": "Українська", "layout.anyAppsH": "Будь-яка програма. Будь-яка встановлена розкладка.", "layout.anyAppsP": "Працює з програмами Mac і розкладками, доступними в macOS.", "layout.localH": "Швидко, приватно й локально", "layout.localP": "Перемикання є локальною автоматизацією: без ШІ та передавання даних.", "layout.setupH": "Налаштування за хвилину", "meta.title": "Автоматичне перемикання розкладки для програм на Mac — TapFixAI", "meta.desc": "TapFixAI автоматично перемикає розкладку клавіатури під час переходу між програмами на Mac. Призначте українську, англійську чи іншу мову кожній програмі."
+  },
+  "tr": {
+    "layout.cardH": "Her uygulama için ayrı klavye düzeni",
+    "layout.cardP": "CapCut, Telegram, Mail veya başka bir uygulama için düzen seçin. TapFixAI giriş dilini otomatik değiştirir.",
+    "layout.badge": "TapFixAI’da şimdi kullanılabilir",
+    "layout.h": "Doğru klavye düzeni kendiliğinden açılır",
+    "layout.p": "Mac’inizdeki her uygulamaya bir giriş dili atayın: CapCut, Telegram, Mail, Safari, Slack, Notlar, Pages ve daha fazlası. TapFixAI seçtiğiniz macOS düzenini otomatik açar.",
+    "layout.settings": "<strong>Ayar:</strong> Ayarlar → Klavye Düzeni → Uygulamaya Göre Düzen. Kuralları açabilir, kapatabilir, düzenleyebilir veya silebilirsiniz.",
+    "layout.more": "Nasıl çalıştığını görün",
+    "layout.exampleLanguage": "Türkçe", "layout.anyAppsH": "Her uygulama. Her yüklü düzen.", "layout.anyAppsP": "Mac uygulamaları ve macOS’teki klavye düzenleriyle çalışır.", "layout.localH": "Hızlı, özel ve yerel", "layout.localP": "Geçiş yerel otomasyondur: yapay zekâ kullanılmaz ve veri gönderilmez.", "layout.setupH": "Bir dakikada ayarlayın", "meta.title": "Mac’te uygulamaya göre otomatik klavye düzeni değiştirme — TapFixAI", "meta.desc": "TapFixAI, Mac uygulamaları arasında geçerken klavye düzenini otomatik değiştirir. Her uygulamaya Türkçe, İngilizce veya başka bir dil atayın."
+  },
+  "id": {
+    "layout.cardH": "Tata letak untuk setiap aplikasi",
+    "layout.cardP": "Pilih tata letak untuk CapCut, Telegram, Mail, atau aplikasi lain. TapFixAI mengganti bahasa input secara otomatis.",
+    "layout.badge": "Sudah tersedia di TapFixAI",
+    "layout.h": "Tata letak yang tepat aktif dengan sendirinya",
+    "layout.p": "Tetapkan bahasa input untuk setiap aplikasi Mac: CapCut, Telegram, Mail, Safari, Slack, Catatan, Pages, dan lainnya. TapFixAI otomatis mengaktifkan tata letak macOS pilihan Anda.",
+    "layout.settings": "<strong>Pengaturan:</strong> Pengaturan → Tata Letak Keyboard → Tata Letak per Aplikasi. Aturan dapat diaktifkan, dinonaktifkan, diedit, atau dihapus.",
+    "layout.more": "Lihat cara kerjanya",
+    "layout.exampleLanguage": "Bahasa Indonesia", "layout.anyAppsH": "Aplikasi apa pun. Tata letak apa pun.", "layout.anyAppsP": "Berfungsi dengan aplikasi Mac dan tata letak yang tersedia di macOS.", "layout.localH": "Cepat, privat, dan lokal", "layout.localP": "Peralihan adalah otomatisasi lokal: tanpa AI dan tanpa pengiriman data.", "layout.setupH": "Siapkan dalam satu menit", "meta.title": "Peralihan tata letak keyboard otomatis per aplikasi di Mac — TapFixAI", "meta.desc": "TapFixAI mengganti tata letak keyboard otomatis saat Anda berpindah aplikasi di Mac. Tetapkan bahasa Indonesia, Inggris, atau bahasa lain untuk setiap aplikasi."
+  },
+  "vi": {
+    "layout.cardH": "Bố cục riêng cho từng ứng dụng",
+    "layout.cardP": "Chọn bố cục cho CapCut, Telegram, Mail hoặc ứng dụng bất kỳ. TapFixAI tự động đổi ngôn ngữ nhập.",
+    "layout.badge": "Đã có trong TapFixAI",
+    "layout.h": "Bố cục phù hợp tự động được bật",
+    "layout.p": "Gán ngôn ngữ nhập cho từng ứng dụng Mac: CapCut, Telegram, Mail, Safari, Slack, Ghi chú, Pages và nhiều ứng dụng khác. TapFixAI tự động bật bố cục macOS bạn chọn.",
+    "layout.settings": "<strong>Thiết lập:</strong> Cài đặt → Bố cục bàn phím → Bố cục theo ứng dụng. Bạn có thể bật, tắt, sửa hoặc xóa quy tắc.",
+    "layout.more": "Xem cách hoạt động",
+    "layout.exampleLanguage": "Tiếng Việt", "layout.anyAppsH": "Mọi ứng dụng. Mọi bố cục đã cài.", "layout.anyAppsP": "Hoạt động với ứng dụng Mac và các bố cục có sẵn trong macOS.", "layout.localH": "Nhanh, riêng tư và cục bộ", "layout.localP": "Việc chuyển đổi là tự động hóa cục bộ: không dùng AI và không gửi dữ liệu.", "layout.setupH": "Thiết lập trong một phút", "meta.title": "Tự động đổi bố cục bàn phím theo ứng dụng trên Mac — TapFixAI", "meta.desc": "TapFixAI tự động đổi bố cục bàn phím khi bạn chuyển giữa các ứng dụng Mac. Gán tiếng Việt, tiếng Anh hoặc ngôn ngữ khác cho từng ứng dụng."
+  },
+  "th": {
+    "layout.cardH": "รูปแบบแป้นพิมพ์สำหรับแต่ละแอป",
+    "layout.cardP": "เลือกรูปแบบให้ CapCut, Telegram, Mail หรือแอปใดก็ได้ TapFixAI จะเปลี่ยนภาษาป้อนข้อมูลให้อัตโนมัติ",
+    "layout.badge": "พร้อมใช้งานแล้วใน TapFixAI",
+    "layout.h": "รูปแบบแป้นพิมพ์ที่ใช่เปิดเองอัตโนมัติ",
+    "layout.p": "กำหนดภาษาป้อนข้อมูลให้แต่ละแอปบน Mac เช่น CapCut, Telegram, Mail, Safari, Slack, Notes, Pages และอื่นๆ TapFixAI จะเปิดรูปแบบ macOS ที่คุณเลือกโดยอัตโนมัติ",
+    "layout.settings": "<strong>ตั้งค่า:</strong> การตั้งค่า → รูปแบบแป้นพิมพ์ → รูปแบบตามแอป เปิด ปิด แก้ไข หรือลบกฎได้ทุกเมื่อ",
+    "layout.more": "ดูวิธีการทำงาน",
+    "layout.exampleLanguage": "ไทย", "layout.anyAppsH": "ทุกแอป ทุกรูปแบบที่ติดตั้ง", "layout.anyAppsP": "ใช้ได้กับแอป Mac และรูปแบบแป้นพิมพ์ที่มีใน macOS", "layout.localH": "เร็ว เป็นส่วนตัว และทำงานในเครื่อง", "layout.localP": "การสลับเป็นระบบอัตโนมัติในเครื่อง ไม่ใช้ AI และไม่ส่งข้อมูล", "layout.setupH": "ตั้งค่าได้ในหนึ่งนาที", "meta.title": "สลับรูปแบบแป้นพิมพ์อัตโนมัติตามแอปบน Mac — TapFixAI", "meta.desc": "TapFixAI สลับรูปแบบแป้นพิมพ์อัตโนมัติเมื่อเปลี่ยนแอปบน Mac กำหนดภาษาไทย อังกฤษ หรือภาษาอื่นให้แต่ละแอปได้"
+  },
+  "zh": {
+    "layout.cardH": "为每个应用设置键盘布局",
+    "layout.cardP": "为 CapCut、Telegram、邮件或任何应用选择布局。TapFixAI 会自动切换输入语言。",
+    "layout.badge": "TapFixAI 现已支持",
+    "layout.h": "正确的键盘布局自动开启",
+    "layout.p": "为 Mac 上的每个应用指定输入语言：CapCut、Telegram、邮件、Safari、Slack、备忘录、Pages 等。TapFixAI 会自动启用你选择的 macOS 布局。",
+    "layout.settings": "<strong>设置位置：</strong>设置 → 键盘布局 → 按应用设置布局。规则可随时启用、停用、编辑或删除。",
+    "layout.more": "查看工作方式",
+    "layout.exampleLanguage": "中文", "layout.anyAppsH": "任何应用，任何已安装布局", "layout.anyAppsP": "支持 Mac 应用和 macOS 中可用的键盘布局。", "layout.localH": "快速、私密、本地运行", "layout.localP": "切换属于本地系统自动化，不使用 AI，也不发送数据。", "layout.setupH": "一分钟完成设置", "meta.title": "Mac 按应用自动切换键盘布局 — TapFixAI", "meta.desc": "TapFixAI 可在切换 Mac 应用时自动更换键盘布局。为每个应用指定中文、英文或其他输入语言。"
+  },
+  "ja": {
+    "layout.cardH": "アプリごとのキーボード配列",
+    "layout.cardP": "CapCut、Telegram、メールなど、どのアプリにも配列を設定できます。TapFixAI が入力言語を自動で切り替えます。",
+    "layout.badge": "TapFixAI ですでに利用可能",
+    "layout.h": "正しいキーボード配列へ自動で切り替え",
+    "layout.p": "CapCut、Telegram、メール、Safari、Slack、メモ、Pages など、Mac の各アプリに入力言語を割り当てられます。TapFixAI が選択した macOS 配列を自動で有効にします。",
+    "layout.settings": "<strong>設定：</strong>設定 → キーボード配列 → アプリごとの配列。ルールはいつでも有効化、無効化、編集、削除できます。",
+    "layout.more": "仕組みを見る",
+    "layout.exampleLanguage": "日本語", "layout.anyAppsH": "どのアプリでも、どの配列でも", "layout.anyAppsP": "Mac アプリと macOS で利用可能なキーボード配列に対応します。", "layout.localH": "高速・プライベート・ローカル", "layout.localP": "切り替えはローカル自動化です。AI は使用せず、データも送信しません。", "layout.setupH": "1分で設定", "meta.title": "Macでアプリごとにキーボード配列を自動切り替え — TapFixAI", "meta.desc": "TapFixAI は Mac アプリを切り替えるとキーボード配列も自動変更します。アプリごとに日本語、英語、その他の入力言語を設定できます。"
+  },
+  "ko": {
+    "layout.cardH": "앱별 키보드 레이아웃",
+    "layout.cardP": "CapCut, Telegram, Mail 등 어떤 앱이든 레이아웃을 선택하세요. TapFixAI가 입력 언어를 자동으로 전환합니다.",
+    "layout.badge": "TapFixAI에서 지금 사용 가능",
+    "layout.h": "알맞은 키보드 레이아웃이 자동으로 켜집니다",
+    "layout.p": "CapCut, Telegram, Mail, Safari, Slack, 메모, Pages 등 Mac의 각 앱에 입력 언어를 지정하세요. TapFixAI가 선택한 macOS 레이아웃을 자동으로 활성화합니다.",
+    "layout.settings": "<strong>설정:</strong> 설정 → 키보드 레이아웃 → 앱별 레이아웃. 규칙은 언제든 켜고 끄거나 수정 및 삭제할 수 있습니다.",
+    "layout.more": "작동 방식 보기",
+    "layout.exampleLanguage": "한국어", "layout.anyAppsH": "모든 앱, 모든 설치된 레이아웃", "layout.anyAppsP": "Mac 앱과 macOS에서 사용할 수 있는 키보드 레이아웃을 지원합니다.", "layout.localH": "빠르고 비공개이며 로컬로 작동", "layout.localP": "전환은 로컬 자동화입니다. AI를 사용하지 않고 데이터를 전송하지 않습니다.", "layout.setupH": "1분 만에 설정", "meta.title": "Mac 앱별 키보드 레이아웃 자동 전환 — TapFixAI", "meta.desc": "TapFixAI는 Mac 앱을 전환할 때 키보드 레이아웃을 자동으로 바꿉니다. 앱마다 한국어, 영어 또는 다른 입력 언어를 지정하세요."
+  },
+  "hi": {
+    "layout.cardH": "हर ऐप के लिए अलग कीबोर्ड लेआउट",
+    "layout.cardP": "CapCut, Telegram, Mail या किसी भी ऐप के लिए लेआउट चुनें। TapFixAI इनपुट भाषा अपने आप बदलता है।",
+    "layout.badge": "अब TapFixAI में उपलब्ध",
+    "layout.h": "सही कीबोर्ड लेआउट अपने आप चालू होता है",
+    "layout.p": "Mac के हर ऐप—CapCut, Telegram, Mail, Safari, Slack, Notes, Pages और अन्य—के लिए इनपुट भाषा तय करें। TapFixAI चुना हुआ macOS लेआउट अपने आप सक्रिय करता है।",
+    "layout.settings": "<strong>सेटअप:</strong> Settings → Keyboard Layout → Layout per App. नियमों को कभी भी चालू, बंद, संपादित या हटाया जा सकता है।",
+    "layout.more": "देखें यह कैसे काम करता है",
+    "layout.exampleLanguage": "हिन्दी", "layout.anyAppsH": "कोई भी ऐप। कोई भी इंस्टॉल किया हुआ लेआउट।", "layout.anyAppsP": "Mac ऐप और macOS में उपलब्ध कीबोर्ड लेआउट के साथ काम करता है।", "layout.localH": "तेज़, निजी और स्थानीय", "layout.localP": "स्विचिंग स्थानीय ऑटोमेशन है: इसमें AI नहीं और डेटा नहीं भेजा जाता।", "layout.setupH": "एक मिनट में सेटअप", "meta.title": "Mac पर हर ऐप के लिए कीबोर्ड लेआउट का स्वचालित बदलाव — TapFixAI", "meta.desc": "TapFixAI Mac ऐप बदलते समय कीबोर्ड लेआउट अपने आप बदलता है। हर ऐप के लिए हिन्दी, अंग्रेज़ी या दूसरी भाषा तय करें।"
+  },
+  "ar": {
+    "layout.cardH": "تخطيط لوحة مفاتيح لكل تطبيق",
+    "layout.cardP": "اختر تخطيطًا لـ CapCut أو Telegram أو Mail أو أي تطبيق. يبدّل TapFixAI لغة الإدخال تلقائيًا.",
+    "layout.badge": "متاح الآن في TapFixAI",
+    "layout.h": "التخطيط الصحيح يعمل تلقائيًا",
+    "layout.p": "عيّن لغة إدخال لكل تطبيق على Mac، مثل CapCut وTelegram وMail وSafari وSlack والملاحظات وPages. يفعّل TapFixAI تخطيط macOS الذي تختاره تلقائيًا.",
+    "layout.settings": "<strong>الإعداد:</strong> الإعدادات ← تخطيط لوحة المفاتيح ← التخطيط حسب التطبيق. يمكنك تفعيل القواعد أو تعطيلها أو تعديلها أو حذفها.",
+    "layout.more": "شاهد كيف تعمل",
+    "layout.exampleLanguage": "العربية", "layout.anyAppsH": "أي تطبيق، وأي تخطيط مثبت", "layout.anyAppsP": "يعمل مع تطبيقات Mac وتخطيطات لوحة المفاتيح المتاحة في macOS.", "layout.localH": "سريع وخاص ومحلي", "layout.localP": "التبديل أتمتة محلية: بلا ذكاء اصطناعي ولا إرسال للبيانات.", "layout.setupH": "إعداد خلال دقيقة", "meta.title": "تبديل تخطيط لوحة المفاتيح تلقائيًا لكل تطبيق على Mac — TapFixAI", "meta.desc": "يغيّر TapFixAI تخطيط لوحة المفاتيح تلقائيًا عند التنقل بين تطبيقات Mac. عيّن العربية أو الإنجليزية أو لغة أخرى لكل تطبيق."
+  },
+  "fa": {
+    "layout.cardH": "چیدمان صفحه‌کلید برای هر برنامه",
+    "layout.cardP": "برای CapCut، Telegram، Mail یا هر برنامه‌ای چیدمان انتخاب کنید. TapFixAI زبان ورودی را خودکار تغییر می‌دهد.",
+    "layout.badge": "اکنون در TapFixAI در دسترس است",
+    "layout.h": "چیدمان درست خودکار فعال می‌شود",
+    "layout.p": "برای هر برنامهٔ Mac مانند CapCut، Telegram، Mail، Safari، Slack، Notes و Pages زبان ورودی تعیین کنید. TapFixAI چیدمان انتخابی macOS را خودکار فعال می‌کند.",
+    "layout.settings": "<strong>تنظیم:</strong> تنظیمات ← چیدمان صفحه‌کلید ← چیدمان برای هر برنامه. قانون‌ها را می‌توانید فعال، غیرفعال، ویرایش یا حذف کنید.",
+    "layout.more": "نحوهٔ کار را ببینید",
+    "layout.exampleLanguage": "فارسی", "layout.anyAppsH": "هر برنامه، هر چیدمان نصب‌شده", "layout.anyAppsP": "با برنامه‌های Mac و چیدمان‌های صفحه‌کلید موجود در macOS کار می‌کند.", "layout.localH": "سریع، خصوصی و محلی", "layout.localP": "تغییر چیدمان یک خودکارسازی محلی است: بدون هوش مصنوعی و ارسال داده.", "layout.setupH": "راه‌اندازی در یک دقیقه", "meta.title": "تغییر خودکار چیدمان صفحه‌کلید برای هر برنامه در Mac — TapFixAI", "meta.desc": "TapFixAI هنگام جابه‌جایی بین برنامه‌های Mac چیدمان صفحه‌کلید را خودکار عوض می‌کند. برای هر برنامه فارسی، انگلیسی یا زبان دیگری تعیین کنید."
+  }
+}

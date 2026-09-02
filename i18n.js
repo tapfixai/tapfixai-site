@@ -1,26 +1,21 @@
 // TapFix i18n — per-language URLs (/xx/), auto-detect (CIS -> ru), manual switcher.
 // Pre-rendered localized pages inject: TF_STATIC=true, TF_LANG, TF_PAGE, TF_AVAIL.
 window.TF_LANGS = [
-  {c:"en", n:"English"},
-  {c:"es", n:"Español"},
-  {c:"pt", n:"Português"},
-  {c:"fr", n:"Français"},
-  {c:"de", n:"Deutsch"},
-  {c:"it", n:"Italiano"},
-  {c:"nl", n:"Nederlands"},
-  {c:"pl", n:"Polski"},
-  {c:"uk", n:"Українська"},
-  {c:"ru", n:"Русский"},
-  {c:"tr", n:"Türkçe"},
-  {c:"id", n:"Indonesia"},
-  {c:"vi", n:"Tiếng Việt"},
-  {c:"th", n:"ไทย"},
-  {c:"zh", n:"中文"},
-  {c:"ja", n:"日本語"},
-  {c:"ko", n:"한국어"},
-  {c:"hi", n:"हिन्दी"},
-  {c:"ar", n:"العربية", rtl:true},
-  {c:"fa", n:"فارسی", rtl:true}
+  {c:"en", n:"English"}, {c:"en-gb", n:"English (UK)"}, {c:"en-au", n:"English (Australia)"}, {c:"en-ca", n:"English (Canada)"},
+  {c:"es", n:"Español"}, {c:"es-mx", n:"Español (México)"},
+  {c:"pt", n:"Português"}, {c:"pt-pt", n:"Português (Portugal)"},
+  {c:"fr", n:"Français"}, {c:"fr-ca", n:"Français (Canada)"},
+  {c:"de", n:"Deutsch"}, {c:"it", n:"Italiano"}, {c:"nl", n:"Nederlands"}, {c:"pl", n:"Polski"},
+  {c:"uk", n:"Українська"}, {c:"ru", n:"Русский"}, {c:"tr", n:"Türkçe"},
+  {c:"id", n:"Bahasa Indonesia"}, {c:"vi", n:"Tiếng Việt"}, {c:"th", n:"ไทย"},
+  {c:"zh", n:"简体中文"}, {c:"zh-hant", n:"繁體中文"}, {c:"ja", n:"日本語"}, {c:"ko", n:"한국어"},
+  {c:"hi", n:"हिन्दी"}, {c:"ar", n:"العربية", rtl:true}, {c:"fa", n:"فارسی", rtl:true},
+  {c:"bn", n:"বাংলা"}, {c:"ca", n:"Català"}, {c:"hr", n:"Hrvatski"}, {c:"cs", n:"Čeština"},
+  {c:"da", n:"Dansk"}, {c:"fi", n:"Suomi"}, {c:"el", n:"Ελληνικά"}, {c:"gu", n:"ગુજરાતી"},
+  {c:"he", n:"עברית", rtl:true}, {c:"hu", n:"Magyar"}, {c:"kn", n:"ಕನ್ನಡ"}, {c:"ms", n:"Bahasa Melayu"},
+  {c:"ml", n:"മലയാളം"}, {c:"mr", n:"मराठी"}, {c:"no", n:"Norsk"}, {c:"or", n:"ଓଡ଼ିଆ"},
+  {c:"pa", n:"ਪੰਜਾਬੀ"}, {c:"ro", n:"Română"}, {c:"sk", n:"Slovenčina"}, {c:"sl", n:"Slovenščina"},
+  {c:"sv", n:"Svenska"}, {c:"ta", n:"தமிழ்"}, {c:"te", n:"తెలుగు"}, {c:"ur", n:"اردو", rtl:true}
 ];
 
 (function(){
