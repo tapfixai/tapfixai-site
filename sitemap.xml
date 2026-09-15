@@ -5450,4 +5450,16 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://tapfixai.app/accessibility-disclosure"/>
     <lastmod>2026-09-02</lastmod>
   </url>
+  <url>
+    <loc>https://tapfixai.app/tide-live/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tapfixai.app/tide-live/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tapfixai.app/tide-live/"/>
+    <lastmod>2026-09-15</lastmod>
+  </url>
+  <url>
+    <loc>https://tapfixai.app/tide-live/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tapfixai.app/tide-live/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tapfixai.app/tide-live/privacy/"/>
+    <lastmod>2026-09-15</lastmod>
+  </url>
 </urlset>
