@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Иконка Tide Live «разрез днём». Исходник для всех PNG (см. docs/icon/README.md). -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="1024" viewBox="0 0 200 200">
+<clipPath id="rr"><rect width="200" height="200" rx="40"/></clipPath><g clip-path="url(#rr)">
+<defs>
+<linearGradient id="sky" x1="0" y1="-60" x2="0" y2="92" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1A63AA"/><stop offset=".4" stop-color="#1F6FB8"/><stop offset="1" stop-color="#A8DDEB"/></linearGradient>
+<linearGradient id="sea" x1="0" y1="92" x2="0" y2="260" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#22C1BA"/><stop offset=".45" stop-color="#0E8C99"/><stop offset="1" stop-color="#04324A"/></linearGradient>
+<linearGradient id="sand" x1="0" y1="60" x2="140" y2="200" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#F6DDA6"/><stop offset="1" stop-color="#D9B272"/></linearGradient>
+<g id="cloud" fill="#FFFFFF"><ellipse cx="0" cy="0" rx="14" ry="7"/><circle cx="-6" cy="-5" r="7"/><circle cx="5" cy="-7" r="9"/><ellipse cx="14" cy="0" rx="8" ry="5.5"/></g>
+</defs>
+<rect x="-70" y="-70" width="340" height="162" fill="url(#sky)"/>
+<circle cx="150" cy="48" r="30" fill="#FFF6CF" opacity=".35"/>
+<circle cx="150" cy="48" r="19" fill="#FFF3C0"/>
+<g transform="translate(106,26) scale(.8)" opacity=".95"><use href="#cloud"/></g>
+<g transform="translate(172,78) scale(.65)" opacity=".85"><use href="#cloud"/></g>
+<rect x="-70" y="92" width="340" height="178" fill="url(#sea)"/>
+<path d="M-70 80 C-20 77 10 76 38 77 C66 80 82 92 102 116 C124 136 138 166 144 200 C147 220 149 240 150 270 L-70 270 L-70 270 Z" fill="url(#sand)"/>
+<path d="M-70 123 C-20 121 0 120 34 121 C60 126 72 140 86 160 C96 174 102 190 106 210 L110 270 L-70 270 L-70 270 Z" fill="#CFA565"/>
+<path d="M-70 161 C-20 159 0 158 24 159 C40 164 52 172 60 184 C66 194 70 210 72 230 L73 270 L-70 270 L-70 270 Z" fill="#B48A51"/>
+<path d="M96 110 C108 120 120 134 128 150" fill="none" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round"/>
+<path d="M116 104 q9 -5 18 0 q9 5 18 0 q9 -5 18 0" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" opacity=".85"/>
+<g transform="translate(46,84)">
+<path d="M0 0 C-2 -18 1 -36 9 -52" fill="none" stroke="#6B4A2B" stroke-width="6" stroke-linecap="round"/>
+<g fill="#1E9A55">
+<path d="M9 -52 C0 -62 -16 -62 -26 -50 C-16 -54 -4 -53 9 -52Z"/>
+<path d="M9 -52 C2 -66 -12 -72 -22 -68 C-10 -64 0 -60 9 -52Z"/>
+<path d="M9 -52 C12 -68 24 -74 34 -70 C24 -66 16 -60 9 -52Z"/>
+<path d="M9 -52 C22 -60 38 -56 44 -44 C34 -50 22 -52 9 -52Z"/>
+<path d="M9 -52 C18 -50 28 -40 28 -28 C22 -38 16 -46 9 -52Z"/>
+<path d="M9 -52 C0 -48 -10 -38 -12 -28 C-4 -38 2 -46 9 -52Z"/>
+</g>
+<circle cx="7" cy="-50" r="2.6" fill="#7A5222"/><circle cx="12" cy="-49" r="2.4" fill="#7A5222"/>
+</g>
+<line x1="-70" y1="142" x2="270" y2="142" stroke="#FFFFFF" stroke-width="2.5" stroke-dasharray="8 6" opacity=".8"/>
+<path d="M178 126 v30 M171 133 l7 -8 l7 8 M171 149 l7 8 l7 -8" fill="none" stroke="#FFFFFF" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+</g></svg>
