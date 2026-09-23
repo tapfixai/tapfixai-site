@@ -234,3 +234,37 @@ footer{padding:36px 0 60px;color:var(--muted);font-size:12.5px;background:var(--
   .links a{padding:14px 18px;opacity:1;border-radius:16px}
   .nav.open .links{opacity:1;transform:none;pointer-events:auto}
 }
+
+/* ---------- document pages (support, privacy, terms, refunds, deletion…) ---------- */
+.docpage main{padding:112px 0 80px}
+.card.doc{max-width:860px;margin:0 auto;padding:56px 60px;border-radius:32px;background:var(--bg-2)!important;box-shadow:var(--tile-shadow)!important;transform:none!important}
+.card.doc:hover{transform:none!important}
+.doc h1{font-size:clamp(34px,5.4vw,56px);line-height:1.05;letter-spacing:-.035em;font-weight:700;margin:0 0 14px;max-width:none}
+.doc h2{font-size:clamp(21px,2.4vw,26px);letter-spacing:-.02em;font-weight:650;margin:44px 0 10px}
+.doc h3{font-size:19px;margin:28px 0 8px}
+.doc p,.doc li{color:var(--muted);font-size:17px;line-height:1.6}
+.doc ul,.doc ol{padding-left:22px;margin:10px 0}.doc li{margin:6px 0}
+.doc a{color:var(--link);font-weight:500}.doc a:hover{text-decoration:underline}
+.doc strong{color:var(--text)}
+.doc .meta{color:var(--muted);font-size:15px;font-weight:500}
+.doc .contact{display:inline-flex;align-items:center;min-height:48px;margin:8px 0;padding:0 24px;border-radius:999px;background:var(--ink);color:var(--ink-text);font-weight:600;text-decoration:none!important}
+.doc .note{margin:16px 0;padding:16px 20px;border-radius:18px;background:var(--bg);border:1px solid var(--line)}
+.doc .note p{margin:0;color:var(--text)}
+.doc .step{padding:14px 18px;border-radius:16px;background:var(--bg);color:var(--text);font-weight:500}
+.doc .tag{display:inline-block;font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;vertical-align:middle;color:#fff}
+.doc .tag.ios{background:var(--c1)}.doc .tag.android{background:var(--c3)}
+.doc table{min-width:0;font-size:15px}
+.doc hr{border:0;border-top:1px solid var(--line);margin:36px 0}
+.foot{font-size:12.5px}
+@media(max-width:560px){.card.doc{padding:30px 22px;border-radius:26px}.docpage main{padding-top:90px}}
+
+/* ---------- marketing sub-pages (/mac, layout-per-app, SEO): keep own blocks, new skin ---------- */
+.mktpage{--surface:var(--bg-2);--surface-2:var(--bg);--card:var(--bg-2);--accent:var(--c1);--accent-2:var(--c2);--accent2:var(--c2);--accent-soft:color-mix(in srgb,var(--c1) 12%,transparent);--shadow:var(--tile-shadow);--radius:28px}
+.mktpage .panel,.mktpage .price-card,.mktpage .step,.mktpage .rule{background:var(--bg-2)!important;border:0!important;box-shadow:var(--tile-shadow)!important;border-radius:28px}
+.mktpage section:nth-of-type(odd){background:var(--bg-2)}
+.mktpage section:nth-of-type(odd) .card,.mktpage section:nth-of-type(odd) .panel,.mktpage section:nth-of-type(odd) .price-card,.mktpage section:nth-of-type(odd) .step{background:var(--bg)!important}
+.mktpage .hero > .stage{width:min(820px,100%);margin-top:48px}
+.mktpage .hero .trust{justify-content:center}
+.mktpage .hero > .stage{text-align:left}
+.mktpage .stage .orb{background:conic-gradient(from 0deg,var(--c1),var(--c2),var(--c5),var(--c4),var(--c3),var(--c6),var(--c1))!important;filter:blur(70px);opacity:.45;border:0!important;box-shadow:none!important;animation:spin2 30s linear infinite}
+@keyframes spin2{to{rotate:360deg}}

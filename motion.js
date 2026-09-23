@@ -41,7 +41,7 @@
   }
 
   // --- reveals
-  d.querySelectorAll(".section-head,.card,#screens:not(.story) .feature .media,#screens:not(.story) .feature .ftext,.panel,details.data").forEach(function(el){
+  d.querySelectorAll(".section-head,.card:not(.doc),#screens:not(.story) .feature .media,#screens:not(.story) .feature .ftext,.panel,details.data").forEach(function(el){
     el.classList.add("reveal");
     if(el.classList.contains("card")) el.style.setProperty("--d",([].indexOf.call(el.parentElement.children,el)%3)*0.08+"s");
   });
@@ -50,7 +50,7 @@
   } else {
     var io=new IntersectionObserver(function(es){es.forEach(function(e){
       if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}
-    });},{rootMargin:"0px 0px -8% 0px",threshold:.1});
+    });},{rootMargin:"0px 0px -8% 0px",threshold:0});
     d.querySelectorAll(".reveal").forEach(function(el){io.observe(el);});
   }
 
