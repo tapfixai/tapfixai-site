@@ -244,7 +244,7 @@
   
 h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.lead{letter-spacing:-.008em}.btn{letter-spacing:-.006em}
 </style>
-  <link rel="stylesheet" href="/glass.css?v=10">
+  <link rel="stylesheet" href="/glass.css?v=12">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..900&display=swap" rel="stylesheet">
@@ -284,14 +284,14 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
 <body class="mktpage">
   <header>
     <div class="nav glass">
-      <a class="brand" href="#top" aria-label="TapFix AI Home">
+      <a class="brand" href="/zh/" aria-label="TapFix AI Home">
         <div class="logo">TF<small>AI</small></div>
         <span>TapFix AI</span>
       </a>
       <nav class="links" aria-label="Main navigation">
         <a href="/zh/" data-i18n="nav.keyboard">键盘</a>
         <a href="/zh/mac" data-i18n="nav.mac">Mac</a>
-        <a href="#pricing" data-i18n="nav.pricing">价格</a>
+        
         <a href="/zh/support" data-i18n="nav.support">支持</a>
         <a href="/privacy" data-i18n="nav.privacy">隐私</a>
       </nav>
@@ -530,20 +530,11 @@ h1{letter-spacing:-.032em}h2{letter-spacing:-.022em}h3{letter-spacing:-.012em}.l
   </main>
 
   <footer>
-    <div class="wrap foot">
-      <div data-i18n="foot.copy">© 2026 TapFix AI Studio。保留所有权利。</div>
-      <div>
-        <a href="/zh/" data-i18n="foot.keyboard">键盘</a> ·
-        <a href="/zh/mac" data-i18n="foot.mac">Mac</a> ·
-        <a href="/zh/mac#pricing" data-i18n="foot.pricing">价格</a> ·
-        <a href="/zh/support" data-i18n="foot.support">支持</a> ·
-        <a href="/privacy" data-i18n="foot.privacy">隐私政策</a> ·
-        <a href="/terms" data-i18n="foot.terms">条款</a> ·
-        <a href="/refunds" data-i18n="foot.refunds">退款</a> ·
-        <a href="/accessibility-disclosure" data-i18n="foot.acc">辅助功能</a> · <a href="/zh/delete-data" data-i18n="foot.delete">删除数据</a>
-      </div>
-    </div>
-  </footer>
+  <div class="wrap foot">
+    <div data-i18n="foot.copy">© 2026 TapFix AI Studio。保留所有权利。</div>
+    <nav class="foot-links" aria-label="Footer"><a href="/zh/" data-i18n="foot.keyboard">键盘</a><a href="/zh/mac" data-i18n="foot.mac">Mac</a><a href="/zh/mac#pricing" data-i18n="foot.pricing">价格</a><a href="/zh/support" data-i18n="foot.support">支持</a><a href="/privacy" data-i18n="foot.privacy">隐私政策</a><a href="/terms" data-i18n="foot.terms">条款</a><a href="/refunds" data-i18n="foot.refunds">退款</a><a href="/zh/delete-data" data-i18n="foot.delete">删除数据</a><a href="/accessibility-disclosure" data-i18n="foot.acc">辅助功能</a></nav>
+  </div>
+</footer>
 
   <script>window.TF_I18N="/i18n-mac.json";</script>
   <script>

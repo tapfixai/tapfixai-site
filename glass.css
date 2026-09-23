@@ -268,3 +268,18 @@ footer{padding:36px 0 60px;color:var(--muted);font-size:12.5px;background:var(--
 .mktpage .hero > .stage{text-align:left}
 .mktpage .stage .orb{background:conic-gradient(from 0deg,var(--c1),var(--c2),var(--c5),var(--c4),var(--c3),var(--c6),var(--c1))!important;filter:blur(70px);opacity:.45;border:0!important;box-shadow:none!important;animation:spin2 30s linear infinite}
 @keyframes spin2{to{rotate:360deg}}
+
+/* ---------- header: identical on every page ---------- */
+body > header{position:fixed!important;top:12px!important;left:0;right:0;height:auto!important;background:none!important;border:0!important;box-shadow:none!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important;padding:0 12px!important}
+body > header .nav{position:relative;width:min(980px,100%)!important;height:56px!important;min-height:0!important;margin:0 auto!important;padding:0 8px 0 10px!important;gap:16px!important;border-radius:999px!important}
+body > header .lang{width:150px!important;min-width:0!important;height:38px;padding:0 30px 0 14px!important;text-overflow:ellipsis}
+@media(min-width:961px){body > header .links{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}}
+@media(max-width:560px){body > header{top:8px!important;padding:0 8px!important}body > header .nav{height:52px!important}body > header .lang{width:128px!important}}
+
+/* ---------- footer: identical on every page ---------- */
+body > footer{padding:36px 0 56px!important;background:var(--bg)!important;border:0!important;color:var(--muted);font-size:13px}
+body > footer .foot{display:flex;justify-content:space-between;align-items:flex-start;gap:14px 32px;flex-wrap:wrap;padding-top:22px;border-top:1px solid var(--line)}
+.foot-links{display:flex;flex-wrap:wrap;gap:6px 20px}
+.foot-links a,.foot-seo a{color:var(--text);opacity:.8}.foot-links a:hover,.foot-seo a:hover{opacity:1;text-decoration:underline}
+.foot-seo{margin-top:14px}.foot-seo .mini-links{margin:0;font-size:12.5px}
+@media(max-width:560px){body > footer .foot{flex-direction:column}}
