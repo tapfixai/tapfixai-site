@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+  <channel>
+    <title>TapFixAI</title>
+    <item>
+      <title>TapFixAI 1.0.10</title>
+      <pubDate>Fri, 02 Oct 2026 16:49:17 +0000</pubDate>
+      <sparkle:version>110</sparkle:version>
+      <sparkle:shortVersionString>1.0.10</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+      <description xml:lang="ru"><![CDATA[<p>Автоматические обновления: теперь TapFixAI сам скачивает новую версию, устанавливает её и перезапускается.</p>]]></description>
+      <description><![CDATA[<p>Automatic updates: TapFixAI now downloads new versions, installs them and relaunches by itself.</p>]]></description>
+      <enclosure url="https://tapfixai.app/downloads/TapFixAI-macOS-1.0.10.dmg" type="application/octet-stream" sparkle:edSignature="BkXuzT22DFJ9pRjDcycV6xYKgbzebn9g5jyy8cc4hoD/VM5DhlxovhNbPtUgJrwIPBKnpUPO8N/7tA1q+IcFCw==" length="4256436" />
+    </item>
+  </channel>
+</rss>

@@ -1,20 +1,20 @@
 {
-  "latest_version": "1.0.9",
-  "latest_build": 109,
+  "latest_version": "1.0.10",
+  "latest_build": 110,
   "min_supported_build": 100,
-  "download_url": "https://tapfixai.app/downloads/TapFixAI-macOS-1.0.9.dmg",
-  "sha256": "8dba195042d112caf07d59e2de50355251a173add59f524d051b0585c9dfb964",
-  "published_at": "2026-10-02T16:31:41Z",
+  "download_url": "https://tapfixai.app/downloads/TapFixAI-macOS-1.0.10.dmg",
+  "sha256": "0679a2882b73256e85bbe443e2ef6eef39d1c55b4b2b4ff627fffeabdd79ea4f",
+  "published_at": "2026-10-02T16:49:17Z",
   "title": {
-    "en": "TapFixAI 1.0.9 is available",
-    "ru": "Доступна версия TapFixAI 1.0.9"
+    "en": "TapFixAI 1.0.10 is available",
+    "ru": "Доступна версия TapFixAI 1.0.10"
   },
   "message": {
-    "en": "Version 1.0.9 is available.",
-    "ru": "Доступна версия 1.0.9."
+    "en": "Version 1.0.10 is available.",
+    "ru": "Доступна версия 1.0.10."
   },
   "release_notes": {
-    "en": "Per-app keyboard layouts now switch reliably in Chrome, Telegram, Claude, ChatGPT and other apps that restore their own input source.",
-    "ru": "Раскладки для приложений теперь надёжно переключаются в Chrome, Telegram, Claude, ChatGPT и других приложениях, которые возвращают свою раскладку."
+    "en": "Automatic updates: TapFixAI now downloads new versions, installs them and relaunches by itself.",
+    "ru": "Автоматические обновления: теперь TapFixAI сам скачивает новую версию, устанавливает её и перезапускается."
   }
 }
