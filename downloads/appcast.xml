@@ -3,14 +3,14 @@
   <channel>
     <title>TapFixAI</title>
     <item>
-      <title>TapFixAI 1.0.10</title>
-      <pubDate>Fri, 02 Oct 2026 16:49:17 +0000</pubDate>
-      <sparkle:version>110</sparkle:version>
-      <sparkle:shortVersionString>1.0.10</sparkle:shortVersionString>
+      <title>TapFixAI 1.0.11</title>
+      <pubDate>Fri, 02 Oct 2026 16:57:44 +0000</pubDate>
+      <sparkle:version>111</sparkle:version>
+      <sparkle:shortVersionString>1.0.11</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-      <description xml:lang="ru"><![CDATA[<p>Автоматические обновления: теперь TapFixAI сам скачивает новую версию, устанавливает её и перезапускается.</p>]]></description>
-      <description><![CDATA[<p>Automatic updates: TapFixAI now downloads new versions, installs them and relaunches by itself.</p>]]></description>
-      <enclosure url="https://tapfixai.app/downloads/TapFixAI-macOS-1.0.10.dmg" type="application/octet-stream" sparkle:edSignature="BkXuzT22DFJ9pRjDcycV6xYKgbzebn9g5jyy8cc4hoD/VM5DhlxovhNbPtUgJrwIPBKnpUPO8N/7tA1q+IcFCw==" length="4256436" />
+      <description xml:lang="ru"><![CDATA[<p>Проверка обновлений теперь всегда показывает самую свежую версию сразу после выхода.</p>]]></description>
+      <description><![CDATA[<p>Update checks now always show the newest version right after it is released.</p>]]></description>
+      <enclosure url="https://tapfixai.app/downloads/TapFixAI-macOS-1.0.11.dmg" type="application/octet-stream" sparkle:edSignature="PkR/PuNJ5FU0ysEOFtfh19SHlDDuiKOtDkvICha29X/QFqrFn95y3YsfPujszmXk81fm4DT/u52AWob61aTMCQ==" length="4256756" />
     </item>
   </channel>
 </rss>

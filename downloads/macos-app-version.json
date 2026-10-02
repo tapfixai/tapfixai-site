@@ -1,20 +1,20 @@
 {
-  "latest_version": "1.0.10",
-  "latest_build": 110,
+  "latest_version": "1.0.11",
+  "latest_build": 111,
   "min_supported_build": 100,
-  "download_url": "https://tapfixai.app/downloads/TapFixAI-macOS-1.0.10.dmg",
-  "sha256": "0679a2882b73256e85bbe443e2ef6eef39d1c55b4b2b4ff627fffeabdd79ea4f",
-  "published_at": "2026-10-02T16:49:17Z",
+  "download_url": "https://tapfixai.app/downloads/TapFixAI-macOS-1.0.11.dmg",
+  "sha256": "c029bf30eb817ef5f18663dbd08f472c289d71bde3a0ee7643875546910370e3",
+  "published_at": "2026-10-02T16:57:44Z",
   "title": {
-    "en": "TapFixAI 1.0.10 is available",
-    "ru": "Доступна версия TapFixAI 1.0.10"
+    "en": "TapFixAI 1.0.11 is available",
+    "ru": "Доступна версия TapFixAI 1.0.11"
   },
   "message": {
-    "en": "Version 1.0.10 is available.",
-    "ru": "Доступна версия 1.0.10."
+    "en": "Version 1.0.11 is available.",
+    "ru": "Доступна версия 1.0.11."
   },
   "release_notes": {
-    "en": "Automatic updates: TapFixAI now downloads new versions, installs them and relaunches by itself.",
-    "ru": "Автоматические обновления: теперь TapFixAI сам скачивает новую версию, устанавливает её и перезапускается."
+    "en": "Update checks now always show the newest version right after it is released.",
+    "ru": "Проверка обновлений теперь всегда показывает самую свежую версию сразу после выхода."
   }
 }
