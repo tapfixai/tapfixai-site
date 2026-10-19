@@ -283,3 +283,89 @@ body > footer .foot{display:flex;justify-content:space-between;align-items:flex-
 .foot-links a,.foot-seo a{color:var(--text);opacity:.8}.foot-links a:hover,.foot-seo a:hover{opacity:1;text-decoration:underline}
 .foot-seo{margin-top:14px}.foot-seo .mini-links{margin:0;font-size:12.5px}
 @media(max-width:560px){body > footer .foot{flex-direction:column}}
+
+/* =====================================================================
+   PREMIUM POLISH LAYER — one surface language for every card on every page
+   ===================================================================== */
+:root{
+  --surf:#f5f5f7; --surf-hi:#f5f5f7;
+  --rim:0 0 0 1px rgba(0,0,0,.035);
+  --lift:0 1px 2px rgba(0,0,0,.04),0 24px 48px -28px rgba(0,0,0,.22);
+}
+@media (prefers-color-scheme:dark){:root{
+  --surf:#0f0f11; --surf-hi:#18181b;
+  --rim:inset 0 1px 0 rgba(255,255,255,.07),0 0 0 1px rgba(255,255,255,.07);
+  --lift:inset 0 1px 0 rgba(255,255,255,.09),0 0 0 1px rgba(255,255,255,.1),0 30px 60px -30px rgba(0,0,0,.9);
+}}
+
+/* unified card surface (home tiles, /mac cards, steps, price cards, panels) */
+.card:not(.doc),.mktpage .step,.mktpage .price-card,.mktpage .panel,#permissions .panel,#support .panel,details.data,.mktpage .layout-rule,.mktpage .cta{
+  background:linear-gradient(180deg,var(--surf-hi),var(--surf))!important;
+  box-shadow:var(--rim)!important;border:0!important;border-radius:28px!important;
+  transition:transform .6s var(--ease),box-shadow .6s var(--ease)!important}
+@media (hover:hover){
+  .card:not(.doc):hover,.mktpage .step:hover,.mktpage .price-card:hover{transform:translateY(-4px)!important;box-shadow:var(--lift)!important}
+}
+/* light theme: cards sit on white sections → soft grey; on grey sections → white */
+@media (prefers-color-scheme:light){
+  #permissions .panel,#support .panel,details.data,.mktpage section:nth-of-type(even) .panel,.mktpage section:nth-of-type(even) .step,.mktpage section:nth-of-type(even) .card{--surf:#fff;--surf-hi:#fff}
+}
+.card:not(.doc){padding:32px!important}
+.card h3{margin:22px 0 8px!important;font-size:20px!important;font-weight:650!important;letter-spacing:-.022em}
+.card p{font-size:15.5px!important;line-height:1.55!important}
+
+/* glossy app-icon tiles */
+.icon{position:relative;overflow:hidden;width:56px!important;height:56px!important;border-radius:16px!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.55),inset 0 -3px 8px rgba(0,0,0,.18),0 10px 22px -10px var(--ic,var(--c1))!important}
+.icon::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  background:linear-gradient(180deg,rgba(255,255,255,.38),rgba(255,255,255,0) 52%)}
+.icon svg{position:relative;z-index:1;width:27px!important;height:27px!important;stroke-width:2;filter:drop-shadow(0 1px 1px rgba(0,0,0,.18))}
+.mktpage .grid .card:nth-child(1){--ic:var(--c1)}.mktpage .grid .card:nth-child(2){--ic:var(--c2)}.mktpage .grid .card:nth-child(3){--ic:var(--c6)}
+.mktpage .grid .card:nth-child(4){--ic:var(--c5)}.mktpage .grid .card:nth-child(5){--ic:var(--c4)}.mktpage .grid .card:nth-child(6){--ic:var(--c3)}
+.mktpage .grid .card:nth-child(7){--ic:var(--c1)}.mktpage .grid .card:nth-child(8){--ic:#8e8e93}.mktpage .grid .card:nth-child(9){--ic:var(--c2)}
+.mktpage .grid .card .icon{background:linear-gradient(160deg,color-mix(in srgb,var(--ic) 75%,#fff),var(--ic))!important;color:#fff!important}
+
+/* iOS-style grouped lists (no box-in-box, proper padding) */
+.list{display:block!important;margin:0!important;border-radius:20px;overflow:hidden;background:var(--bg-2)}
+@media (prefers-color-scheme:dark){.list{background:rgba(255,255,255,.035)}}
+.mktpage .list div,#permissions .list div,.list > div{position:relative;margin:0!important;padding:16px 20px!important;border:0!important;border-radius:0!important;
+  background:none!important;box-shadow:none!important;color:var(--muted);font-size:15.5px;line-height:1.5}
+.list > div + div::before{content:"";position:absolute;left:20px;right:0;top:0;height:1px;background:var(--line)}
+.list a{color:var(--link)}
+.panel > .list:first-child{margin-top:0!important}
+.panel h3{margin:0 0 16px;font-size:20px;font-weight:650;letter-spacing:-.02em}
+.panel > p:not(.lead){color:var(--muted);font-size:15px;margin:18px 4px 0}
+.mktpage .twocol{align-items:start!important;gap:18px!important}
+.mktpage .panel{padding:36px!important}
+
+/* steps: coloured number badges; FAQ cards without the "?" squares */
+.mktpage .step{padding:30px!important}
+.mktpage .step .n{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;font-weight:700;font-size:17px;color:#fff;margin-bottom:18px;position:relative;overflow:hidden;
+  background:linear-gradient(160deg,color-mix(in srgb,var(--c1) 75%,#fff),var(--c1));box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 8px 18px -8px var(--c1)}
+.mktpage .steps .step:nth-child(2) .n{background:linear-gradient(160deg,color-mix(in srgb,var(--c2) 75%,#fff),var(--c2));box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 8px 18px -8px var(--c2)}
+.mktpage .steps .step:nth-child(3) .n{background:linear-gradient(160deg,color-mix(in srgb,var(--c3) 75%,#fff),var(--c3));box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 8px 18px -8px var(--c3)}
+.mktpage .step h3{margin:0 0 8px;font-size:19px;font-weight:650;letter-spacing:-.02em}
+.mktpage .faq-grid{grid-template-columns:repeat(2,1fr)!important;margin-top:18px!important}
+.mktpage .faq-grid .n{display:none}
+.mktpage .faq-grid .step h3::before{content:"";display:block;width:24px;height:3px;border-radius:3px;margin-bottom:16px;background:linear-gradient(90deg,var(--c1),var(--c2))}
+.mktpage .faq-grid .step a{color:var(--link)}
+
+/* price cards */
+.mktpage .price-card{padding:34px!important}
+.mktpage .pricing-grid .price-card:last-child{box-shadow:var(--rim),0 0 0 2px color-mix(in srgb,var(--c1) 55%,transparent)!important}
+.mktpage .plan-name{color:var(--c1)!important;font-weight:700!important;letter-spacing:.06em!important}
+.mktpage .price{font-weight:700!important;letter-spacing:-.04em!important}
+
+/* layout rules (CapCut / Telegram / Mail) */
+.mktpage .layout-rule{padding:18px 22px!important;border-radius:18px!important}
+.mktpage .layout-rule span:last-child{color:var(--c1)!important;font-weight:600}
+
+/* hero glass chips: neutral, crisp glass instead of tinted mud */
+.chip{background:rgba(255,255,255,.82)!important;box-shadow:0 1px 0 rgba(255,255,255,.9) inset,0 12px 30px -10px rgba(0,0,0,.25)!important}
+@media (prefers-color-scheme:dark){.chip{background:rgba(30,30,34,.82)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 0 0 1px rgba(255,255,255,.08),0 16px 36px -12px rgba(0,0,0,.8)!important}}
+
+/* section rhythm: consistent vertical spacing */
+.mktpage section{padding:110px 0!important}
+.mktpage .section-head{margin-bottom:52px!important}
+@media(max-width:960px){.mktpage .faq-grid{grid-template-columns:1fr!important}}
+@media(max-width:560px){.mktpage section{padding:72px 0!important}.mktpage .panel,.mktpage .price-card{padding:26px!important}.card:not(.doc){padding:26px!important}}
