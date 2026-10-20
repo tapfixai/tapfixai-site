@@ -55,6 +55,10 @@ downloads/TapFixAI-Testers-latest.dmg
 *.gz
 *.drp
 *.prproj
+*.part
+*.ytdl
+*.blend
+*.aep
 *.MP4
 *.MOV
 *.MXF
@@ -88,6 +92,10 @@ downloads/TapFixAI-Testers-latest.dmg
 *.GZ
 *.DRP
 *.PRPROJ
+*.PART
+*.YTDL
+*.BLEND
+*.AEP
 node_modules/
 build/
 dist/
