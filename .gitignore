@@ -115,3 +115,6 @@ venvs/
 # files over 95 MB
 # nested repos (synced separately)
 # <<< github_sync (auto)
+
+# TapFixAI macOS installers are the site downloads: always deploy them
+!downloads/TapFixAI-macOS-*.dmg
