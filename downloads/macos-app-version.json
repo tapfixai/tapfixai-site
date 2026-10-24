@@ -1,20 +1,20 @@
 {
-  "latest_version": "1.0.11",
-  "latest_build": 111,
+  "latest_version": "1.0.12",
+  "latest_build": 112,
   "min_supported_build": 100,
-  "download_url": "https://tapfixai.app/downloads/TapFixAI-macOS-1.0.11.dmg",
-  "sha256": "c029bf30eb817ef5f18663dbd08f472c289d71bde3a0ee7643875546910370e3",
-  "published_at": "2026-10-02T16:57:44Z",
+  "download_url": "https://tapfixai.app/downloads/TapFixAI-macOS-1.0.12.dmg",
+  "sha256": "42303c96a019853d8e40dae0c06aea3302c65d22861f67c7739596ea174ba225",
+  "published_at": "2026-10-24T15:22:29Z",
   "title": {
-    "en": "TapFixAI 1.0.11 is available",
-    "ru": "Доступна версия TapFixAI 1.0.11"
+    "en": "TapFixAI 1.0.12 is available",
+    "ru": "Доступна версия TapFixAI 1.0.12"
   },
   "message": {
-    "en": "Version 1.0.11 is available.",
-    "ru": "Доступна версия 1.0.11."
+    "en": "Version 1.0.12 is available.",
+    "ru": "Доступна версия 1.0.12."
   },
   "release_notes": {
-    "en": "Update checks now always show the newest version right after it is released.",
-    "ru": "Проверка обновлений теперь всегда показывает самую свежую версию сразу после выхода."
+    "en": "Window tiling: Control+Option+4 arranges up to 4 windows into screen corners, and Control+Option+U, I, J, K, arrows and Enter move the active window to a quarter, a half or the full screen.",
+    "ru": "Раскладка окон: Control+Option+4 раскладывает до 4 окон по углам экрана, а Control+Option+U, I, J, K, стрелки и Enter ставят активное окно в четверть, половину или на весь экран."
   }
 }
