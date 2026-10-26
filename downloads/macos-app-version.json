@@ -1,20 +1,20 @@
 {
-  "latest_version": "1.0.12",
-  "latest_build": 112,
+  "latest_version": "1.0.13",
+  "latest_build": 113,
   "min_supported_build": 100,
-  "download_url": "https://tapfixai.app/downloads/TapFixAI-macOS-1.0.12.dmg",
-  "sha256": "42303c96a019853d8e40dae0c06aea3302c65d22861f67c7739596ea174ba225",
-  "published_at": "2026-10-24T15:22:29Z",
+  "download_url": "https://tapfixai.app/downloads/TapFixAI-macOS-1.0.13.dmg",
+  "sha256": "98f74b1547f21d632ec92eb1d975632df992f943d9762cd7db45dd3c051abae8",
+  "published_at": "2026-10-26T06:02:38Z",
   "title": {
-    "en": "TapFixAI 1.0.12 is available",
-    "ru": "Доступна версия TapFixAI 1.0.12"
+    "en": "TapFixAI 1.0.13 is available",
+    "ru": "Доступна версия TapFixAI 1.0.13"
   },
   "message": {
-    "en": "Version 1.0.12 is available.",
-    "ru": "Доступна версия 1.0.12."
+    "en": "Version 1.0.13 is available.",
+    "ru": "Доступна версия 1.0.13."
   },
   "release_notes": {
-    "en": "Window tiling: Control+Option+4 arranges up to 4 windows into screen corners, and Control+Option+U, I, J, K, arrows and Enter move the active window to a quarter, a half or the full screen.",
-    "ru": "Раскладка окон: Control+Option+4 раскладывает до 4 окон по углам экрана, а Control+Option+U, I, J, K, стрелки и Enter ставят активное окно в четверть, половину или на весь экран."
+    "en": "Turn off the MacBook display: Control+Option+0 or the TapFixAI menu item fully turns off the built-in screen while an external monitor is connected. The keyboard and trackpad keep working.",
+    "ru": "Выключение экрана MacBook: Control+Option+0 или пункт в меню TapFixAI полностью выключает встроенный экран, пока подключён внешний монитор. Клавиатура и трекпад продолжают работать."
   }
 }

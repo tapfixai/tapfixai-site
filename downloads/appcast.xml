@@ -3,14 +3,14 @@
   <channel>
     <title>TapFixAI</title>
     <item>
-      <title>TapFixAI 1.0.12</title>
-      <pubDate>Sat, 24 Oct 2026 15:22:29 +0000</pubDate>
-      <sparkle:version>112</sparkle:version>
-      <sparkle:shortVersionString>1.0.12</sparkle:shortVersionString>
+      <title>TapFixAI 1.0.13</title>
+      <pubDate>Mon, 26 Oct 2026 06:02:38 +0000</pubDate>
+      <sparkle:version>113</sparkle:version>
+      <sparkle:shortVersionString>1.0.13</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-      <description xml:lang="ru"><![CDATA[<p>Раскладка окон: Control+Option+4 раскладывает до 4 окон по углам экрана, а Control+Option+U, I, J, K, стрелки и Enter ставят активное окно в четверть, половину или на весь экран.</p>]]></description>
-      <description><![CDATA[<p>Window tiling: Control+Option+4 arranges up to 4 windows into screen corners, and Control+Option+U, I, J, K, arrows and Enter move the active window to a quarter, a half or the full screen.</p>]]></description>
-      <enclosure url="https://tapfixai.app/downloads/TapFixAI-macOS-1.0.12.dmg" type="application/octet-stream" sparkle:edSignature="0lLwFFMVkUAYBdgAimtMb23jwM1LFmUj7KHop9UFXpp7J3+5dFEp46uLfwqmkyJVvXr6pykwsXgbWIdoHmz2BQ==" length="4266359" />
+      <description xml:lang="ru"><![CDATA[<p>Выключение экрана MacBook: Control+Option+0 или пункт в меню TapFixAI полностью выключает встроенный экран, пока подключён внешний монитор. Клавиатура и трекпад продолжают работать.</p>]]></description>
+      <description><![CDATA[<p>Turn off the MacBook display: Control+Option+0 or the TapFixAI menu item fully turns off the built-in screen while an external monitor is connected. The keyboard and trackpad keep working.</p>]]></description>
+      <enclosure url="https://tapfixai.app/downloads/TapFixAI-macOS-1.0.13.dmg" type="application/octet-stream" sparkle:edSignature="nX9J4Nm7iDgmqhxRrbEAQGCXZhaHMToYYIwddR3D6xJy20JyNnAzIyZm5gZMsYr7t3693mtsF6Ybqj/WW+y8DA==" length="4279667" />
     </item>
   </channel>
 </rss>
