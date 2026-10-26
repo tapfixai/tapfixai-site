@@ -1,20 +1,20 @@
 {
-  "latest_version": "1.0.13",
-  "latest_build": 113,
+  "latest_version": "1.0.14",
+  "latest_build": 114,
   "min_supported_build": 100,
-  "download_url": "https://tapfixai.app/downloads/TapFixAI-macOS-1.0.13.dmg",
-  "sha256": "98f74b1547f21d632ec92eb1d975632df992f943d9762cd7db45dd3c051abae8",
-  "published_at": "2026-10-26T06:02:38Z",
+  "download_url": "https://tapfixai.app/downloads/TapFixAI-macOS-1.0.14.dmg",
+  "sha256": "4b61b5d621da8521533a7e8bff4be13b0b5d237e7d6fb1a2dc524d52c396462a",
+  "published_at": "2026-10-26T16:09:18Z",
   "title": {
-    "en": "TapFixAI 1.0.13 is available",
-    "ru": "Доступна версия TapFixAI 1.0.13"
+    "en": "TapFixAI 1.0.14 is available",
+    "ru": "Доступна версия TapFixAI 1.0.14"
   },
   "message": {
-    "en": "Version 1.0.13 is available.",
-    "ru": "Доступна версия 1.0.13."
+    "en": "Version 1.0.14 is available.",
+    "ru": "Доступна версия 1.0.14."
   },
   "release_notes": {
-    "en": "Turn off the MacBook display: Control+Option+0 or the TapFixAI menu item fully turns off the built-in screen while an external monitor is connected. The keyboard and trackpad keep working.",
-    "ru": "Выключение экрана MacBook: Control+Option+0 или пункт в меню TapFixAI полностью выключает встроенный экран, пока подключён внешний монитор. Клавиатура и трекпад продолжают работать."
+    "en": "Swap windows: Control+Option+arrow moves the active window into the neighbouring quarter or half of the screen, or swaps it with the window already there. You can also drag a window onto another while holding Option. Screen halves are now on Control+Option+Shift+arrow.",
+    "ru": "Обмен окон местами: Control+Option+стрелка переставляет активное окно в соседнюю четверть или половину экрана, а если она занята, окна меняются местами. Окно можно также перетащить на другое с зажатым Option. Половины экрана теперь на Control+Option+Shift+стрелка."
   }
 }

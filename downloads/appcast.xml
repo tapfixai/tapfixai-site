@@ -3,14 +3,14 @@
   <channel>
     <title>TapFixAI</title>
     <item>
-      <title>TapFixAI 1.0.13</title>
-      <pubDate>Mon, 26 Oct 2026 06:02:38 +0000</pubDate>
-      <sparkle:version>113</sparkle:version>
-      <sparkle:shortVersionString>1.0.13</sparkle:shortVersionString>
+      <title>TapFixAI 1.0.14</title>
+      <pubDate>Mon, 26 Oct 2026 16:09:18 +0000</pubDate>
+      <sparkle:version>114</sparkle:version>
+      <sparkle:shortVersionString>1.0.14</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-      <description xml:lang="ru"><![CDATA[<p>Выключение экрана MacBook: Control+Option+0 или пункт в меню TapFixAI полностью выключает встроенный экран, пока подключён внешний монитор. Клавиатура и трекпад продолжают работать.</p>]]></description>
-      <description><![CDATA[<p>Turn off the MacBook display: Control+Option+0 or the TapFixAI menu item fully turns off the built-in screen while an external monitor is connected. The keyboard and trackpad keep working.</p>]]></description>
-      <enclosure url="https://tapfixai.app/downloads/TapFixAI-macOS-1.0.13.dmg" type="application/octet-stream" sparkle:edSignature="nX9J4Nm7iDgmqhxRrbEAQGCXZhaHMToYYIwddR3D6xJy20JyNnAzIyZm5gZMsYr7t3693mtsF6Ybqj/WW+y8DA==" length="4279667" />
+      <description xml:lang="ru"><![CDATA[<p>Обмен окон местами: Control+Option+стрелка переставляет активное окно в соседнюю четверть или половину экрана, а если она занята, окна меняются местами. Окно можно также перетащить на другое с зажатым Option. Половины экрана теперь на Control+Option+Shift+стрелка.</p>]]></description>
+      <description><![CDATA[<p>Swap windows: Control+Option+arrow moves the active window into the neighbouring quarter or half of the screen, or swaps it with the window already there. You can also drag a window onto another while holding Option. Screen halves are now on Control+Option+Shift+arrow.</p>]]></description>
+      <enclosure url="https://tapfixai.app/downloads/TapFixAI-macOS-1.0.14.dmg" type="application/octet-stream" sparkle:edSignature="KrWjA44VRTeB7MlCuh9c/jWC5AdGl9mrPhHxUeDIgCMNeSQlJFSfhhM3w4gcyVOgpx1BvJ3x0ejrDX7IztZmAg==" length="4286724" />
     </item>
   </channel>
 </rss>
