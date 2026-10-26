@@ -3,14 +3,14 @@
   <channel>
     <title>TapFixAI</title>
     <item>
-      <title>TapFixAI 1.0.14</title>
-      <pubDate>Mon, 26 Oct 2026 16:09:18 +0000</pubDate>
-      <sparkle:version>114</sparkle:version>
-      <sparkle:shortVersionString>1.0.14</sparkle:shortVersionString>
+      <title>TapFixAI 1.0.15</title>
+      <pubDate>Mon, 26 Oct 2026 17:10:32 +0000</pubDate>
+      <sparkle:version>115</sparkle:version>
+      <sparkle:shortVersionString>1.0.15</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-      <description xml:lang="ru"><![CDATA[<p>Обмен окон местами: Control+Option+стрелка переставляет активное окно в соседнюю четверть или половину экрана, а если она занята, окна меняются местами. Окно можно также перетащить на другое с зажатым Option. Половины экрана теперь на Control+Option+Shift+стрелка.</p>]]></description>
-      <description><![CDATA[<p>Swap windows: Control+Option+arrow moves the active window into the neighbouring quarter or half of the screen, or swaps it with the window already there. You can also drag a window onto another while holding Option. Screen halves are now on Control+Option+Shift+arrow.</p>]]></description>
-      <enclosure url="https://tapfixai.app/downloads/TapFixAI-macOS-1.0.14.dmg" type="application/octet-stream" sparkle:edSignature="KrWjA44VRTeB7MlCuh9c/jWC5AdGl9mrPhHxUeDIgCMNeSQlJFSfhhM3w4gcyVOgpx1BvJ3x0ejrDX7IztZmAg==" length="4286724" />
+      <description xml:lang="ru"><![CDATA[<p>Chrome: Control+Option+Shift+стрелка влево или вправо открывает текущую вкладку отдельным окном без адресной строки и ставит его в половину экрана. Control+Option+Shift+стрелка вверх заполняет экран активным окном.</p>]]></description>
+      <description><![CDATA[<p>Chrome: Control+Option+Shift+Left or Right opens the current tab as a separate window without the address bar and places it in half of the screen. Control+Option+Shift+Up fills the screen with the active window.</p>]]></description>
+      <enclosure url="https://tapfixai.app/downloads/TapFixAI-macOS-1.0.15.dmg" type="application/octet-stream" sparkle:edSignature="yx7sQK7wAC03oRJIsnF5FfpVoYrQ9rGt1uBTehn1MFUDfd01/5r+XT8cFt6cPwnULyHWo//NktNVP6J7ZqwPCw==" length="4289511" />
     </item>
   </channel>
 </rss>

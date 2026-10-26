@@ -1,20 +1,20 @@
 {
-  "latest_version": "1.0.14",
-  "latest_build": 114,
+  "latest_version": "1.0.15",
+  "latest_build": 115,
   "min_supported_build": 100,
-  "download_url": "https://tapfixai.app/downloads/TapFixAI-macOS-1.0.14.dmg",
-  "sha256": "4b61b5d621da8521533a7e8bff4be13b0b5d237e7d6fb1a2dc524d52c396462a",
-  "published_at": "2026-10-26T16:09:18Z",
+  "download_url": "https://tapfixai.app/downloads/TapFixAI-macOS-1.0.15.dmg",
+  "sha256": "36d4fe3f9ae9eb0b9a622807bd4e66d464191a924e8a7d84219676a46118451c",
+  "published_at": "2026-10-26T17:10:32Z",
   "title": {
-    "en": "TapFixAI 1.0.14 is available",
-    "ru": "Доступна версия TapFixAI 1.0.14"
+    "en": "TapFixAI 1.0.15 is available",
+    "ru": "Доступна версия TapFixAI 1.0.15"
   },
   "message": {
-    "en": "Version 1.0.14 is available.",
-    "ru": "Доступна версия 1.0.14."
+    "en": "Version 1.0.15 is available.",
+    "ru": "Доступна версия 1.0.15."
   },
   "release_notes": {
-    "en": "Swap windows: Control+Option+arrow moves the active window into the neighbouring quarter or half of the screen, or swaps it with the window already there. You can also drag a window onto another while holding Option. Screen halves are now on Control+Option+Shift+arrow.",
-    "ru": "Обмен окон местами: Control+Option+стрелка переставляет активное окно в соседнюю четверть или половину экрана, а если она занята, окна меняются местами. Окно можно также перетащить на другое с зажатым Option. Половины экрана теперь на Control+Option+Shift+стрелка."
+    "en": "Chrome: Control+Option+Shift+Left or Right opens the current tab as a separate window without the address bar and places it in half of the screen. Control+Option+Shift+Up fills the screen with the active window.",
+    "ru": "Chrome: Control+Option+Shift+стрелка влево или вправо открывает текущую вкладку отдельным окном без адресной строки и ставит его в половину экрана. Control+Option+Shift+стрелка вверх заполняет экран активным окном."
   }
 }
