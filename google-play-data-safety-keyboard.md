@@ -22,8 +22,10 @@ This is a working draft for Google Play Console. Final answers should be checked
 
 ### Audio
 
-- **Collected by TapFix AI server:** No, based on current implementation.
-- **Processed on device / Android service:** Microphone input is used for dictation through Android speech recognition when the user taps the microphone button.
+- **Voice or sound recordings: Collected:** Yes (since 1.0.58). Only when TapFix AI voice input is used (Google speech recognition does not work on the phone, or the user picks TapFix AI). Audio goes over HTTPS to api.tapfixai.app and is transcribed by OpenAI.
+- **Processed ephemerally:** Yes. Audio and text are not stored by TapFix.
+- **Shared:** No (OpenAI is a service provider processing on our behalf).
+- **Default path:** Android speech recognition (Google) on the device, TapFix receives no audio.
 - **Purpose:** App functionality.
 - **Required:** Optional; only needed for dictation.
 
